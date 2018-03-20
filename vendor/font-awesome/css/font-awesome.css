@@ -603,6 +603,12 @@
 .fa-trophy:before {
   content: "\f091";
 }
+.fa-journal:before {
+  content: "\f02d";
+}
+.fa-conference:before {
+  content: "\f15c";
+}
 .fa-github-square:before {
   content: "\f092";
 }
