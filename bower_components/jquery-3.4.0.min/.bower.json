@@ -1,0 +1,15 @@
+{
+  "name": "jquery-3.4.0.min",
+  "_cacheHeaders": {
+    "ETag": "W/\"5cae4a5e-15857\"",
+    "Last-Modified": "Wed, 10 Apr 2019 19:56:14 GMT",
+    "Content-Length": "30632",
+    "Content-Type": "application/javascript; charset=utf-8"
+  },
+  "_release": "e-tag:W/\"5cae4a5",
+  "main": "index.js",
+  "_source": "https://code.jquery.com/jquery-3.4.0.min.js",
+  "_target": "*",
+  "_originalSource": "https://code.jquery.com/jquery-3.4.0.min.js",
+  "_direct": true
+}
