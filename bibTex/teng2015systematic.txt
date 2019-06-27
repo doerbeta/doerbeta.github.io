@@ -1,0 +1,9 @@
+@article{teng2015systematic,
+  title={Systematic genome-wide screening and prediction of microRNAs in EBOV during the 2014 ebolavirus outbreak},
+  author={Teng, Yue and Wang, Yuzhuo and Zhang, Xianglilan and Liu, Wenli and Fan, Hang and Yao, Hongwu and Lin, Baihan and Zhu, Ping and Yuan, Wenjun and Tong, Yigang and others},
+  journal={Scientific reports},
+  volume={5},
+  pages={9912},
+  year={2015},
+  publisher={Nature Publishing Group}
+}

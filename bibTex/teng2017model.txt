@@ -1,0 +1,10 @@
+@article{teng2017model,
+  title={Model-informed risk assessment for Zika virus outbreaks in the Asia-Pacific regions},
+  author={Teng, Yue and Bi, Dehua and Xie, Guigang and Jin, Yuan and Huang, Yong and Lin, Baihan and An, Xiaoping and Tong, Yigang and Feng, Dan},
+  journal={Journal of Infection},
+  volume={74},
+  number={5},
+  pages={484--491},
+  year={2017},
+  publisher={Elsevier}
+}

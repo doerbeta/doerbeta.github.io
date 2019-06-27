@@ -1,0 +1,6 @@
+@article{lin2018adaptive,
+  title={Adaptive Representation Selection in Contextual Bandit},
+  author={Lin, Baihan and Cecchi, Guillermo and Bouneffouf, Djallel and Rish, Irina},
+  journal={arXiv preprint arXiv:1802.00981},
+  year={2018}
+}

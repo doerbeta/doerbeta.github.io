@@ -1,0 +1,6 @@
+@article{gonzalez2019enhance,
+  title={Enhanced arm reach after a {Pinocchio} illusion in {Virtual Reality}},
+  author={Gonzalez-Franco, Mar and Lin, Baihan and Berger, Christopher and Lanier, Jaron},
+  journal={},
+  year={2019}
+}

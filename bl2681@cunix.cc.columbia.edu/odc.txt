@@ -1,0 +1,12 @@
+@conference{lin2016ocular,
+  doi = {10.13140/rg.2.1.1792.9847},
+  url = {http://rgdoi.net/10.13140/RG.2.1.1792.9847},
+  author = {Lin, Baihan and Andelin, Adrian and Olavarria, Jaime},
+  keywords = {},
+  title = {Ocular Dominance Columns in Rat Visual Cortex: a Qualitative Model to Analyze Deprivation-Induced Cortical Plasticity},
+  booktitle = {NeuroFutures Conference 2016},
+      address = {Seattle, WA},
+      month = {June},
+  publisher = {},
+  year = {2016}
+}

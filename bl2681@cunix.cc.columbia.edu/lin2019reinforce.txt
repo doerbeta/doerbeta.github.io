@@ -1,0 +1,6 @@
+@article{lin2019reinforce,
+  title={Reinforcement Learning Models of Human Behavior: Reward Processing in Mental Disorders},
+  author={Lin, Baihan and Bouneffouf, Djallel and Reinen, Jenna and Rish, Irina and Cecchi, Guillermo},
+  journal={arXiv preprint arXiv:},
+  year={2019}
+}

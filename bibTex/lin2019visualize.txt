@@ -1,0 +1,6 @@
+@article{lin2019visualize,
+  title={Visualizing Representational Dynamics with Multidimensional Scaling Alignment},
+  author={Lin, Baihan and Mur, Marieke and Kietzmann, Tim and Kriegeskorte, Nikolaus},
+  journal={arXiv preprint arXiv:},
+  year={2019}
+}
