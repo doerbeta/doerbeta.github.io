@@ -1,9 +1,0 @@
-@article{teng2017integrative,
-  title={An integrative analysis reveals a central role of P53 activation via MDM2 in Zika virus infection induced cell death},
-  author={Teng, Yue and Liu, Shufeng and Guo, Xiaocan and Liu, Shuxia and Jin, Yuan and He, Tongtong and Bi, Dehua and Zhang, Pei and Lin, Baihan and An, Xiaoping and others},
-  journal={Frontiers in cellular and infection microbiology},
-  volume={7},
-  pages={327},
-  year={2017},
-  publisher={Frontiers}
-}

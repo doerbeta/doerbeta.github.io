@@ -1,6 +1,0 @@
-@article{lin2019regularity,
-  title={Regularity Normalization: Constraining Implicit Space with Minimum Description Length},
-  author={Lin, Baihan},
-  journal={arXiv preprint arXiv:1902.10658},
-  year={2019}
-}

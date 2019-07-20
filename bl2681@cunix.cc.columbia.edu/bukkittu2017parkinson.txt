@@ -1,6 +1,0 @@
-@article{bukkittu2017parkinson,
-  title={Parkinson's Disease Digital Biomarker Discovery with Optimized Transitions and Inferred Markov Emissions},
-  author={Bukkittu, Avinash and Lin, Baihan and Vu, Trung and Pe'er, Itsik},
-  journal={arXiv preprint arXiv:1711.04078},
-  year={2017}
-}

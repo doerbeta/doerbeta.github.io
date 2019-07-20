@@ -1,6 +1,0 @@
-@article{lin2018adgtic,
-  title={Adaptive Independence Tests with Geo-Topological Transformation},
-  author={Lin, Baihan and Kriegeskorte, Nikolaus},
-  journal={arXiv preprint arXiv:1810.02923},
-  year={2018}
-}

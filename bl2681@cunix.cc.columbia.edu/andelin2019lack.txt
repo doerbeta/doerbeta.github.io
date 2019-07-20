@@ -1,6 +1,0 @@
-@article{andelin2019lack,
-  title={Lack of Ocular Dominance Columns in Albino Rats Increases the Size of the Binocular Region in Striate Cortex},
-  author={Andelin, Adrian and Doyle, Zane and Laing, Robyn and Turecek, Joseph and Lin, Baihan and Olavarria, Jaime},
-  journal={},
-  year={2019}
-}
