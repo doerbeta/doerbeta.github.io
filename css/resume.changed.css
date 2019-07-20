@@ -148,6 +148,23 @@ a:hover, a:focus, a:active {
 
 
 /*further-added-flier*/
+
+.flier2 {
+  pointer-events: none;
+}
+
+.flier2 > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly 20s linear infinite;
+        pointer-events: none !important;
+  top: 0;
+  left: 0;
+  transform: translateX(200%) translateY(50%) rotateZ(0);
+  position: fixed;
+  animation-delay: 0.5s;
+  z-index: 99999;
+}
+
 .flier {
 	pointer-events: none;
 }
