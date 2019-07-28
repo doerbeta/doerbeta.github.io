@@ -1,0 +1,9 @@
+@conference{lin2019modeling,
+  author = {Lin, Baihan},
+  title = {Modeling Neurological and Psychiatric Disorders with Reward Biased Reinforcement Learning Models},
+  booktitle = {Technology in Psychiatry Summit (TIPS) 2019},
+      address = {Boston, USA},
+      month = {October},
+  publisher = {},
+  year = {2019}
+}
