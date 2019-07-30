@@ -3,7 +3,7 @@
   url = {},
   author = {Lin, Baihan},
   title = {Cliques of single-cell RNA-seq profiles reveal insights into cell ecology during development and differentiation},
-  booktitle = {Intelligent Systems for Molecular Biology (ISMB) 2019},
+  booktitle = {Intelligent Systems for Molecular Biology},
       address = {Basel, Switzerland},
       month = {July},
   publisher = {},

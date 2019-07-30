@@ -1,7 +1,7 @@
 @inproceedings{lin2018contextual,
   title={Contextual Bandit with Adaptive Feature Extraction},
   author={Lin, Baihan and Bouneffouf, Djallel and Cecchi, Guillermo A and Rish, Irina},
-  booktitle={2018 IEEE International Conference on Data Mining Workshops (ICDMW)},
+  booktitle={IEEE International Conference on Data Mining Workshops (ICDMW)},
   pages={937--944},
   year={2018},
   organization={IEEE}
