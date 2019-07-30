@@ -2,6 +2,9 @@
   title={Self-assembling 2D arrays with de novo protein building blocks},
   author={Chen, Zibo and Johnson, Matthew C and Chen, Jiajun and Bick, Matthew J and Boyken, Scott E and Lin, Baihan and De Yoreo, James J and Kollman, Justin M and Baker, David and DiMaio, Frank},
   journal={Journal of the American Chemical Society},
+  volume={141},
+  number={22},
+  pages={8891-8895},
   year={2019},
   publisher={ACS Publications}
 }
