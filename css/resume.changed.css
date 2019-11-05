@@ -42,6 +42,9 @@
   .top-some {
      margin-top: 0em;
   }
+  .list-adaptive-item {
+  display: inline-block;
+}
 }
 .row::after {
   content: "";
@@ -96,7 +99,7 @@ body {
 
 @media (min-width: 992px) {
   body {
-    padding-top: 1em;
+    padding-top: 0em;
     padding-left: 10rem;
   }
 }

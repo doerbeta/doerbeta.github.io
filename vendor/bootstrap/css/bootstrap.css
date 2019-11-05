@@ -450,6 +450,14 @@ mark,
   list-style: none;
 }
 
+.list-adaptive-item {
+  display: block;
+}
+
+.list-adaptive-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
 .list-inline-item {
   display: inline-block;
 }
