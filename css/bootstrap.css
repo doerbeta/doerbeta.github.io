@@ -49,6 +49,7 @@ html {
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
 }
 
 @-ms-viewport {
@@ -68,6 +69,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  text-rendering: optimizeLegibility;
 }
 
 [tabindex="-1"]:focus {
