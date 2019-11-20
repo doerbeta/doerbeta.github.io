@@ -1,0 +1,8 @@
+@article{lin2019what,
+  title={{What About Higher-Order Cellular Complexity? An Inquiry with Topological Simplicial Analysis}},
+  author={Lin, Baihan and Rabadan, Raul and Kriegeskorte, Nikolaus},
+  booktitle = {NIPS 2019 Workshop on Learning Meaningful Representations of Life (LMRL)},
+  address = {Vancouver, Canada},
+  month = {December},
+  year={2019}
+}
