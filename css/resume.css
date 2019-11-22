@@ -9,12 +9,12 @@
 }
 .imgcolumn {
   float: center;
-  width: 15.00%;
+  width: 20.00%;
   padding: 5px;
 }
 .textcolumn {
   float: left;
-  width: 84.00%;
+  width: 79.00%;
   padding: 5px;
 }
 .contactcolumn {
@@ -27,7 +27,7 @@
   width: 10em;
   padding: 5px;
 }
-@media (max-width: 992px) {
+@media (max-width: 989.98px) {
   .imgcolumn {
   display: none;
   width: 0em;
@@ -46,6 +46,7 @@
   }
   .list-adaptive-item {
   display: inline-block;
+  /*float: right;*/
 }
 }
 .row::after {
@@ -168,6 +169,7 @@ body {
   padding-top: 1em;
   color: #868e96;
   padding-left: 1em;
+  padding-right: 1em;
 }
 h1,
 h2,
@@ -210,17 +212,22 @@ h2 {
   color: #BD5D38;
 }
 
-#sideNavSlim .navbar-nav .nav-item .nav-link {
+#sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
   text-align: left;
   /*text-transform: uppercase;*/
 }
-@media (min-width: 992px) {
+#projNav {
+  display: none;
+}
+
+@media (min-width: 990px) {
   body {
     padding-top: 0em;
     padding-left: 10rem;
+    padding-right: 10rem;
   }
-  #sideNavSlim {
+  #sideNav {
     text-align: left;
     position: fixed;
     top: 0;
@@ -228,51 +235,6 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 10rem;
-    height: 100vh;
-  }
-  #sideNavSlim .navbar-brand {
-    display: flex;
-    margin: auto auto 0;
-    padding: 0.5rem;
-  }
-  #sideNavSlim .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
-  }
-  #sideNavSlim .navbar-collapse {
-    display: flex;
-    align-items: flex-start;
-    flex-grow: 0;
-    width: 100%;
-    margin-bottom: auto;
-  }
-  #sideNavSlim .navbar-collapse .navbar-nav {
-    flex-direction: column;
-    width: 100%;
-    /*margin-top: 5em;*/
-  }
-  #sideNavSlim .navbar-collapse .navbar-nav .nav-item {
-    display: block;
-  }
-  #sideNavSlim .navbar-collapse .navbar-nav .nav-item .nav-link {
-    display: block;
-  }
-}
-
-#sideNav .navbar-nav .nav-item .nav-link {
-  font-weight: 600;
-  text-transform: uppercase;
-}
-@media (min-width: 992px) {
-  #sideNav {
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 17rem;
     height: 100vh;
   }
   #sideNav .navbar-brand {
@@ -295,6 +257,7 @@ h2 {
   #sideNav .navbar-collapse .navbar-nav {
     flex-direction: column;
     width: 100%;
+    /*margin-top: 5em;*/
   }
   #sideNav .navbar-collapse .navbar-nav .nav-item {
     display: block;
@@ -302,6 +265,46 @@ h2 {
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
   }
+  #projNav .navbar-brand {
+    display: flex;
+    margin: auto auto 0;
+    padding: 0.5rem;
+  }
+  #projNav .navbar-brand .img-profile {
+    max-width: 10rem;
+    max-height: 10rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  }
+  #projNav {
+    text-align: right;
+    margin-left: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    height: 100vh;
+  }
+  #projNav .navbar-collapse {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: auto;
+  }
+  #projNav .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    /*margin-top: 5em;*/
+  }
+  #projNav .navbar-collapse .navbar-nav .nav-item {
+    display: block;
+  }
+  #projNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    display: block;
+  }
+
 }
 
 section.resume-section {
@@ -323,7 +326,7 @@ section.resume-section .resume-item .resume-date {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 990px) {
   section.resume-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
@@ -366,19 +369,19 @@ a:hover, a:focus, a:active {
 }
 
 .flier {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .flier > * {
 /* Adjust animation duration to change the element’s speed */
         animation: fly 50s linear infinite;
         pointer-events: none !important;
-	top: 0;
-	left: 0;
-	transform: translateX(-120%) translateY(-120%) rotateZ(0);
-	position: fixed;
-	animation-delay: 1s;
-	z-index: 999999;
+  top: 0;
+  left: 0;
+  transform: translateX(-120%) translateY(-120%) rotateZ(0);
+  position: fixed;
+  animation-delay: 1s;
+  z-index: 999999;
 }
 
  /* Keyframe values control where the element will begin
@@ -388,36 +391,38 @@ a:hover, a:focus, a:active {
 
 @keyframes fly {
 
-	98.001%, 0% {
+  98.001%, 0% {
                 display: block;
-		transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
-	}
+    transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+  }
 
-	15% {
-		transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
-	}
+  15% {
+    transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+  }
 
-	15.001%, 18% {
-		transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
-	}
+  15.001%, 18% {
+    transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+  }
 
-	40% {
-		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
-	}
+  40% {
+    transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+  }
 
-	40.001%, 43% {
-		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
-	}
+  40.001%, 43% {
+    transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+  }
 
-	65% {
-		transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
-	}
+  65% {
+    transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+  }
 
-	65.001%, 68% {
-		transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
-	}
+  65.001%, 68% {
+    transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+  }
 
-	95% {
-		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
-	}
+  95% {
+    transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+  }
 }
+
+
