@@ -391,6 +391,9 @@ section.resume-section .resume-item .resume-date {
 }
 
 .text-primary {
+    font-family: 'Saira', serif;
+    font-size: 1.1rem;
+
     color: #272727 !important;
 }
 
