@@ -3885,7 +3885,7 @@ var Dropdown = function ($$$1) {
     DATA_TOGGLE: '[data-toggle="dropdown"]',
     FORM_CHILD: '.dropdown form',
     MENU: '.dropdown-menu',
-    NAVBAR_NAV: '.navbar-nav',
+    NAVBAR_NAV: '#sideNav .navbar-nav',
     VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled)'
   };
   var AttachmentMap = {
@@ -4072,7 +4072,7 @@ var Dropdown = function ($$$1) {
     };
 
     _proto._detectNavbar = function _detectNavbar() {
-      return $$$1(this._element).closest('.navbar').length > 0;
+      return $$$1(this._element).closest('#sideNav .navbar').length > 0;
     };
 
     _proto._getPopperConfig = function _getPopperConfig() {
@@ -4355,7 +4355,7 @@ var Modal = function ($$$1) {
     DATA_DISMISS: '[data-dismiss="modal"]',
     FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
     STICKY_CONTENT: '.sticky-top',
-    NAVBAR_TOGGLER: '.navbar-toggler'
+    NAVBAR_TOGGLER: '#sideNav .navbar-toggler'
     /**
      * ------------------------------------------------------------------------
      * Class Definition
@@ -5771,8 +5771,8 @@ var ScrollSpy = function ($$$1) {
     DATA_SPY: '[data-spy="scroll"]',
     ACTIVE: '.active',
     NAV_LIST_GROUP: '.nav, .list-group',
-    NAV_LINKS: '.nav-link',
-    NAV_ITEMS: '.nav-item',
+    NAV_LINKS: '#sideNav .nav-link',
+    NAV_ITEMS: '#sideNav .nav-item',
     LIST_ITEMS: '.list-group-item',
     DROPDOWN: '.dropdown',
     DROPDOWN_ITEMS: '.dropdown-item',

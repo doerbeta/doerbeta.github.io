@@ -47,6 +47,9 @@ footer {
 }
 
 @media (max-width: 989.98px) {
+    .list-social-icons {
+        display: none;
+    }
     .imgcolumn {
         display: none;
         width: 0em;
@@ -287,9 +290,11 @@ h2 {
 #projNav {
     display: none;
 }
+
 .will-gone {
     display: none;
 }
+
 @media (min-width: 990px) {
     body {
         padding-top: 0em;
@@ -380,7 +385,7 @@ h2 {
 
 section.resume-section {
     border-bottom: 1px solid #dee2e6;
-    padding-top: 2rem !important;
+    padding-top: 4rem !important;
     padding-bottom: 2rem !important;
 }
 
