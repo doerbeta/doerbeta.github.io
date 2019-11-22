@@ -88,6 +88,11 @@
     color: #343a40;
     text-rendering: optimizeLegibility;
 }
+@media (max-width: 767.98px) {
+    .field {
+        font-size: 1rem;
+    }
+}
 
 /* Create four equal columns that sits next to each other */
 
