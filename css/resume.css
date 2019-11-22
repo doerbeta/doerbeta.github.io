@@ -84,7 +84,7 @@
     font-family: 'Saira Extra Condensed', serif;
     font-weight: 700;
     /*text-transform: uppercase;*/
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #343a40;
     text-rendering: optimizeLegibility;
 }
@@ -214,7 +214,7 @@
 }
 
 body {
-    font-family: 'Open Sans', serif;
+    font-family: 'Ubuntu', serif;
     padding-top: 1em;
     color: #868e96;
     padding-left: 1em;
@@ -279,12 +279,17 @@ h2 {
 #projNav {
     display: none;
 }
-
+.will-gone {
+    display: none;
+}
 @media (min-width: 990px) {
     body {
         padding-top: 0em;
         padding-left: 10rem;
         padding-right: 10rem;
+    }
+    .will-gone {
+    display: block;
     }
     #sideNav {
         text-align: left;
@@ -396,7 +401,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .text-primary {
-    font-family: 'Saira', serif;
+    /*font-family: 'Ubuntu', serif;*/
     font-size: 1.1rem;
 
     color: #272727 !important;
@@ -499,11 +504,12 @@ span {
 .letter {
     display: block;
     text-align: center;
-    /*font-size  : 4em;*/
+    font-size  : 0.8em;
     margin: 0;
     /*font-weight: bold;*/
     /*color      : white;*/
-    line-height: 0.45;
+    line-height: 0.42;
+    font-family: "Fira Sans Extra Condensed", serif;
     /*font-family: "Times New Roman", Times, serif;*/
 }
 
