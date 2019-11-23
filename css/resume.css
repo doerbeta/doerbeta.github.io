@@ -589,3 +589,24 @@ span {
     animation: rotate 3s infinite;
 }
 
+.collapsible {
+  cursor: pointer;
+}
+
+.collapsible:after {
+  content: '\002B';
+  font-weight: bold;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.abstract {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  color: #414950;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
