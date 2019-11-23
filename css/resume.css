@@ -43,7 +43,16 @@ footer {
     float: bottom;
     width: 12em;
     padding: 5px;
+    display: block;
     vertical-align: bottom;
+}
+
+@media (max-width: 1080px) {
+    .brandcolumn {
+        display: none;
+        width: 0em;
+        padding: 0px;
+    }
 }
 
 @media (max-width: 989.98px) {
@@ -51,11 +60,6 @@ footer {
         display: none;
     }
     .imgcolumn {
-        display: none;
-        width: 0em;
-        padding: 0px;
-    }
-    .brandcolumn {
         display: none;
         width: 0em;
         padding: 0px;
