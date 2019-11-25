@@ -1,7 +1,8 @@
 @inproceedings{lin2019neural,
   title={Neural Networks as Model Selection with Incremental MDL Normalization},
   author={Lin, Baihan},
-  booktitle={IJCAI Workshop on Human Brain and Artificial Intelligence},
-  pages={},
-  year={2019}
+  booktitle={International Workshop on Human Brain and Artificial Intelligence},
+  pages={195--208},
+  year={2019},
+  organization={Springer}
 }
