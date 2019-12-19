@@ -1,25 +1,201 @@
-<head>
-  <style> body { margin: 0; } </style>
 
-  <script src="//unpkg.com/force-graph"></script>
-  <!-- <script src="../../dist/force-graph.js"></script> -->
-</head>
 
-<body>
-  <div id="graph"></div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Baihan Lin's personal website">
+        <meta name="author" content="Baihan Lin">
+        <title>Baihan Lin</title>
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+        <link href="../../css/bootstrap.css" rel="stylesheet">
+        <link href="../../css/resume.css" rel="stylesheet">
+        <link href="../../css/font-awesome.css" rel="stylesheet">
+        <link href="../../css/devicons.css" rel="stylesheet">
+        <link href="../../css/simple-line-icons.css" rel="stylesheet">
+    </head>
+    <body>
+<!--         <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top" id="sideNav">
+            <h3 class="bottom-some"><a style="color:#ffffff;display:inline;text-transform:none;" href="../../#">Baihan Lin&nbsp;&nbsp;</a></h3>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../../#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../../#research">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../../#publications">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../../#life">Life</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../../bits">Bits</a>
+                    </li>
+                    <li><span class="nav-link js-scroll-trigger will-gone"><br/><br/></span></li>
+                    <ul class="list-inline list-social-icons mb-0 top-some">
+                        <li class="list-adaptive-item">
+                            <a href="https://www.linkedin.com/in/doerlbh/">
+                            <span class="fa-stack fa-md">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                            </a>
+                        </li>
+                        <li class="list-adaptive-item">
+                            <a href="https://github.com/doerlbh">
+                            <span class="fa-stack fa-md">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                            </a>
+                        </li>
+                        <li class="list-adaptive-item">
+                            <a href="https://www.instagram.com/doerlbh/">
+                            <span class="fa-stack fa-md">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                            </a>
+                        </li>
+                        <li class="list-adaptive-item">
+                            <a href="https://www.facebook.com/doerlbh">
+                            <span class="fa-stack fa-md">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                            </a>
+                        </li>
+                        <li class="list-adaptive-item">
+                            <a href="https://scholar.google.com/citations?user=H67KJ4cAAAAJ&hl=en">
+                            <span class="fa-stack fa-md">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+                            </span>
+                            </a>
+                        </li>
+                        <li class="list-adaptive-item">
+                            <a href="https://twitter.com/doerlbh">
+                            <span class="fa-stack fa-md">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <li class="nav-item will-gone">
+                        <span class="nav-link js-scroll-trigger"> &#x21E7;<br/>see me at</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top" id="projNav">
+            <h3 class="bottom-some"><a style="color:#ffffff;display:inline;text-align:left;text-transform:none" href="../../#project">some cool projects I do</a></h3>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../mentalRL">mental RL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../dynRSA"> dynamic RSA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../topology">topology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../neuralMDL">neural MDL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../tensegrity">tensegrity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../proteindesign">protein design</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../pinocchio"> pinocchio VR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../osteoapp"> OsteoApp </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="../patch"> quanti patch </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav> -->
+        <div class="container-fluid p-0">
+            <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="">
+                <div class="my-auto">
+                    <h2 class="mb-5", style="text-transform:none">iTDA: interactive topological data analysis (Demo)</h2>
 
-  <script>
-    fetch('../datasets/miserables.json').then(res => res.json()).then(data => {
-      const Graph = ForceGraph()
-      (document.getElementById('graph'))
-        .graphData(data)
-        .nodeId('id')
-        .nodeRelSize(4)
-        .nodeVal('val')
-        .nodeLabel('id'+':'+'group')
-        .nodeAutoColorBy('group')
-        .linkSource('source')
-        .linkTarget('target')
-    });
-  </script>
-</body>
+                    <b class="text-primary"> by <a href="https://www.baihan.nyc/">Baihan Lin</a>, Columbia University, 2019 &nbsp; </b>
+                    <p class="mb-5 text-primary">
+                        <br> To visualize and compare a few state-of-the-art dimension reduction methods with TDA...
+                        <br>
+                    <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
+                    </p>
+
+                    <div id="graph"></div>
+
+                    <script> 
+                        fetch('../datasets/miserables.json').then(res => res.json()).then(data => {
+                            const Graph = ForceGraph()
+                            (document.getElementById('graph'))
+                            .graphData(data)
+                            .nodeId('id')
+                            .nodeRelSize(4)
+                            .nodeVal('val')
+                            .nodeLabel('id'+':'+'group')
+                            .nodeAutoColorBy('group')
+                            .linkSource('source')
+                            .linkTarget('target')
+                        });
+                    </script>
+                    
+                    <p class="mb-5 text-primary">
+                        <b> References: </b><br>
+                        <br> [1] Wold, S., Esbensen, K., & Geladi, P. (1987). Principal component analysis. Chemometrics and intelligent laboratory systems, 2(1-3), 37-52.
+                        <br> [2] Borg, I., & Groenen, P. (2003). Modern multidimensional scaling: Theory and applications. Journal of Educational Measurement, 40(3), 277-280.
+                        <br> [3] Carlsson, G. (2009). Topology and data. Bulletin of the American Mathematical Society, 46(2), 255-308.
+                        <br> [4] Churchland, M. M., Cunningham, J. P., Kaufman, M. T., Foster, J. D., Nuyujukian, P., Ryu, S. I., & Shenoy, K. V. (2012). Neural population dynamics during reaching. Nature, 487(7405), 51.
+                        <br> [5] Lin, B., Mur, M., Kietzmann, T., & Kriegeskorte, N. (2019). Visualizing Representational Dynamics with Multidimensional Scaling Alignment. arXiv preprint arXiv:1906.09264.
+                    <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
+                    </p>
+
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JavaScript -->
+        <script src="../../js/jquery.min.js"></script>
+        <script src="../../js/bootstrap.bundle.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="../../js/jquery.easing.js"></script>
+        <!-- Custom scripts for this template -->
+        <script src="../../js/resume.js"></script>
+        <script src="//unpkg.com/force-graph"></script>
+        <script src="//unpkg.com/force-graph"></script>
+    </body>
+    <!-- 
+        <div class="flier2"><img src="img/random/rock.png" alt="" style="width:500px;height:300px;"></div>
+        
+        <div class="flier"><img src="img/random/doge.png" alt="" style="width:300px;height:400px;"></div>
+         -->
+     <footer style="align:center;">&copy; Copyright 2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script> by Baihan Lin</footer>
+</html>
+

@@ -1,0 +1,25 @@
+<head>
+  <style> body { margin: 0; } </style>
+
+  <script src="//unpkg.com/force-graph"></script>
+  <!-- <script src="../../dist/force-graph.js"></script> -->
+</head>
+
+<body>
+  <div id="graph"></div>
+
+  <script>
+    fetch('../datasets/miserables.json').then(res => res.json()).then(data => {
+      const Graph = ForceGraph()
+      (document.getElementById('graph'))
+        .graphData(data)
+        .nodeId('id')
+        .nodeRelSize(4)
+        .nodeVal('val')
+        .nodeLabel('id'+':'+'group')
+        .nodeAutoColorBy('group')
+        .linkSource('source')
+        .linkTarget('target')
+    });
+  </script>
+</body>
