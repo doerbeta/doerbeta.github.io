@@ -154,6 +154,8 @@
                         <td class="mb-5 text-primary"> Dataset: </td> 
                         <td class="mb-5 text-primary"> 
                             <input type="radio" name="dataset" value="farrell" checked>&nbsp;scRNA-seq (Farrell et al., 2018) [10]&nbsp;
+                            <input type="radio" name="dataset" value="mnist">&nbsp; MNIST (LeCun et al., 1998) &nbsp;
+                            <input type="radio" name="dataset" value="farrell" checked>&nbsp; neural recording (Bell et al., 2011) &nbsp;
                         </td>
                         </tr>
 
@@ -173,9 +175,13 @@
                             <td class="mb-5 text-primary">
                                 <input type="radio" name="embedding" value="pca" checked> &nbsp;PCA [1] &nbsp;
                                 <input type="radio" name="embedding" value="mds"> &nbsp;MDS [2] &nbsp;
+                                <input type="radio" name="embedding" value="svd"> &nbsp;SVD &nbsp;
                                 <input type="radio" name="embedding" value="tsne"> &nbsp;t-SNE [3] &nbsp;
+                                <input type="radio" name="embedding" value="umap"> &nbsp;UMAP &nbsp;
+                                <input type="radio" name="embedding" value="isomap"> &nbsp;ISOMAP &nbsp;
                                 <input type="radio" name="embedding" value="jpca"> &nbsp;jPCA [5] &nbsp;
                                 <input type="radio" name="embedding" value="pmds"> &nbsp;pMDS [6] &nbsp;
+
                             </td>
                         </tr>
                         <tr> 
@@ -195,7 +201,7 @@
                                 <input type="radio" name="tda" value="tsa"> &nbsp;TSA [8]&nbsp;
                             </td>
                             <td class="mb-5 text-primary"> 
-                                <button onclick="" style="border-radius:12px;" id="advancedtda" disabled> &nbsp;Advanced TDA options&nbsp;</button>
+                                <button onclick="" style="border-radius:12px;" id="advancedtda" disabled> &nbsp;advanced options&nbsp;</button>
                             </td>
 
                         </tr>
@@ -219,7 +225,7 @@
                             .nodeAutoColorBy('group')
                             .linkSource('source')
                             .linkTarget('target')
-                            .height(500)
+                            .height(600)
                         });
                     </script>
                     
@@ -235,7 +241,9 @@
                         <br> [8] Lin, B., Rabadan, R., & Kriegeskorte, N. (2019) What About Higher-Order Cellular Complexity? An Inquiry with Topological Simplicial Analysis. <i> 2019 NeurIPS 2019 Workshop on Learning Meaningful Representations of Life (LMRL)</i>.
                         <br> [9] Rizvi, A. H., Camara, P. G., Kandror, E. K., Roberts, T. J., Schieren, I., Maniatis, T., & Rabadan, R. (2017). Single-cell topological RNA-seq analysis reveals insights into cellular differentiation and development. <i>Nature biotechnology</i>, 35(6), 551.
                         <br> [10] Farrell, J. A., Wang, Y., Riesenfeld, S. J., Shekhar, K., Regev, A., & Schier, A. F. (2018). Single-cell reconstruction of developmental trajectories during zebrafish embryogenesis. <i>Science</i>, 360(6392), eaar3131. 
-                    <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
+                        <br> Bell, A. H., Malecek, N. J., Morin, E. L., Hadj-Bouziane, F., Tootell, R. B., & Ungerleider, L. G. (2011). Relationship between functional magnetic resonance imaging-identified regions and neuronal category selectivity. <i>Journal of Neuroscience</i>, 31(34), 12229-12240.
+                        <br> LeCun, Y., Cortes, C., & Burges, C. J. (1998). The MNIST database of handwritten digits, 1998. URL http://yann.lecun.com/exdb/mnist, 10, 34.
+                        <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
                     </p>
 
                 </div>
