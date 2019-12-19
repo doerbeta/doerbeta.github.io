@@ -148,8 +148,62 @@
                     <p class="mb-5 text-primary">
                         <br> To visualize and compare a few state-of-the-art dimension reduction methods with TDA...
                         <br>
+                        <table class="field-table">
+
+                        <tr>
+                        <td class="mb-5 text-primary"> Dataset: </td> 
+                        <td class="mb-5 text-primary"> 
+                            <input type="radio" name="dataset" value="farrell" checked>&nbsp;scRNA-seq (Farrell et al., 2018) [10]&nbsp;
+                        </td>
+                        </tr>
+
+                        <tr>
+                        <td class="mb-5 text-primary"> Metric: </td> 
+                        <td class="mb-5 text-primary"> 
+                            <input type="radio" name="metric" value="euc" checked>&nbsp;Euclidean&nbsp;
+                            <input type="radio" name="metric" value="cor">&nbsp;Correlation&nbsp;
+                            <input type="radio" name="metric" value="cor">&nbsp;kNN&nbsp;
+                            <input type="radio" name="metric" value="ham">&nbsp;Hamming&nbsp;
+                            <input type="radio" name="metric" value="cos">&nbsp;Cosine&nbsp;
+                        </td>
+                        </tr>
+
+                        <tr> 
+                            <td class="mb-5 text-primary"> Embedding: </td>
+                            <td class="mb-5 text-primary">
+                                <input type="radio" name="embedding" value="pca" checked> &nbsp;PCA [1] &nbsp;
+                                <input type="radio" name="embedding" value="mds"> &nbsp;MDS [2] &nbsp;
+                                <input type="radio" name="embedding" value="tsne"> &nbsp;t-SNE [3] &nbsp;
+                                <input type="radio" name="embedding" value="jpca"> &nbsp;jPCA [5] &nbsp;
+                                <input type="radio" name="embedding" value="pmds"> &nbsp;pMDS [6] &nbsp;
+                            </td>
+                        </tr>
+                        <tr> 
+                            <td class="mb-5 text-primary"> Clustering: </td>
+                            <td class="mb-5 text-primary"> 
+                                <input type="radio" name="clustering" value="none" checked> &nbsp;none  &nbsp;
+                                <input type="radio" name="clustering" value="kmeans"> &nbsp;kMeans  &nbsp;
+                                <input type="radio" name="clustering" value="knn"> &nbsp;kNN &nbsp;
+                            </td>
+                        </tr>
+                        <tr> 
+                            <td class="mb-5 text-primary"> TDA: </td>
+                            <td class="mb-5 text-primary"> 
+                                <input type="radio" name="tda" value="none" checked> &nbsp;none&nbsp; 
+                                <input type="radio" name="tda" value="tda"> &nbsp;TDA [4]&nbsp;
+                                <input type="radio" name="tda" value="ttda"> &nbsp;tTDA [7]&nbsp;
+                                <input type="radio" name="tda" value="tsa"> &nbsp;TSA [8]&nbsp;
+                            </td>
+                            <td class="mb-5 text-primary"> 
+                                <button onclick="" style="border-radius:12px;" id="advancedtda" disabled> &nbsp;Advanced TDA options&nbsp;</button>
+                            </td>
+
+                        </tr>
+                    </table>
+
                     <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
                     </p>
+
 
                     <div id="graph"></div>
 
@@ -173,11 +227,14 @@
                         <b> References: </b><br>
                         <br> [1] Wold, S., Esbensen, K., & Geladi, P. (1987). Principal component analysis. <i>Chemometrics and intelligent laboratory systems</i>, 2(1-3), 37-52.
                         <br> [2] Borg, I., & Groenen, P. (2003). Modern multidimensional scaling: Theory and applications. <i>Journal of Educational Measurement</i>, 40(3), 277-280.
-                        <br> [3] Carlsson, G. (2009). Topology and data. <i>Bulletin of the American Mathematical Society</i>, 46(2), 255-308.
-                        <br> [4] Churchland, M. M., Cunningham, J. P., Kaufman, M. T., Foster, J. D., Nuyujukian, P., Ryu, S. I., & Shenoy, K. V. (2012). Neural population dynamics during reaching. <i> Nature</i>, 487(7405), 51.
-                        <br> [5] Lin, B., Mur, M., Kietzmann, T., & Kriegeskorte, N. (2019). Visualizing Representational Dynamics with Multidimensional Scaling Alignment. <i>2019 Conference on Cognitive Computational Neuroscience (CCN)</i>, 1030-1033
-                        <br> [6] Lin, B. Cliques of single-cell RNA-seq profiles reveal insights into cell ecology during development and differentiation. <i> 2019 Conference on Intelligent Systems for Molecular Biology (ISMB)</i>.
-                        <br> [7] Lin, B., Rabadan, R., & Kriegeskorte, N. (2019) What About Higher-Order Cellular Complexity? An Inquiry with Topological Simplicial Analysis. <i> 2019 NeurIPS 2019 Workshop on Learning Meaningful Representations of Life (LMRL)</i>.
+                        <br> [3] Maaten, L. V. D., & Hinton, G. (2008). Visualizing data using t-SNE. <i>Journal of machine learning research</i>, 9(Nov), 2579-2605.
+                        <br> [4] Carlsson, G. (2009). Topology and data. <i>Bulletin of the American Mathematical Society</i>, 46(2), 255-308.
+                        <br> [5] Churchland, M. M., Cunningham, J. P., Kaufman, M. T., Foster, J. D., Nuyujukian, P., Ryu, S. I., & Shenoy, K. V. (2012). Neural population dynamics during reaching. <i> Nature</i>, 487(7405), 51.
+                        <br> [6] Lin, B., Mur, M., Kietzmann, T., & Kriegeskorte, N. (2019). Visualizing Representational Dynamics with Multidimensional Scaling Alignment. <i>2019 Conference on Cognitive Computational Neuroscience (CCN)</i>, 1030-1033
+                        <br> [7] Lin, B. Cliques of single-cell RNA-seq profiles reveal insights into cell ecology during development and differentiation. <i> 2019 Conference on Intelligent Systems for Molecular Biology (ISMB)</i>.
+                        <br> [8] Lin, B., Rabadan, R., & Kriegeskorte, N. (2019) What About Higher-Order Cellular Complexity? An Inquiry with Topological Simplicial Analysis. <i> 2019 NeurIPS 2019 Workshop on Learning Meaningful Representations of Life (LMRL)</i>.
+                        <br> [9] Rizvi, A. H., Camara, P. G., Kandror, E. K., Roberts, T. J., Schieren, I., Maniatis, T., & Rabadan, R. (2017). Single-cell topological RNA-seq analysis reveals insights into cellular differentiation and development. <i>Nature biotechnology</i>, 35(6), 551.
+                        <br> [10] Farrell, J. A., Wang, Y., Riesenfeld, S. J., Shekhar, K., Regev, A., & Schier, A. F. (2018). Single-cell reconstruction of developmental trajectories during zebrafish embryogenesis. <i>Science</i>, 360(6392), eaar3131. 
                     <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
                     </p>
 
