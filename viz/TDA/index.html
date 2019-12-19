@@ -214,7 +214,9 @@
                     <div id="graph"></div>
 
                     <script> 
-                        fetch('../datasets/miserables.json').then(res => res.json()).then(data => {
+                        dummyGraph();
+                        function dummyGraph() {
+                            fetch('../datasets/miserables.json').then(res => res.json()).then(data => {
                             const Graph = ForceGraph()
                             (document.getElementById('graph'))
                             .graphData(data)
@@ -227,6 +229,7 @@
                             .linkTarget('target')
                             .height(600)
                         });
+                        }
                     </script>
                     
                     <p class="mb-5 text-primary">
@@ -258,6 +261,7 @@
         <script src="../../js/resume.js"></script>
         <script src="//unpkg.com/force-graph"></script>
         <script src="//unpkg.com/force-graph"></script>
+        <script src="../jsfunctions/tda.js"></script>
     </body>
     <!-- 
         <div class="flier2"><img src="img/random/rock.png" alt="" style="width:500px;height:300px;"></div>
