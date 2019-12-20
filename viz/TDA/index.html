@@ -271,8 +271,8 @@
                         //     dataset.push([newNumber1, newNumber2]); // Add new number to array
                         // }
                         // var data = require('../datasets/farrell2018_pca.json');
-                        d3.json('../datasets/farrell2018_pca.json'), function(error,data) {
-                        // console.log(data);
+                        d3.json('../datasets/farrell2018_pca.json').then(function(data) {
+                        console.log(data);
 
                         for (var i = 0; i < data.data.length; i++) {
                             var newNumber1 = data.data[i].emb[0]; 
@@ -280,7 +280,7 @@
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
                         }
                         // console.log(dataset);
-                    // }
+                    });
 
                         // d3.json("../dataset/farrell2018_pca.json", function(error, data) {
                         //     data.forEach(function(d) {
@@ -371,8 +371,7 @@
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
                         }
                         // console.log(dataset);
-                    }
-
+                    
                                 // Update scale domains
                                 xScale.domain([0, d3.max(dataset, function(d) {
                                     return d[0];
