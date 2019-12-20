@@ -238,6 +238,7 @@
                 </p>
 
                 <div id="graph"></div>
+                <h5></h5>
 
                 <script>
                     // dummyGraph();
@@ -268,7 +269,8 @@
                             var newNumber2 = Math.floor(Math.random() * maxRange); // New random integer
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
                         }
-                        var data = require('../dataset/farrell2018_pca.json');
+                        // var data = require('../dataset/farrell2018_pca.json');
+                        import data from '../dataset/farrell2018_pca.json';
                         var dataset = data.data['emb']
 
                         // Setup settings for graphic
@@ -302,7 +304,7 @@
                             .ticks(5);
 
                         // Create SVG element
-                        var svg = d3.select("#graph") // This is where we put our vis
+                        var svg = d3.select("h5") // This is where we put our vis
                             .append("svg")
                             .attr("width", canvas_width)
                             .attr("height", canvas_height)
