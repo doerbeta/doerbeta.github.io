@@ -238,7 +238,7 @@
                 </p>
 
                 <div id="graph"></div>
-                <h5></h5>
+                <svg></svg>
 
                 <script>
                     // dummyGraph();
@@ -304,7 +304,7 @@
                             .ticks(5);
 
                         // Create SVG element
-                        var svg = d3.select("h5") // This is where we put our vis
+                        var svg = d3.select("svg") // This is where we put our vis
                             .append("svg")
                             .attr("width", canvas_width)
                             .attr("height", canvas_height)
@@ -444,7 +444,6 @@
     <script src="../../js/jquery.easing.js"></script>
     <!-- Custom scripts for this template -->
     <script src="../../js/resume.js"></script>
-    <script src="//unpkg.com/force-graph"></script>
     <script src="//unpkg.com/force-graph"></script>
     <script src="../jsfunctions/tda.js"></script>
 </body>
