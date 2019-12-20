@@ -271,7 +271,7 @@
                         //     dataset.push([newNumber1, newNumber2]); // Add new number to array
                         // }
                         // var data = require('../datasets/farrell2018_pca.json');
-                        import data from '../datasets/farrell2018_pca.json';
+                        d3.json('../datasets/farrell2018_pca.json') function(data) {
                         console.log(data);
 
                         for (var i = 0; i < data.data.length; i++) {
@@ -280,6 +280,7 @@
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
                         }
                         console.log(dataset);
+                    }
 
                         // d3.json("../dataset/farrell2018_pca.json", function(error, data) {
                         //     data.forEach(function(d) {
@@ -355,17 +356,21 @@
                                 var numValues = dataset.length; // Get original dataset's length
                                 var maxRange = Math.random() * 1000; // Get max range of new values
                                 dataset = []; // Initialize empty array
-                                for (var i = 0; i < numValues; i++) {
-                                    var newNumber1 = Math.floor(Math.random() * maxRange); // Random int for x
-                                    var newNumber2 = Math.floor(Math.random() * maxRange); // Random int for y
-                                    dataset.push([newNumber1, newNumber2]); // Add new numbers to array
-                                }
-                                import data from '../datasets/farrell2018_umap.json';
-                                for (var i = 0; i < data.data.length; i++) {
-                                    var newNumber1 = data.data[i].emb[0]; 
-                                    var newNumber2 = data.data[i].emb[1];
-                                    dataset.push([newNumber1, newNumber2]); // Add new number to array
-                                }
+                                // for (var i = 0; i < numValues; i++) {
+                                //     var newNumber1 = Math.floor(Math.random() * maxRange); // Random int for x
+                                //     var newNumber2 = Math.floor(Math.random() * maxRange); // Random int for y
+                                //     dataset.push([newNumber1, newNumber2]); // Add new numbers to array
+                                // }
+                                d3.json('../datasets/farrell2018_umap.json') function(data) {
+                        // console.log(data);
+
+                        for (var i = 0; i < data.data.length; i++) {
+                            var newNumber1 = data.data[i].emb[0]; 
+                            var newNumber2 = data.data[i].emb[1];
+                            dataset.push([newNumber1, newNumber2]); // Add new number to array
+                        }
+                        // console.log(dataset);
+                    }
 
                                 // Update scale domains
                                 xScale.domain([0, d3.max(dataset, function(d) {
