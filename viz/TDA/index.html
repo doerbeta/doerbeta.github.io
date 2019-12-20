@@ -272,11 +272,14 @@
                         // }
                         // var data = require('../datasets/farrell2018_pca.json');
                         import data from '../datasets/farrell2018_pca.json';
+                        console.log(data)
+
                         for (var i = 0; i < data.data.length; i++) {
                             var newNumber1 = data.data[i].emb[0]; 
                             var newNumber2 = data.data[i].emb[1];
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
                         }
+                        console.log(dataset)
 
                         // d3.json("../dataset/farrell2018_pca.json", function(error, data) {
                         //     data.forEach(function(d) {
