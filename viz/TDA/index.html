@@ -19,6 +19,20 @@
     <link href="../../css/simple-line-icons.css" rel="stylesheet">
 </head>
 
+<style type="text/css">
+            /* Format X and Y Axis */
+            .axis path,
+            .axis line {
+                fill: none;
+                stroke: black;
+                shape-rendering: crispEdges;
+            }
+            .axis text {
+                /*font-family: sans-serif;*/
+                font-size: 11px;
+            }
+    </style>
+
 <body>
     <!--         <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top" id="sideNav">
             <h3 class="bottom-some"><a style="color:#ffffff;display:inline;text-transform:none;" href="../../#">Baihan Lin&nbsp;&nbsp;</a></h3>
@@ -184,6 +198,16 @@
 
                             </td>
                         </tr>
+
+                         <tr>
+                            <td class="mb-5 text-primary"> Color: </td>
+                            <td class="mb-5 text-primary">
+                                <input type="radio" name="color" value="none" checked> &nbsp;none&nbsp;
+                                <input type="radio" name="color" value="label"> &nbsp;label&nbsp;
+                                <input type="radio" name="color" value="time"> &nbsp;time&nbsp;
+                            </td>
+                        </tr>
+
                         <tr>
                             <td class="mb-5 text-primary"> Clustering: </td>
                             <td class="mb-5 text-primary">
