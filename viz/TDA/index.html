@@ -263,16 +263,28 @@
 
                     function drawPlots() {
                         var dataset = []; // Initialize empty array
-                        var numDataPoints = 15; // Number of dummy data points
-                        var maxRange = Math.random() * 1000; // Max range of new values
-                        for (var i = 0; i < numDataPoints; i++) {
-                            var newNumber1 = Math.floor(Math.random() * maxRange); // New random integer
-                            var newNumber2 = Math.floor(Math.random() * maxRange); // New random integer
-                            dataset.push([newNumber1, newNumber2]); // Add new number to array
-                        }
+                        // var numDataPoints = 15; // Number of dummy data points
+                        // var maxRange = Math.random() * 1000; // Max range of new values
+                        // for (var i = 0; i < numDataPoints; i++) {
+                        //     var newNumber1 = Math.floor(Math.random() * maxRange); // New random integer
+                        //     var newNumber2 = Math.floor(Math.random() * maxRange); // New random integer
+                        //     dataset.push([newNumber1, newNumber2]); // Add new number to array
+                        // }
                         // var data = require('../dataset/farrell2018_pca.json');
                         import data from '../dataset/farrell2018_pca.json';
+                        for (var i = 0; i < data.data.length; i++) {
+                            var newNumber1 = data.data[i].emb[0]; 
+                            var newNumber2 = data.data[i].emb[1];
+                            dataset.push([newNumber1, newNumber2]); // Add new number to array
+                        }
                         var dataset = data.data['emb']
+
+                        // d3.json("../dataset/farrell2018_pca.json", function(error, data) {
+                        //     data.forEach(function(d) {
+
+                        //     }
+                        //     // console.log(data);
+                        // });
 
                         // Setup settings for graphic
                         var canvas_width = 500;
