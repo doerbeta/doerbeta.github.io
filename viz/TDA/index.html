@@ -361,7 +361,8 @@
                                 //     var newNumber2 = Math.floor(Math.random() * maxRange); // Random int for y
                                 //     dataset.push([newNumber1, newNumber2]); // Add new numbers to array
                                 // }
-                                d3.json('../datasets/farrell2018_umap.json'), function(error,data) {
+
+                        d3.json('../datasets/farrell2018_umap.json').then(function(data) {
                         // console.log(data);
 
                         for (var i = 0; i < data.data.length; i++) {
@@ -369,6 +370,7 @@
                             var newNumber2 = data.data[i].emb[1];
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
                         }
+                        
                         // console.log(dataset);
                     
                                 // Update scale domains
