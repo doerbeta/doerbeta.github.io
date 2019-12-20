@@ -233,7 +233,7 @@
 
                         </tr>
                     </table>
-                    <h4>Click on this to update</h4>
+                    <h4>Click on here to update</h4>
                     <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
                 </p>
 
@@ -242,25 +242,25 @@
 
                 <script>
                     // dummyGraph();
-                    // drawPlots();
+                    drawPlots();
 
-                    // function dummyGraph() {
-                    //     fetch('../datasets/miserables.json').then(res => res.json()).then(data => {
-                    //         const Graph = ForceGraph()
-                    //             (document.getElementById('graph'))
-                    //             .graphData(data)
-                    //             .nodeId('id')
-                    //             .nodeRelSize(4)
-                    //             .nodeVal('val')
-                    //             .nodeLabel('id' + ':' + 'group')
-                    //             .nodeAutoColorBy('group')
-                    //             .linkSource('source')
-                    //             .linkTarget('target')
-                    //             .height(600)
-                    //     });
-                    // }
+                    function dummyGraph() {
+                        fetch('../datasets/miserables.json').then(res => res.json()).then(data => {
+                            const Graph = ForceGraph()
+                                (document.getElementById('graph'))
+                                .graphData(data)
+                                .nodeId('id')
+                                .nodeRelSize(4)
+                                .nodeVal('val')
+                                .nodeLabel('id' + ':' + 'group')
+                                .nodeAutoColorBy('group')
+                                .linkSource('source')
+                                .linkTarget('target')
+                                .height(600)
+                        });
+                    }
 
-                    // function drawPlots() {
+                    function drawPlots() {
                         var dataset = []; // Initialize empty array
                         var numDataPoints = 15; // Number of dummy data points
                         var maxRange = Math.random() * 1000; // Max range of new values
@@ -395,25 +395,25 @@
                                     .call(yAxis);
                             });
 
-                    // }
+                    }
 
-                    // function pcaTDAGraph() {
-                    //     fetch('../datasets/farrell2018_pca.json').then(res => res.json()).then(data => {
-                    //         const Graph = ForceGraph()
-                    //             (document.getElementById('graph'))
-                    //             .graphData(data)
-                    //             .nodeId('id')
-                    //             .nodeRelSize(4)
-                    //             .nodeVal('val')
-                    //             .nodeLabel('id' + ':' + 'group')
-                    //             .nodeAutoColorBy('group')
-                    //             .linkSource('source')
-                    //             .linkTarget('target')
-                    //             .height(600)
-                    //     });
-                    // }
+                    function pcaTDAGraph() {
+                        fetch('../datasets/farrell2018_pca.json').then(res => res.json()).then(data => {
+                            const Graph = ForceGraph()
+                                (document.getElementById('graph'))
+                                .graphData(data)
+                                .nodeId('id')
+                                .nodeRelSize(4)
+                                .nodeVal('val')
+                                .nodeLabel('id' + ':' + 'group')
+                                .nodeAutoColorBy('group')
+                                .linkSource('source')
+                                .linkTarget('target')
+                                .height(600)
+                        });
+                    }
 
-                    // var nodes, links
+                    var nodes, links
                 </script>
 
                 <p class="mb-5 text-primary">
@@ -446,6 +446,7 @@
     <script src="../../js/resume.js"></script>
     <script src="//unpkg.com/force-graph"></script>
     <script src="../jsfunctions/tda.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 </body>
 <!-- 
         <div class="flier2"><img src="img/random/rock.png" alt="" style="width:500px;height:300px;"></div>
