@@ -265,25 +265,30 @@
 
                     function drawPlots() {
                         var dataset = []; // Initialize empty array
-                        // var numDataPoints = 15; // Number of dummy data points
-                        // var maxRange = Math.random() * 1000; // Max range of new values
-                        // for (var i = 0; i < numDataPoints; i++) {
-                        //     var newNumber1 = Math.floor(Math.random() * maxRange); // New random integer
-                        //     var newNumber2 = Math.floor(Math.random() * maxRange); // New random integer
-                        //     dataset.push([newNumber1, newNumber2]); // Add new number to array
-                        // }
-                        // var data = require('../datasets/farrell2018_pca.json');
-                        d3.json('../datasets/farrell2018_pca.json').then(function(data) {
-                        // console.log(data);
 
-                        // for (var i = 0; i < data.data.length; i++) {
-                        for (var i = 0; i < 100; i++) {
-                            var newNumber1 = data.data[i].emb[0]; 
-                            var newNumber2 = data.data[i].emb[1];
+                        var numDataPoints = 15; // Number of dummy data points
+                        var maxRange = Math.random() * 1000; // Max range of new values
+                        for (var i = 0; i < numDataPoints; i++) {
+                            var newNumber1 = Math.floor(Math.random() * maxRange); // New random integer
+                            var newNumber2 = Math.floor(Math.random() * maxRange); // New random integer
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
                         }
+
+
+                    //     d3.json('../datasets/farrell2018_pca.json').then(function(data) {
+                    //     // console.log(data);
+
+                    //     // for (var i = 0; i < data.data.length; i++) {
+                    //     for (var i = 0; i < 100; i++) {
+                    //         var newNumber1 = data.data[i].emb[0]; 
+                    //         var newNumber2 = data.data[i].emb[1];
+                    //         dataset.push([newNumber1, newNumber2]); // Add new number to array
+                    //     }
+                    //     console.log(dataset);
+                    // });
+
                         console.log(dataset);
-                    });
+
 
                         // d3.json("../dataset/farrell2018_pca.json", function(error, data) {
                         //     data.forEach(function(d) {
@@ -353,22 +358,22 @@
                                 var numValues = dataset.length; // Get original dataset's length
                                 var maxRange = Math.random() * 1000; // Get max range of new values
                                 dataset = []; // Initialize empty array
-                                // for (var i = 0; i < numValues; i++) {
-                                //     var newNumber1 = Math.floor(Math.random() * maxRange); // Random int for x
-                                //     var newNumber2 = Math.floor(Math.random() * maxRange); // Random int for y
-                                //     dataset.push([newNumber1, newNumber2]); // Add new numbers to array
-                                // }
+                                for (var i = 0; i < numValues; i++) {
+                                    var newNumber1 = Math.floor(Math.random() * maxRange); // Random int for x
+                                    var newNumber2 = Math.floor(Math.random() * maxRange); // Random int for y
+                                    dataset.push([newNumber1, newNumber2]); // Add new numbers to array
+                                }
 
-                        d3.json('../datasets/farrell2018_umap.json').then(function(data) {
-                        // console.log(data);
+                        // d3.json('../datasets/farrell2018_umap.json').then(function(data) {
+                        // // console.log(data);
 
-                        // for (var i = 0; i < data.data.length; i++) {
-                        for (var i = 0; i < 100; i++) {
-                            var newNumber1 = data.data[i].emb[0]; 
-                            var newNumber2 = data.data[i].emb[1];
-                            dataset.push([newNumber1, newNumber2]); // Add new number to array
-                        }
-                        });
+                        // // for (var i = 0; i < data.data.length; i++) {
+                        // for (var i = 0; i < 100; i++) {
+                        //     var newNumber1 = data.data[i].emb[0]; 
+                        //     var newNumber2 = data.data[i].emb[1];
+                        //     dataset.push([newNumber1, newNumber2]); // Add new number to array
+                        // }
+                        // });
                         // console.log(dataset);
                     
                                 // Update scale domains
