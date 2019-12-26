@@ -303,7 +303,7 @@
                             })])
                             .range([padding, canvas_width - padding * 2]); // output range
 
-                        var yScale = d3.scale.linear() // yScale is height of graphic
+                        var yScale = d3.scaleLinear() // yScale is height of graphic
                             .domain([0, d3.max(dataset, function(d) {
                                 return d[1]; // input domain
                             })])
