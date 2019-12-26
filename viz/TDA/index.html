@@ -279,8 +279,8 @@
 
                         // for (var i = 0; i < data.data.length; i++) {
                         for (var i = 0; i < numDataPoints; i++) {
-                            var newNumber1 = Number(data.data[i].emb[0]); 
-                            var newNumber2 = Number(data.data[i].emb[1]);
+                            var newNumber1 = Number(data.data[i].emb[0])+1000; 
+                            var newNumber2 = Number(data.data[i].emb[1])+1000;
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
                         }
                         // console.log(dataset);
@@ -367,7 +367,7 @@
                         // console.log(data);
 
                         // for (var i = 0; i < data.data.length; i++) {
-                        for (var i = 0; i < 100; i++) {
+                        for (var i = 0; i < numDataPoints; i++) {
                             var newNumber1 = Number(data.data[i].emb[0]); 
                             var newNumber2 = Number(data.data[i].emb[1]);
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
