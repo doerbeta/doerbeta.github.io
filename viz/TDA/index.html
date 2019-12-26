@@ -266,11 +266,11 @@
                     function drawPlots() {
                         var dataset = []; // Initialize empty array
 
-                        var numDataPoints = 15; // Number of dummy data points
+                        var numDataPoints = 100; // Number of dummy data points
                         var maxRange = Math.random() * 1000; // Max range of new values
                         for (var i = 0; i < numDataPoints; i++) {
-                            var newNumber1 = Math.floor(Math.random() * maxRange); // New random integer
-                            var newNumber2 = Math.floor(Math.random() * maxRange); // New random integer
+                            var newNumber1 = Math.floor(Math.random() * maxRange) + 0.1; // New random integer
+                            var newNumber2 = Math.floor(Math.random() * maxRange) + 0.1; // New random integer
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
                         }
 
@@ -298,8 +298,8 @@
                         // });
 
                         // Setup settings for graphic
-                        var canvas_width = 1000;
-                        var canvas_height = 600;
+                        var canvas_width = 800;
+                        var canvas_height = 500;
                         var padding = 30; // for chart edges
 
                         // Create scale functions
