@@ -310,16 +310,11 @@
                             .range([canvas_height - padding, padding]); // remember y starts on top going down so we flip
 
                         // Define X axis
-                        var xAxis = d3.svg.axis()
-                            .scale(xScale)
-                            .orient("bottom")
-                            .ticks(5);
+                        var xAxis = d3.axisBottom(xRange).ticks(5);
+                            // .orient("bottom")
 
                         // Define Y axis
-                        var yAxis = d3.svg.axis()
-                            .scale(yScale)
-                            .orient("left")
-                            .ticks(5);
+                        var yAxis = d3.axisBottom(yRange).ticks(5);
 
                         // Create SVG element
                         var svg = d3.select("#graph") // This is where we put our vis
