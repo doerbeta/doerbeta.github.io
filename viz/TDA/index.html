@@ -276,7 +276,8 @@
                         d3.json('../datasets/farrell2018_pca.json').then(function(data) {
                         // console.log(data);
 
-                        for (var i = 0; i < data.data.length; i++) {
+                        // for (var i = 0; i < data.data.length; i++) {
+                        for (var i = 0; i < 100; i++) {
                             var newNumber1 = data.data[i].emb[0]; 
                             var newNumber2 = data.data[i].emb[1];
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
@@ -361,7 +362,8 @@
                         d3.json('../datasets/farrell2018_umap.json').then(function(data) {
                         // console.log(data);
 
-                        for (var i = 0; i < data.data.length; i++) {
+                        // for (var i = 0; i < data.data.length; i++) {
+                        for (var i = 0; i < 100; i++) {
                             var newNumber1 = data.data[i].emb[0]; 
                             var newNumber2 = data.data[i].emb[1];
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
