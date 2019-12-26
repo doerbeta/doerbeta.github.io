@@ -298,8 +298,8 @@
                         // });
 
                         // Setup settings for graphic
-                        var canvas_width = 500;
-                        var canvas_height = 300;
+                        var canvas_width = 1000;
+                        var canvas_height = 600;
                         var padding = 30; // for chart edges
 
                         // Create scale functions
@@ -319,7 +319,7 @@
                         var xAxis = d3.axisBottom(xScale).ticks(5);
 
                         // Define Y axis
-                        var yAxis = d3.axisBottom(yScale).ticks(5);
+                        var yAxis = d3.axisLeft(yScale).ticks(5);
 
                         // Create SVG element
                         var svg = d3.select("#graph") // This is where we put our vis
@@ -389,7 +389,7 @@
                                     .data(dataset) // Update with new data
                                     .transition() // Transition from old to new
                                     .duration(1000) // Length of animation
-                                    .each("start", function() { // Start animation
+                                    .on("start", function() { // Start animation
                                         d3.select(this) // 'this' means the current element
                                             .attr("fill", "red") // Change color
                                             .attr("r", 5); // Change size
@@ -404,7 +404,7 @@
                                     .attr("cy", function(d) {
                                         return yScale(d[1]); // Circle's Y
                                     })
-                                    .each("end", function() { // End animation
+                                    .on("end", function() { // End animation
                                         d3.select(this) // 'this' means the current element
                                             .transition()
                                             .duration(500)
