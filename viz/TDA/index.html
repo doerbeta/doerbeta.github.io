@@ -297,7 +297,7 @@
                         var padding = 30; // for chart edges
 
                         // Create scale functions
-                        var xScale = d3.scale.linear() // xScale is width of graphic
+                        var xScale = d3.scaleLinear() // xScale is width of graphic
                             .domain([0, d3.max(dataset, function(d) {
                                 return d[0]; // input domain
                             })])
