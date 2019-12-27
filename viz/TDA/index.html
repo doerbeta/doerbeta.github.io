@@ -314,7 +314,7 @@
 
                             // Create scale functions
                             xScale = d3.scaleLinear() // xScale is width of graphic
-                                .domain(function() {
+                                .domain(function(i) {
                                     var min = d3.min(dataset, function(d) {
                                     return d[0];
                                 }),
@@ -327,7 +327,7 @@
                                 .range([padding, canvas_width - padding * 2]); // output range
 
                             yScale = d3.scaleLinear() // yScale is height of graphic
-                                .domain(function() {
+                                .domain(function(i) {
                                     var min = d3.min(dataset, function(d) {
                                     return d[1];
                                 }),
@@ -432,7 +432,7 @@
                                     console.log(dataset);
 
                                     // Update scale domains
-                                    xScale.domain(function() {
+                                    xScale.domain(function(i) {
                                     var min = d3.min(dataset, function(d) {
                                     return d[0];
                                 }),
@@ -442,7 +442,7 @@
                                     var buffer = 0.05 * (max - min);
                                     return [min - buffer, max + buffer];
                                 });
-                                    yScale.domain(function() {
+                                    yScale.domain(function(i) {
                                     var min = d3.min(dataset, function(d) {
                                     return d[1];
                                 }),
