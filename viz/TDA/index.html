@@ -268,7 +268,8 @@
                         var numDataPoints = 100; // Number of dummy data points
                         var maxRange = Math.random() * 1000; // Max range of new values
 
-                        embedding = document.querySelector('input[name="embedding"]:checked').value;
+                        var embedding = document.querySelector('input[name="embedding"]:checked').value;
+                        var xScale, yScale, xAxis, yAxis, svg;
                         d3.json(embedding).then(function(data) {
                             // console.log(data);
                             for (var i = 0; i < data.data.length; i++) {
@@ -285,7 +286,7 @@
                             var padding = 30; // for chart edges
 
                             // Create scale functions
-                            var xScale = d3.scaleLinear() // xScale is width of graphic
+                            xScale = d3.scaleLinear() // xScale is width of graphic
                                 .domain([d3.min(dataset, function(d) {
                                     return d[0];
                                 }), d3.max(dataset, function(d) {
@@ -293,7 +294,7 @@
                                 })])
                                 .range([padding, canvas_width - padding * 2]); // output range
 
-                            var yScale = d3.scaleLinear() // yScale is height of graphic
+                            yScale = d3.scaleLinear() // yScale is height of graphic
                                 .domain([d3.min(dataset, function(d) {
                                     return d[1];
                                 }), d3.max(dataset, function(d) {
@@ -302,13 +303,13 @@
                                 .range([canvas_height - padding, padding]); // remember y starts on top going down so we flip
 
                             // Define X axis
-                            var xAxis = d3.axisBottom(xScale).ticks(5);
+                            xAxis = d3.axisBottom(xScale).ticks(5);
 
                             // Define Y axis
-                            var yAxis = d3.axisLeft(yScale).ticks(5);
+                            yAxis = d3.axisLeft(yScale).ticks(5);
 
                             // Create SVG element
-                            var svg = d3.select("#graph") // This is where we put our vis
+                            svg = d3.select("#graph") // This is where we put our vis
                                 .append("svg")
                                 .attr("width", canvas_width)
                                 .attr("height", canvas_height)
@@ -396,7 +397,6 @@
                             //                         .attr("fill", "black") // Change color
                             //                         .attr("r", 2); // Change radius
                             //                 });
-
 
 
                             //         // Update X Axis
