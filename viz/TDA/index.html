@@ -266,8 +266,6 @@
                     function drawPlots() {
                         var dataset = []; // Initialize empty array
                         var numDataPoints = 100; // Number of dummy data points
-                        var decimalplace = 1000;
-
                         var maxRange = Math.random() * 1000; // Max range of new values
                         // for (var i = 0; i < numDataPoints; i++) {
                         //     var newNumber1 = Math.floor(Math.random() * maxRange)/1000; // New random integer
@@ -280,8 +278,8 @@
 
                         // for (var i = 0; i < data.data.length; i++) {
                         for (var i = 0; i < numDataPoints; i++) {
-                            var newNumber1 = Math.round(Number(data.data[i].emb[0]) * decimalplace) / decimalplace; 
-                            var newNumber2 = Math.round(Number(data.data[i].emb[1]) * decimalplace) / decimalplace;
+                            var newNumber1 = parseFloat(data.data[i].emb[0]); 
+                            var newNumber2 = parseFloat(data.data[i].emb[1]);
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
                         }
                         // console.log(dataset);
