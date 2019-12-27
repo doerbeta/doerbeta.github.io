@@ -268,24 +268,24 @@
                         var numDataPoints = 100; // Number of dummy data points
                         var decimalplace = 1000;
 
-                        // var maxRange = Math.random() * 1000; // Max range of new values
-                        // for (var i = 0; i < numDataPoints; i++) {
-                        //     var newNumber1 = Math.floor(Math.random() * maxRange)/1000; // New random integer
-                        //     var newNumber2 = Math.floor(Math.random() * maxRange)/1000; // New random integer
-                        //     dataset.push([newNumber1, newNumber2]); // Add new number to array
-                        // }
-
-                        d3.json('../datasets/farrell2018_pca.json').then(function(data) {
-                        // console.log(data);
-
-                        // for (var i = 0; i < data.data.length; i++) {
+                        var maxRange = Math.random() * 1000; // Max range of new values
                         for (var i = 0; i < numDataPoints; i++) {
-                            var newNumber1 = Math.round(Number(data.data[i].emb[0]) * decimalplace) ; 
-                            var newNumber2 = Math.round(Number(data.data[i].emb[1]) * decimalplace) ;
+                            var newNumber1 = Math.floor(Math.random() * maxRange)/1000; // New random integer
+                            var newNumber2 = Math.floor(Math.random() * maxRange)/1000; // New random integer
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
                         }
-                        // console.log(dataset);
-                    });
+
+                    //     d3.json('../datasets/farrell2018_pca.json').then(function(data) {
+                    //     // console.log(data);
+
+                    //     // for (var i = 0; i < data.data.length; i++) {
+                    //     for (var i = 0; i < numDataPoints; i++) {
+                    //         var newNumber1 = Math.round(Number(data.data[i].emb[0]) * decimalplace) / decimalplace; 
+                    //         var newNumber2 = Math.round(Number(data.data[i].emb[1]) * decimalplace) / decimalplace;
+                    //         dataset.push([newNumber1, newNumber2]); // Add new number to array
+                    //     }
+                    //     // console.log(dataset);
+                    // });
 
                         console.log(dataset);
 
