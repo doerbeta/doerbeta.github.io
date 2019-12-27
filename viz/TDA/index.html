@@ -354,9 +354,9 @@
                                     if (document.querySelector('input[name="color"]:checked').value == "none") {
                                         return "black";
                                     } else if (d >= 20) {
-                                        return color2(cvalues(d-20));
+                                        return color2(cvalues[d]-20);
                                     } else {
-                                        return color(cvalues(d));
+                                        return color(cvalues[d]);
                                     }
                                 });
 
@@ -463,9 +463,9 @@
                                             if (document.querySelector('input[name="color"]:checked').value == "none") {
                                                 return "black";
                                             } else if (d >= 20) {
-                                                return color2(cvalues(d-20));
+                                                return color2(cvalues[d]-20);
                                             } else {
-                                                return color(cvalues(d));
+                                                return color(cvalues[d]);
                                             }
                                         });
 
