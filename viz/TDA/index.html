@@ -289,8 +289,8 @@
 
                             switch (document.querySelector('input[name="color"]:checked').value) {
                                 case "label":
-                                    var color = d3.scaleOrdinal.range(d3.schemeCategory20);
-                                    var color2 = d3.scaleOrdinal.range(d3.schemeCategory20b);
+                                    var color = d3.scaleOrdinal(d3.schemeCategory20);
+                                    var color2 = d3.scaleOrdinal(d3.schemeCategory20b);
                                     console.log(color);
                                     console.log(color2);
                                     break;
@@ -298,7 +298,7 @@
                                     var T = d3.max(cvalues, function(d) {
                                         return d[0];
                                     });
-                                    var color = d3.scaleSequential.range(d3.schemeRdBu[T]);
+                                    var color = d3.scaleSequential(d3.schemeRdBu[T]);
                                     console.log(color);
                                     break;
                                 default:
