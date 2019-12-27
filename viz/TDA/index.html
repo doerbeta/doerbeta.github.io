@@ -237,8 +237,7 @@
 
                         </tr>
                     </table>
-                    <h4>Click on this text to update</h4>
-                    <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
+
                 </p>
 
                 <div id="graph"></div>
@@ -264,20 +263,42 @@
                     }
 
                     function drawPlots() {
-                        var dataset = []; // Initialize empty array
-                        var numDataPoints = 100; // Number of dummy data points
-                        var maxRange = Math.random() * 1000; // Max range of new values
+                        var dataset = [],
+                            cvalues = []; // Initialize empty array
 
                         var embedding = document.querySelector('input[name="embedding"]:checked').value;
                         var xScale, yScale, xAxis, yAxis, svg;
                         d3.json(embedding).then(function(data) {
                             // console.log(data);
                             for (var i = 0; i < data.data.length; i++) {
-                            // for (var i = 0; i < numDataPoints; i++) {
                                 var newNumber1 = parseFloat(data.data[i].emb[0]);
                                 var newNumber2 = parseFloat(data.data[i].emb[1]);
-                                dataset.push([newNumber1, newNumber2]); 
+                                dataset.push([newNumber1, newNumber2]);
+
+                                switch (document.querySelector('input[name="color"]:checked').value) {
+                                    case "label":
+                                        cvalues.push(parseInt(data.data[i].label));
+                                        break;
+                                    case "time":
+                                        cvalues.push(parseInt(data.data[i].time));
+                                        break;
+                                    default:
+                                        cvalues.push(0);
+                                }
                             }
+
+                            switch (document.querySelector('input[name="color"]:checked').value) {
+                                case "label":
+                                    var color = d3.scaleOrdinal(d3.schemeCategory20);
+                                    break;
+                                case "time":
+                                    var T = d3.max(cvalues, function(d) {
+                                        return d[0];
+                                    });
+                                    var color = d3.scaleSequential(d3.schemeRdBu[T]);
+                                    break;
+                            }
+
                             // console.log(dataset);
 
                             // Setup settings for graphic
@@ -325,7 +346,14 @@
                                 .attr("cy", function(d) { // Circle's Y
                                     return yScale(d[1]);
                                 })
-                                .attr("r", 2); // radius
+                                .attr("r", 2) // radius
+                                .style("fill", function(d) {
+                                    if (document.querySelector('input[name="color"]:checked').value == "none") {
+                                        return "black";
+                                    } else {
+                                        return color(cValue(d));
+                                    }
+                                });
 
                             // Add to X axis
                             svg.append("g")
@@ -339,63 +367,97 @@
                                 .attr("transform", "translate(" + padding + ",0)")
                                 .call(yAxis);
 
-                            // On click, update with new data
 
-var embs = document.getElementsByName('embedding')
-for (var radioCounter = 0 ; radioCounter < embs.length; radioCounter++) {
-      embs[radioCounter].onclick = function() {
-        embedding = this.value;
-                                    dataset = []; // Initialize empty array
-                                    d3.json(embedding).then(function(data) {
-                                        // console.log(data);
+                            // draw legend
+                            var legend = svg.selectAll(".legend")
+                                .data(color.domain())
+                                .enter().append("g")
+                                .attr("class", "legend")
+                                .attr("transform", function(d, i) {
+                                    return "translate(0," + i * 20 + ")";
+                                });
 
-                                        for (var i = 0; i < data.data.length; i++) {
+                            // draw legend colored rectangles
+                            legend.append("rect")
+                                .attr("x", width - 18)
+                                .attr("width", 18)
+                                .attr("height", 18)
+                                .style("fill", color);
+
+                            // draw legend text
+                            legend.append("text")
+                                .attr("x", width - 24)
+                                .attr("y", 9)
+                                .attr("dy", ".35em")
+                                .style("text-anchor", "end")
+                                .text(function(d) {
+                                    return d;
+                                });
+                        });
+                        // On click, update with new data
+
+                        var embs = document.getElementsByName('embedding')
+                        for (var radioCounter = 0; radioCounter < embs.length; radioCounter++) {
+                            embs[radioCounter].onclick = function() {
+                                embedding = this.value;
+                                dataset = []; // Initialize empty array
+                                d3.json(embedding).then(function(data) {
+                                    // console.log(data);
+
+                                    for (var i = 0; i < data.data.length; i++) {
                                         // for (var i = 0; i < numValues; i++) {
-                                            var newNumber1 = parseFloat(data.data[i].emb[0]);
-                                            var newNumber2 = parseFloat(data.data[i].emb[1]);
-                                            dataset.push([newNumber1, newNumber2]); // Add new number to array
-                                        }
-                                        console.log(dataset);
+                                        var newNumber1 = parseFloat(data.data[i].emb[0]);
+                                        var newNumber2 = parseFloat(data.data[i].emb[1]);
+                                        dataset.push([newNumber1, newNumber2]); // Add new number to array
+                                    }
+                                    console.log(dataset);
 
-                                        // Update scale domains
-                                        xScale.domain([d3.min(dataset, function(d) {
-                                            return d[0];
-                                        }), d3.max(dataset, function(d) {
-                                            return d[0];
-                                        })]);
-                                        yScale.domain([d3.min(dataset, function(d) {
-                                            return d[1];
-                                        }), d3.max(dataset, function(d) {
-                                            return d[1];
-                                        })]);
+                                    // Update scale domains
+                                    xScale.domain([d3.min(dataset, function(d) {
+                                        return d[0];
+                                    }), d3.max(dataset, function(d) {
+                                        return d[0];
+                                    })]);
+                                    yScale.domain([d3.min(dataset, function(d) {
+                                        return d[1];
+                                    }), d3.max(dataset, function(d) {
+                                        return d[1];
+                                    })]);
 
-                                        // Update circles
-                                        svg.selectAll("circle")
-                                            .data(dataset) // Update with new data
-                                            .transition() // Transition from old to new
-                                            .duration(2000) // Length of animation
-                                            .on("start", function() { // Start animation
-                                                d3.select(this) // 'this' means the current element
-                                                    .attr("fill", "red") // Change color
-                                                    .attr("r", 3); // Change size
-                                            })
-                                            .delay(function(d, i) {
-                                                return i / dataset.length * 500; // Dynamic delay (i.e. each item delays a little longer)
-                                            })
-                                            //.ease("linear")  // Transition easing - default 'variable' (i.e. has acceleration), also: 'circle', 'elastic', 'bounce', 'linear'
-                                            .attr("cx", function(d) {
-                                                return xScale(d[0]); // Circle's X
-                                            })
-                                            .attr("cy", function(d) {
-                                                return yScale(d[1]); // Circle's Y
-                                            })
-                                            .on("end", function() { // End animation
-                                                d3.select(this) // 'this' means the current element
-                                                    .transition()
-                                                    .duration(500)
-                                                    .attr("fill", "black") // Change color
-                                                    .attr("r", 2); // Change radius
-                                            });
+                                    // Update circles
+                                    svg.selectAll("circle")
+                                        .data(dataset) // Update with new data
+                                        .transition() // Transition from old to new
+                                        .duration(2000) // Length of animation
+                                        .on("start", function() { // Start animation
+                                            d3.select(this) // 'this' means the current element
+                                                // .attr("fill", "red") // Change color
+                                                .attr("r", 2); // Change size
+                                        })
+                                        .delay(function(d, i) {
+                                            return i / dataset.length * 500; // Dynamic delay (i.e. each item delays a little longer)
+                                        })
+                                        //.ease("linear")  // Transition easing - default 'variable' (i.e. has acceleration), also: 'circle', 'elastic', 'bounce', 'linear'
+                                        .attr("cx", function(d) {
+                                            return xScale(d[0]); // Circle's X
+                                        })
+                                        .attr("cy", function(d) {
+                                            return yScale(d[1]); // Circle's Y
+                                        })
+                                        .on("end", function() { // End animation
+                                            d3.select(this) // 'this' means the current element
+                                                .transition()
+                                                .duration(500)
+                                                .attr("fill", "black") // Change color
+                                                .attr("r", 2); // Change radius
+                                        }) // radius
+                                        .style("fill", function(d) {
+                                            if (document.querySelector('input[name="color"]:checked').value == "none") {
+                                                return "black";
+                                            } else {
+                                                return color(cValue(d));
+                                            }
+                                        });
 
                                     // Update X Axis
                                     svg.select(".x.axis")
@@ -410,85 +472,85 @@ for (var radioCounter = 0 ; radioCounter < embs.length; radioCounter++) {
                                         .call(yAxis);
 
 
-                                    });
+                                });
 
-      }
-}
-                            // d3.select("h4")
-                            //     .on("click", function() {
-                            //         var numValues = dataset.length; // Get original dataset's length
-                            //         var maxRange = Math.random() * 1000; // Get max range of new values
-                            //         dataset = []; // Initialize empty array
+                            }
+                        }
+                        // d3.select("h4")
+                        //     .on("click", function() {
+                        //         var numValues = dataset.length; // Get original dataset's length
+                        //         var maxRange = Math.random() * 1000; // Get max range of new values
+                        //         dataset = []; // Initialize empty array
 
-                            //         d3.json('../datasets/farrell2018_umap.json').then(function(data) {
-                            //             // console.log(data);
+                        //         d3.json('../datasets/farrell2018_umap.json').then(function(data) {
+                        //             // console.log(data);
 
-                            //             for (var i = 0; i < data.data.length; i++) {
-                            //             // for (var i = 0; i < numValues; i++) {
-                            //                 var newNumber1 = parseFloat(data.data[i].emb[0]);
-                            //                 var newNumber2 = parseFloat(data.data[i].emb[1]);
-                            //                 dataset.push([newNumber1, newNumber2]); // Add new number to array
-                            //             }
-                            //             console.log(dataset);
+                        //             for (var i = 0; i < data.data.length; i++) {
+                        //             // for (var i = 0; i < numValues; i++) {
+                        //                 var newNumber1 = parseFloat(data.data[i].emb[0]);
+                        //                 var newNumber2 = parseFloat(data.data[i].emb[1]);
+                        //                 dataset.push([newNumber1, newNumber2]); // Add new number to array
+                        //             }
+                        //             console.log(dataset);
 
-                            //             // Update scale domains
-                            //             xScale.domain([d3.min(dataset, function(d) {
-                            //                 return d[0];
-                            //             }), d3.max(dataset, function(d) {
-                            //                 return d[0];
-                            //             })]);
-                            //             yScale.domain([d3.min(dataset, function(d) {
-                            //                 return d[1];
-                            //             }), d3.max(dataset, function(d) {
-                            //                 return d[1];
-                            //             })]);
+                        //             // Update scale domains
+                        //             xScale.domain([d3.min(dataset, function(d) {
+                        //                 return d[0];
+                        //             }), d3.max(dataset, function(d) {
+                        //                 return d[0];
+                        //             })]);
+                        //             yScale.domain([d3.min(dataset, function(d) {
+                        //                 return d[1];
+                        //             }), d3.max(dataset, function(d) {
+                        //                 return d[1];
+                        //             })]);
 
-                            //             // Update circles
-                            //             svg.selectAll("circle")
-                            //                 .data(dataset) // Update with new data
-                            //                 .transition() // Transition from old to new
-                            //                 .duration(2000) // Length of animation
-                            //                 .on("start", function() { // Start animation
-                            //                     d3.select(this) // 'this' means the current element
-                            //                         .attr("fill", "red") // Change color
-                            //                         .attr("r", 3); // Change size
-                            //                 })
-                            //                 .delay(function(d, i) {
-                            //                     return i / dataset.length * 500; // Dynamic delay (i.e. each item delays a little longer)
-                            //                 })
-                            //                 //.ease("linear")  // Transition easing - default 'variable' (i.e. has acceleration), also: 'circle', 'elastic', 'bounce', 'linear'
-                            //                 .attr("cx", function(d) {
-                            //                     return xScale(d[0]); // Circle's X
-                            //                 })
-                            //                 .attr("cy", function(d) {
-                            //                     return yScale(d[1]); // Circle's Y
-                            //                 })
-                            //                 .on("end", function() { // End animation
-                            //                     d3.select(this) // 'this' means the current element
-                            //                         .transition()
-                            //                         .duration(500)
-                            //                         .attr("fill", "black") // Change color
-                            //                         .attr("r", 2); // Change radius
-                            //                 });
+                        //             // Update circles
+                        //             svg.selectAll("circle")
+                        //                 .data(dataset) // Update with new data
+                        //                 .transition() // Transition from old to new
+                        //                 .duration(2000) // Length of animation
+                        //                 .on("start", function() { // Start animation
+                        //                     d3.select(this) // 'this' means the current element
+                        //                         .attr("fill", "red") // Change color
+                        //                         .attr("r", 3); // Change size
+                        //                 })
+                        //                 .delay(function(d, i) {
+                        //                     return i / dataset.length * 500; // Dynamic delay (i.e. each item delays a little longer)
+                        //                 })
+                        //                 //.ease("linear")  // Transition easing - default 'variable' (i.e. has acceleration), also: 'circle', 'elastic', 'bounce', 'linear'
+                        //                 .attr("cx", function(d) {
+                        //                     return xScale(d[0]); // Circle's X
+                        //                 })
+                        //                 .attr("cy", function(d) {
+                        //                     return yScale(d[1]); // Circle's Y
+                        //                 })
+                        //                 .on("end", function() { // End animation
+                        //                     d3.select(this) // 'this' means the current element
+                        //                         .transition()
+                        //                         .duration(500)
+                        //                         .attr("fill", "black") // Change color
+                        //                         .attr("r", 2); // Change radius
+                        //                 });
 
-                            //         // Update X Axis
-                            //         svg.select(".x.axis")
-                            //             .transition()
-                            //             .duration(1000)
-                            //             .call(xAxis);
+                        //         // Update X Axis
+                        //         svg.select(".x.axis")
+                        //             .transition()
+                        //             .duration(1000)
+                        //             .call(xAxis);
 
-                            //         // Update Y Axis
-                            //         svg.select(".y.axis")
-                            //             .transition()
-                            //             .duration(100)
-                            //             .call(yAxis);
+                        //         // Update Y Axis
+                        //         svg.select(".y.axis")
+                        //             .transition()
+                        //             .duration(100)
+                        //             .call(yAxis);
 
 
-                            //         });
+                        //         });
 
-                            //     });
+                        //     });
 
-                        });
+                    // });
                     }
 
 
