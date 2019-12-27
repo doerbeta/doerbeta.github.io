@@ -372,8 +372,10 @@
                                 .attr("transform", "translate(" + padding + ",0)")
                                 .call(yAxis);
 
-
+                            
+                            if 
                             // draw legend
+                        if (document.querySelector('input[name="color"]:checked').value != "none") {
                             var legend = svg.selectAll(".legend")
                                 .data(color.domain())
                                 .enter().append("g")
@@ -398,6 +400,7 @@
                                 .text(function(d) {
                                     return d;
                                 });
+                            }
                         });
                         // On click, update with new data
 
