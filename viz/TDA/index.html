@@ -322,7 +322,7 @@
                                     return d[0];
                                 });
                                     var buffer = 0.05 * (max - min);
-                                    [min - buffer, max + buffer]
+                                    return [min - buffer, max + buffer];
                                 })
                                 .range([padding, canvas_width - padding * 2]); // output range
 
@@ -335,7 +335,7 @@
                                     return d[1];
                                 });
                                     var buffer = 0.05 * (max - min);
-                                    [min - buffer, max + buffer]
+                                    return [min - buffer, max + buffer];
                                 })
                                 .range([canvas_height - padding, padding]); // remember y starts on top going down so we flip
 
@@ -440,7 +440,7 @@
                                     return d[0];
                                 });
                                     var buffer = 0.05 * (max - min);
-                                    [min - buffer, max + buffer]
+                                    return [min - buffer, max + buffer];
                                 });
                                     yScale.domain(function() {
                                     var min = d3.min(dataset, function(d) {
@@ -450,7 +450,7 @@
                                     return d[1];
                                 });
                                     var buffer = 0.05 * (max - min);
-                                    [min - buffer, max + buffer]
+                                    return [min - buffer, max + buffer];
                                 });
 
                                     // Update circles
