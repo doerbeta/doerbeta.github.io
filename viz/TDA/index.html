@@ -280,8 +280,8 @@
 
                         // for (var i = 0; i < data.data.length; i++) {
                         for (var i = 0; i < numDataPoints; i++) {
-                            var newNumber1 = Math.round(Number(data.data[i].emb[0]) * decimalplace) / decimalplace; 
-                            var newNumber2 = Math.round(Number(data.data[i].emb[1]) * decimalplace) / decimalplace;
+                            var newNumber1 = Math.round(Number(data.data[i].emb[0]) * decimalplace) ; 
+                            var newNumber2 = Math.round(Number(data.data[i].emb[1]) * decimalplace) ;
                             dataset.push([newNumber1, newNumber2]); // Add new number to array
                         }
                         // console.log(dataset);
