@@ -314,19 +314,29 @@
 
                             // Create scale functions
                             xScale = d3.scaleLinear() // xScale is width of graphic
-                                .domain([d3.min(dataset, function(d) {
+                                .domain(function() {
+                                    var min = d3.min(dataset, function(d) {
                                     return d[0];
-                                }), d3.max(dataset, function(d) {
+                                }),
+                                    max = d3.max(dataset, function(d) {
                                     return d[0];
-                                })])
+                                });
+                                    var buffer = 0.05 * (max - min);
+                                    [min - buffer, max + buffer]
+                                })
                                 .range([padding, canvas_width - padding * 2]); // output range
 
                             yScale = d3.scaleLinear() // yScale is height of graphic
-                                .domain([d3.min(dataset, function(d) {
+                                .domain(function() {
+                                    var min = d3.min(dataset, function(d) {
                                     return d[1];
-                                }), d3.max(dataset, function(d) {
+                                }),
+                                    max = d3.max(dataset, function(d) {
                                     return d[1];
-                                })])
+                                });
+                                    var buffer = 0.05 * (max - min);
+                                    [min - buffer, max + buffer]
+                                })
                                 .range([canvas_height - padding, padding]); // remember y starts on top going down so we flip
 
                             // Define X axis
@@ -422,16 +432,26 @@
                                     console.log(dataset);
 
                                     // Update scale domains
-                                    xScale.domain([d3.min(dataset, function(d) {
-                                        return d[0];
-                                    }), d3.max(dataset, function(d) {
-                                        return d[0];
-                                    })]);
-                                    yScale.domain([d3.min(dataset, function(d) {
-                                        return d[1];
-                                    }), d3.max(dataset, function(d) {
-                                        return d[1];
-                                    })]);
+                                    xScale.domain(function() {
+                                    var min = d3.min(dataset, function(d) {
+                                    return d[0];
+                                }),
+                                    max = d3.max(dataset, function(d) {
+                                    return d[0];
+                                });
+                                    var buffer = 0.05 * (max - min);
+                                    [min - buffer, max + buffer]
+                                });
+                                    yScale.domain(function() {
+                                    var min = d3.min(dataset, function(d) {
+                                    return d[1];
+                                }),
+                                    max = d3.max(dataset, function(d) {
+                                    return d[1];
+                                });
+                                    var buffer = 0.05 * (max - min);
+                                    [min - buffer, max + buffer]
+                                });
 
                                     // Update circles
                                     svg.selectAll("circle")
