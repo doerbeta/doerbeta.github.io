@@ -193,11 +193,11 @@
                         <tr>
                             <td class="mb-5 text-primary"> Embedding: </td>
                             <td class="mb-5 text-primary">
-                                <input type="radio" name="embedding" value="pca" id="embpca" checked> &nbsp;PCA [1] &nbsp;
-                                <input type="radio" name="embedding" value="mds" id="embmds"> &nbsp;MDS [2] &nbsp;
+                                <input type="radio" name="embedding" value="../datasets/farrell2018_pca.json" checked> &nbsp;PCA [1] &nbsp;
+                                <input type="radio" name="embedding" value="mds"> &nbsp;MDS [2] &nbsp;
                                 <input type="radio" name="embedding" value="svd"> &nbsp;SVD &nbsp;
                                 <input type="radio" name="embedding" value="tsne"> &nbsp;t-SNE [3] &nbsp;
-                                <input type="radio" name="embedding" value="umap"> &nbsp;UMAP &nbsp;
+                                <input type="radio" name="embedding" value="../datasets/farrell2018_umap.json"> &nbsp;UMAP &nbsp;
                                 <input type="radio" name="embedding" value="isomap"> &nbsp;ISOMAP &nbsp;
                                 <input type="radio" name="embedding" value="jpca"> &nbsp;jPCA [5] &nbsp;
                                 <input type="radio" name="embedding" value="pmds"> &nbsp;pMDS [6] &nbsp;
@@ -267,13 +267,9 @@
                         var dataset = []; // Initialize empty array
                         var numDataPoints = 100; // Number of dummy data points
                         var maxRange = Math.random() * 1000; // Max range of new values
-                        // for (var i = 0; i < numDataPoints; i++) {
-                        //     var newNumber1 = Math.floor(Math.random() * maxRange)/1000; // New random integer
-                        //     var newNumber2 = Math.floor(Math.random() * maxRange)/1000; // New random integer
-                        //     dataset.push([newNumber1, newNumber2]); // Add new number to array
-                        // }
 
-                        d3.json('../datasets/farrell2018_pca.json').then(function(data) {
+                        embedding = document.querySelector('input[name="embedding"]:checked').value;
+                        d3.json(embedding).then(function(data) {
                             // console.log(data);
 
                             for (var i = 0; i < data.data.length; i++) {
@@ -388,11 +384,11 @@
                                         svg.selectAll("circle")
                                             .data(dataset) // Update with new data
                                             .transition() // Transition from old to new
-                                            .duration(1000) // Length of animation
+                                            .duration(2000) // Length of animation
                                             .on("start", function() { // Start animation
                                                 d3.select(this) // 'this' means the current element
                                                     .attr("fill", "red") // Change color
-                                                    .attr("r", 5); // Change size
+                                                    .attr("r", 3); // Change size
                                             })
                                             .delay(function(d, i) {
                                                 return i / dataset.length * 500; // Dynamic delay (i.e. each item delays a little longer)
