@@ -290,6 +290,7 @@
                             switch (document.querySelector('input[name="color"]:checked').value) {
                                 case "label":
                                     var color = d3.scaleOrdinal(d3.schemeCategory20);
+                                    var color2 = d3.scaleOrdinal(d3.schemeCategory20b);
                                     break;
                                 case "time":
                                     var T = d3.max(cvalues, function(d) {
@@ -350,8 +351,10 @@
                                 .style("fill", function(d) {
                                     if (document.querySelector('input[name="color"]:checked').value == "none") {
                                         return "black";
+                                    } else if (d >= 20) {
+                                        return color2(cvalues(d-20));
                                     } else {
-                                        return color(cValue(d));
+                                        return color(cvalues(d));
                                     }
                                 });
 
@@ -454,8 +457,10 @@
                                         .style("fill", function(d) {
                                             if (document.querySelector('input[name="color"]:checked').value == "none") {
                                                 return "black";
+                                            } else if (d >= 20) {
+                                                return color2(cvalues(d-20));
                                             } else {
-                                                return color(cValue(d));
+                                                return color(cvalues(d));
                                             }
                                         });
 
