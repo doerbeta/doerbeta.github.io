@@ -287,19 +287,23 @@
                                 }
                             }
 
+                            console.log(cvalues);
+
                             switch (document.querySelector('input[name="color"]:checked').value) {
                                 case "label":
                                     var color = d3.scaleOrdinal(d3.schemeCategory20);
                                     var color2 = d3.scaleOrdinal(d3.schemeCategory20b);
-                                    console.log(color);
-                                    console.log(color2);
+                                    // console.log(color);
+                                    // console.log(color2);
                                     break;
                                 case "time":
                                     var T = d3.max(cvalues, function(d) {
                                         return d[0];
                                     });
                                     var color = d3.scaleSequential(d3.schemeRdBu[T]);
-                                    console.log(color);
+                                    console.log(color(1));
+                                    console.log(color(2));
+                                    console.log(color(0));
                                     break;
                                 default:
                                     var color = null;
