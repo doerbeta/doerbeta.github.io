@@ -19,7 +19,7 @@
     <link href="../../css/simple-line-icons.css" rel="stylesheet">
 
     <!-- <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
-    <script src="../../js/d3.min.js"></script>
+    <script src="../../js/d3.js"></script>
 
 </head>
 
@@ -453,10 +453,10 @@
                                         .style("fill", function(d,i) {
                                             if (document.querySelector('input[name="color"]:checked').value == "none") {
                                                 return "black";
-                                            } else if (cvalues[i] >= 20) {
-                                                return color2(cvalues[i]-20);
+                                            // } else if (cvalues[i] >= 20) {
+                                            //     return color2(cvalues[i]-20);
                                             } else {
-                                                return color(cvalues[i]);
+                                                return color(cvalues);
                                             }
                                         });
 
@@ -615,7 +615,7 @@ function getAxis(dataset, dim) {
     <script src="../../js/resume.js"></script>
     <script src="//unpkg.com/force-graph"></script>
     <script src="../jsfunctions/tda.js"></script>
-    <script src="https://d3js.org/d3.v5.js"></script>
+    <!-- <script src="https://d3js.org/d3.v5.js"></script> -->
 </body>
 <!-- 
         <div class="flier2"><img src="img/random/rock.png" alt="" style="width:500px;height:300px;"></div>
