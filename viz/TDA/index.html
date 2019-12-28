@@ -291,13 +291,15 @@
 
                             switch (document.querySelector('input[name="color"]:checked').value) {
                                 case "label":
+                                    var N = [...new Set(cvalues)].length;
+                                    console.log(N);
                                     var color = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20);
                                     var color2 = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20b);
                                     // console.log(color);
                                     // console.log(color2);
                                     break;
                                 case "time":
-                                    var T = var uniqueItems = [...new Set(cvalues)].length;
+                                    var T = [...new Set(cvalues)].length;
                                     console.log(T);
                                     var color = d3.scaleSequential().domain(cvalues).range(d3.schemeRdBu[T]);
                                     console.log(color(1));
