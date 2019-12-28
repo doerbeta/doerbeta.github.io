@@ -293,8 +293,9 @@
                                 case "label":
                                     var N = [...new Set(cvalues)].length;
                                     console.log(N);
-                                    var color = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20);
-                                    var color2 = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20b);
+                                    var color = d3.scaleOrdinal().domain(cvalues).range(d3.schemeRainbow[T]);
+                                    // var color = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20);
+                                    // var color2 = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20b);
                                     // console.log(color);
                                     // console.log(color2);
                                     break;
@@ -614,6 +615,7 @@ function getAxis(dataset, dim) {
     <script src="../../js/resume.js"></script>
     <script src="//unpkg.com/force-graph"></script>
     <script src="../jsfunctions/tda.js"></script>
+    <script src="https://d3js.org/d3.v5.js"></script>
 </body>
 <!-- 
         <div class="flier2"><img src="img/random/rock.png" alt="" style="width:500px;height:300px;"></div>
