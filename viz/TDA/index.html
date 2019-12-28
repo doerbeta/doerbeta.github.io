@@ -294,7 +294,7 @@
                                 case "label":
                                     var N = [...new Set(cvalues)].length;
                                     console.log(N);
-                                    var color = d3.scaleOrdinal(d3.schemeRainbow[N]).domain(cvalues);
+                                    var color = d3.scaleOrdinal(d3.schemeSpectral[N]).domain(cvalues);
                                     // var color = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20);
                                     // var color2 = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20b);
                                     // console.log(color);
