@@ -297,9 +297,7 @@
                                     // console.log(color2);
                                     break;
                                 case "time":
-                                    var T = d3.max(cvalues, function(d) {
-                                        return d[0];
-                                    });
+                                    var T = var uniqueItems = [...new Set(cvalues)].length;
                                     console.log(T);
                                     var color = d3.scaleSequential().domain(cvalues).range(d3.schemeRdBu[T]);
                                     console.log(color(1));
