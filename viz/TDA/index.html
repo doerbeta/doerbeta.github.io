@@ -245,8 +245,8 @@
 
                 <script>
 
-                    import * as d3 from '../js/d3';
-                    import * as d3Chromatic from '../js/d3-scale-chromatic';
+                    // import * as d3 from '../js/d3';
+                    // import * as d3Chromatic from '../js/d3-scale-chromatic';
 
                     // dummyGraph();
                     drawPlots();
@@ -298,7 +298,7 @@
                                 case "label":
                                     var N = [...new Set(cvalues)].length;
                                     console.log(N);
-                                    var color = d3.scaleOrdinal(d3Chromatic.schemeSpectral[N]).domain(cvalues);
+                                    var color = d3.scaleOrdinal(d3-scale-chromatic.schemeSpectral[N]).domain(cvalues);
                                     // var color = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20);
                                     // var color2 = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20b);
                                     // console.log(color);
@@ -307,7 +307,7 @@
                                 case "time":
                                     var T = [...new Set(cvalues)].length;
                                     // console.log(T);
-                                    var color = d3.scaleSequential(d3Chromatic.schemeRdBu[T]).domain(cvalues);
+                                    var color = d3.scaleSequential(d3-scale-chromatic.schemeRdBu[T]).domain(cvalues);
                                     console.log(color(1));
                                     console.log(color(2));
                                     console.log(color(0));
