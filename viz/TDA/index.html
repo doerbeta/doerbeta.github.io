@@ -20,6 +20,7 @@
 
     <!-- <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
     <script src="../../js/d3.js"></script>
+    <script src="../../js/d3-scale-chromatic.js"></script>
 
 </head>
 
@@ -354,10 +355,10 @@
                                 .style("fill", function(d,i) {
                                     if (document.querySelector('input[name="color"]:checked').value == "none") {
                                         return "black";
-                                    } else if (cvalues[i] >= 20) {
-                                        return color2(cvalues[i]-20);
+                                    // } else if (cvalues[i] >= 20) {
+                                    //     return color2(cvalues[i]-20);
                                     } else {
-                                        return color(cvalues[i]);
+                                        return color(cvalues);
                                     }
                                 });
 
