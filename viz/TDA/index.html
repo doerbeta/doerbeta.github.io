@@ -294,7 +294,7 @@
                                 case "label":
                                     var N = [...new Set(cvalues)].length;
                                     console.log(N);
-                                    var color = d3.scaleOrdinal(cvalues, d3.schemeRainbow[N]);
+                                    var color = d3.scaleOrdinal(d3.schemeRainbow[N]).domain(cvalues);
                                     // var color = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20);
                                     // var color2 = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20b);
                                     // console.log(color);
@@ -303,7 +303,7 @@
                                 case "time":
                                     var T = [...new Set(cvalues)].length;
                                     // console.log(T);
-                                    var color = d3.scaleSequential(cvalues, d3.schemeRdBu[T]);
+                                    var color = d3.scaleSequential(d3.schemeRdBu[T]).domain(cvalues);
                                     console.log(color(1));
                                     console.log(color(2));
                                     console.log(color(0));
