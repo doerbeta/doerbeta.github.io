@@ -20,7 +20,7 @@
 
     <!-- <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
     <script src="../../js/d3.js"></script>
-    <script src="../../js/d3-scale.js"></script>
+    <!-- <script src="../../js/d3-scale.js"></script> -->
 
 </head>
 
@@ -294,7 +294,9 @@
                                 case "label":
                                     var N = [...new Set(cvalues)].length;
                                     console.log(N);
-                                    var color = d3.scaleOrdinal().domain(cvalues).range(d3.schemeRainbow[T]);
+                                    var color = d3.scaleOrdinal()
+                                        .domain(cvalues)
+                                        .range(d3.schemeRainbow[N]);
                                     // var color = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20);
                                     // var color2 = d3.scaleOrdinal().domain(cvalues).range(d3.schemeCategory20b);
                                     // console.log(color);
@@ -303,7 +305,9 @@
                                 case "time":
                                     var T = [...new Set(cvalues)].length;
                                     // console.log(T);
-                                    var color = d3.scaleSequential().domain(cvalues).range(d3.schemeRdBu[T]);
+                                    var color = d3.scaleSequential()
+                                        .domain(cvalues)
+                                        .range(d3.schemeRdBu[T]);
                                     console.log(color(1));
                                     console.log(color(2));
                                     console.log(color(0));
