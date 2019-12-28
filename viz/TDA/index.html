@@ -20,7 +20,6 @@
 
     <!-- <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
     <script src="../../js/d3.js"></script>
-    <script src="../../js/d3-scale-chromatic.js"></script>
 
 </head>
 
@@ -288,7 +287,7 @@
                                 }
                             }
 
-                            console.log(cvalues);
+                            // console.log(cvalues);
 
                             switch (document.querySelector('input[name="color"]:checked').value) {
                                 case "label":
@@ -302,7 +301,7 @@
                                     break;
                                 case "time":
                                     var T = [...new Set(cvalues)].length;
-                                    console.log(T);
+                                    // console.log(T);
                                     var color = d3.scaleSequential().domain(cvalues).range(d3.schemeRdBu[T]);
                                     console.log(color(1));
                                     console.log(color(2));
