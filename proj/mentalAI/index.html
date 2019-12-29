@@ -36,7 +36,7 @@
                     <br>
 
                 </p>
-                <img src="./img/mentalRL.png" alt="" class="photo" width="80%">
+                <img src="./img/mentalRL.png" alt="" width="80%">
                 <br>
 
                 <h3 style="text-transform:none"> Abstract </h3>
@@ -56,7 +56,7 @@
                     <br> [2] Lin, B., Cecchi, G., Bouneffouf, D., Reinen, J., & Rish, I. (2019). Reinforcement Learning Models of Human Behavior: Reward Processing in Mental Disorders. <em> 2019 NeurIPS Workshop on Biological and Artificial Reinforcement Learning (BARL) </em>
                     <br> <b> link: </b> <a href="https://arxiv.org/abs/1906.11286" style="color:#268fd6">https://arxiv.org/abs/1906.11286</a>
                     <br>
-                    <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
+                    <!-- <img src="../../img/random/sleep.jpg" alt=""> -->
                 </p>
 
                 <h3 style="text-transform:none"> Method </h3>
@@ -64,7 +64,7 @@
                 <p class="mb-5 text-primary">
                     Inspired by the neurological and psychiatric literature, we build upon the standard Q-Learning, a state-of-art approach to reinforcement learning problem, and extend it to a parametric family of models, called Split-QL, where the reward information is split into two streams, positive and negative. The model puts different weight parameters on the incoming positive and negative rewards, and imposes different discounting factors on positive and negative reward accumulated in the past. This simple but powerful extension of Q-learning allows to capture a variety of reward-processing biases observed in human behavior. Below is our algorithm and parameters:
                     <br>
-                    <img src="./img/algorithm.png" alt="" class="photo" width="80%">
+                    <img src="./img/algorithm.png" alt="" width="80%">
                 </p>
 
                 <h3 style="text-transform:none"> Results </h3>
@@ -72,17 +72,18 @@
                 <p class="mb-5 text-primary">
 
                     Empirically, we evaluated the algorithms in three settings: the gambling game of a simple Markov Decision Process (MDP), a real-life Iowa Gambling Task (IGT) and the PacMan computer game with different stationarities.
-                    <br> In the MDP and IGT tasks, our algorithms outperform baseline in most times.
+                    <br> In the MDP and IGT tasks, our algorithms outperform baseline in many cases.
                     <br>
-                    <img src="./img/f1.png" alt="" class="photo" width="80%">
-                    <img src="./img/f2.png" alt="" class="photo" width="60%">
+                    <img src="./img/f1.png" alt="" width="80%">
+                    <br> For instance, in 100 randomly generated arficial environments, our agents beats standard ones most of the times
+                    <br>
+                    <img src="./img/f2.png" alt="" width="60%">
                     <br> In the IGT experiment, the behavioral trajectories of the "mental" agents cluster by the psychiatric conditions with real human data.
                     <br>
-
-                    <img src="./img/f3.png" alt="" class="photo" width="80%">
+                    <img src="./img/f3.png" alt="" width="80%">
                     <br> In the PacMan experiment, our two-stream-reward paradigm demonstrated constant advantages over the baseline algorithms.
                     <br>
-                    <img src="./img/f4.png" alt="" class="photo" width="80%">
+                    <img src="./img/f4.png" alt="" width="80%">
                 </p>
 
                 <h3 style="text-transform:none"> Ongoing work </h3>
