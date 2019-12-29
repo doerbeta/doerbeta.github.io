@@ -64,7 +64,8 @@
                 <p class="mb-5 text-primary">
                     To capture the neural dynamics, the framework involves four steps (as in the figure below). First each time frame of neural activity is analyzed separately in a representational similarity analysis (RSA) paradigm. This could involve, for example, spike counts performed in a temporal sliding window to obtain a neural population activity pattern for each experimental condition. Second, for each time frame, the representational dissimilarity is estimated for each pair of experimental conditions and assembled in the representational dissimilarity matrix (RDM). Stacking these RDMs along the time dimension results in an RDM movie. Third, each RDM is separately subjected to multidimensional scaling (MDS) to obtain, for each time frame, a 2d or 3d configuration of the points for visualization. Fourth, the configurations are aligned to each other using Generalized Procrustes Analysis (GPA), and finally, the aligned configurations are presented together. 
                     <br>
-                    <img src="./img/algorithm.png" alt=""  style="width:80%;display:block;margin-left:auto;margin-right:auto;">
+                    <br>
+                    <img src="./img/algorithm.png" alt=""  style="width:90%;display:block;margin-left:auto;margin-right:auto;">
                     <!-- <br> -->
                 </p>
 
@@ -74,7 +75,7 @@
                     I benchmarked my method on the macaque (a type of monkey)'s single-electrode recordings from the inferior bank of the ST segment, shown 100 grayscale object images from five different categories (faces, fruits, places, body parts and objects). RSA was further applied to select visually-responsive neurons and extract single-trial response patterns from the spike-density function. The recordings were truncated into sections of 821 ms (starting from 100ms before stimulus onset). RDM movies were generated using a sliding window of 21 ms with cross-validated spike rate distance (SRD) as the reponse-pattern dissimilarity measure.                    
                     <br>
                     Usually, the dynamic information is missing if we consider each time frame independently, as there are no intertemporal information given. However, with the alignment that I proposed, we can visualize the smooth transition of each activity below in this movie (each dot is an activity in an individual session; when time is negative, it means the stimulus has not yet begun).
-                     <video style="width:50%;display:block;text-align:center" autoplay>
+                     <video style="width:60%;display:block;margin-left:auto;margin-right:auto;" autoplay>
                         <source src="./img/stm100_movie.mp4" type="video/mp4">
                         <source src="./img/stm100_movie.ogg" type="video/ogg">
                         Your browser does not support the video tag.
