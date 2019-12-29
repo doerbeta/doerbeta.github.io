@@ -1,1 +1,119 @@
-<meta http-equiv="refresh" content="0; URL='https://baihan.nyc/proj/proj'" />
+<!DOCTYPE html>
+<script src="../../js/loadhtml.js"></script>
+
+<html lang="en">
+
+<head>
+    <div w3-include-html="../../html/header.html"></div>
+    <script>
+        w3IncludeHTML();
+    </script>
+</head>
+
+<body>
+    <div w3-include-html="../../html/navleft.html"></div>
+    <div w3-include-html="../../html/navright.html"></div>
+
+    <div class="container-fluid p-0">
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="">
+            <div class="my-auto">
+                <h2 class="mb-5" style="text-transform:none">Minimum Description Length of Neural Networks</h2>
+
+                <b class="text-primary">  by Baihan Lin, Columbia University, Feb 2019 &nbsp; </b>
+                <p class="mb-5 text-primary">
+                    <br> <b> GitHub code:</b> <a href="https://github.com/doerlbh/UnsupervisedAttentionMechanism" style="color:#268fd6">https://github.com/doerlbh/UnsupervisedAttentionMechanism</a>
+
+                    <br>
+                </p>
+
+                <h3 style="text-transform:none"> TL;DR </h3>
+
+                <p class="text-primary">
+                    I develop a novel visualization and inference framework to compare human brain data (e.g. neuroimaging, neural recording) with computational models (e.g. neural networks) taking the signal dynamics into account, which can (1) help neuroscientists understand how brain encode and decode information over time, (2) help create better AI algorithms inspired by these discoveries, and (3) help visualize the abstract concept of representations in the brain and identify critical stages in human visual processing.
+                    <br>
+                    <br>
+
+                </p>
+                <img src="./img/uam.png" alt="" style="width:80%;display:block;margin-left:auto;margin-right:auto;">
+                <br>
+
+                <h3 style="text-transform:none"> Abstract </h3>
+
+                <p class="mb-5 text-primary">
+                         Inspired by the adaptation phenomenon of neuronal firing, we propose an unsupervised attention mechanism (UAM) which computes the statistical regularity in the implicit space of neural networks under the Minimum Description Length (MDL) principle. Treating the neural network optimization process as a partially observable model selection problem, UAM constrained the implicit space by a normalization factor, the universal code length. We compute this universal code incrementally across neural network layers and demonstrated the flexibility to include data priors such as top-down attention and other oracle information. Empirically, our approach outperforms existing normalization methods in tackling limited, imbalanced and nonstationary input distribution in computer vision and reinforcement learning tasks. Lastly, UAM tracks dependency and critical learning stages across layers and recurrent time steps of deep networks.
+                    <br>
+                    <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
+                </p>
+
+                <h3 style="text-transform:none"> Publications </h3>
+
+                <p class="mb-5 text-primary">
+                    [1] Lin, B. (2019). Neural Networks as Model Selection with Incremental MDL Normalization. <em> Human Brain and Artificial Intelligence, (Vol. 1072, pp. 195-209). Springer Nature.</em> 
+                    <br> <b> link: </b> <a href="https://link.springer.com/chapter/10.1007/978-981-15-1398-5_14" style="color:#268fd6">https://link.springer.com/chapter/10.1007/978-981-15-1398-5_14</a>
+                    <br>
+                    <br> [2] Lin, B. (2019). Unsupervised Attention Mechanism across Neural Network Layers. <em> arXiv preprint arXiv:1902.10658. </em>
+                    <br> <b> link: </b> <a href="https://arxiv.org/abs/1902.10658" style="color:#268fd6">https://arxiv.org/abs/1902.10658</a>
+                    <br>
+                    <!-- <img src="../../img/random/sleep.jpg" alt=""> -->
+                </p>
+
+                <h3 style="text-transform:none"> Neural Networks as a model selection process </h3>
+
+                <p class="mb-5 text-primary">
+
+                    <br>
+                    <br>
+                    <img src="./img/mmnn.png" alt=""  style="width:60%;display:block;margin-left:auto;margin-right:auto;">
+                    <!-- <br> -->
+                </p>
+
+                <h3 style="text-transform:none"> Results </h3>
+
+                <p class="mb-5 text-primary">
+                    
+                    <br>
+                    <img src="./img/mnist.png" alt=""  style="width:100%;display:block;margin-left:auto;margin-right:auto;">
+                    <br>
+                    <img src="./img/table.png" alt=""  style="width:100%;display:block;margin-left:auto;margin-right:auto;">
+                    <br>
+                    <img src="./img/dqn.png" alt=""  style="width:100%;display:block;margin-left:auto;margin-right:auto;">
+                    <br>
+                    <img src="./img/game.png" alt=""  style="width:100%;display:block;margin-left:auto;margin-right:auto;">
+                    
+                </p>
+
+                <h3 style="text-transform:none"> Ongoing work </h3>
+
+                <p class="mb-5 text-primary">
+                    To better understand the perspective I proposed, I am comparing my method with other information theoretical methods such as mutual information. Stay tuned~
+                    <br>
+                    <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
+                </p>
+
+                
+            </div>
+        </section>
+    </div>
+
+    <script>
+        w3IncludeHTML();
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.bundle.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="../../js/jquery.easing.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="../../js/resume.js"></script>
+</body>
+<!-- 
+        <div class="flier2"><img src="img/random/rock.png" alt="" style="width:500px;height:300px;"></div>
+
+        <div class="flier"><img src="img/random/doge.png" alt="" style="width:300px;height:400px;"></div>
+         -->
+<footer style="align:center;">&copy; Copyright 2016
+    <script>
+        new Date().getFullYear() > 2016 && document.write("-" + new Date().getFullYear());
+    </script> by Baihan Lin</footer>
+
+</html>
