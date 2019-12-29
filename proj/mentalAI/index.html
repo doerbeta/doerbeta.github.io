@@ -22,23 +22,24 @@
                 <b class="text-primary">  by Baihan Lin, Columbia University, Sep 2018 &nbsp; </b>
                 <p class="mb-5 text-primary">
                     <br> <b> GitHub code:</b> <a href="https://github.com/doerlbh/mentalRL" style="color:#268fd6">https://github.com/doerlbh/mentalRL</a>
-                    
+
                     <br>
                     <br> Joint work with Dr. Guillermo Cecchi (IBM Research), Dr. Djallel Bouneffouf (IBM Research), Dr. Jenna Reinen (IBM Research) and Dr. Irina Rish (Mila, UdeM)
                     <br>
-                    </p>
+                </p>
 
-                    <h3 style="text-transform:none"> TL;DR </h3>
+                <h3 style="text-transform:none"> TL;DR </h3>
 
-<p class="text-primary"> 
-                    I train AI agents to play games just like people with mental disorders play games, which can (1) help neuroscientists understand these conditions, (2) help create better AI algorithms to tackle human-level challenges, and (3) help doctors clinically monitor psychiatric patients by simply letting them play computer games. 
+                <p class="text-primary">
+                    I train AI agents to play games just like people with mental disorders play games, which can (1) help neuroscientists understand these conditions, (2) help create better AI algorithms to tackle human-level challenges, and (3) help doctors clinically monitor psychiatric patients by simply letting them play computer games.
                     <br>
                     <br>
 
                 </p>
-                    <img src="./img/mentalRL.png" alt="" class="photo" width="80%"> <br>
+                <img src="./img/mentalRL.png" alt="" class="photo" width="80%">
+                <br>
 
-                    <h3 style="text-transform:none"> Abstract </h3>
+                <h3 style="text-transform:none"> Abstract </h3>
 
                 <p class="mb-5 text-primary">
                     Drawing an inspiration from behavioral studies of human decision making, we propose here a more general and flexible parametric framework for reinforcement learning that extends standard Q-learning to a two-stream model for processing positive and negative rewards, and allows to incorporate a wide range of reward-processing biases -- an important component of human decision making which can help us better understand a wide spectrum of multi-agent interactions in complex real-world socioeconomic systems, as well as various neuropsychiatric conditions associated with disruptions in normal reward processing. From the computational perspective, we observe that the proposed Split-QL model and its clinically inspired variants consistently outperform standard Q-Learning and SARSA methods, as well as recently proposed Double Q-Learning approaches, on simulated tasks with particular reward distributions, a real-world dataset capturing human decision-making in gambling tasks, and the Pac-Man game in a lifelong learning setting across different reward stationarities.
@@ -46,61 +47,55 @@
                     <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
                 </p>
 
-                    <h3 style="text-transform:none"> Publications </h3>
+                <h3 style="text-transform:none"> Publications </h3>
 
-<p class="mb-5 text-primary">
-                [1] Lin, B., Bouneffouf, D., & Cecchi, G. (2019). Split Q learning: reinforcement learning with two-stream rewards. <em> In Proceedings of the 28th International Joint Conference on Artificial Intelligence (pp. 6448-6449). AAAI Press.</em>
-<br> <b> link: </b> <a href="https://arxiv.org/abs/1906.12350" style="color:#268fd6">https://arxiv.org/abs/1906.12350</a>
+                <p class="mb-5 text-primary">
+                    [1] Lin, B., Bouneffouf, D., & Cecchi, G. (2019). Split Q learning: reinforcement learning with two-stream rewards. <em> In Proceedings of the 28th International Joint Conference on Artificial Intelligence (pp. 6448-6449). AAAI Press.</em>
+                    <br> <b> link: </b> <a href="https://arxiv.org/abs/1906.12350" style="color:#268fd6">https://arxiv.org/abs/1906.12350</a>
                     <br>
-                <br> [2] Lin, B., Cecchi, G., Bouneffouf, D., Reinen, J., & Rish, I. (2019). Reinforcement Learning Models of Human Behavior: Reward Processing in Mental Disorders. <em> 2019 NeurIPS Workshop on Biological and Artificial Reinforcement Learning (BARL) </em>
-                <br> <b> link: </b> <a href="https://arxiv.org/abs/1906.11286" style="color:#268fd6">https://arxiv.org/abs/1906.11286</a>
+                    <br> [2] Lin, B., Cecchi, G., Bouneffouf, D., Reinen, J., & Rish, I. (2019). Reinforcement Learning Models of Human Behavior: Reward Processing in Mental Disorders. <em> 2019 NeurIPS Workshop on Biological and Artificial Reinforcement Learning (BARL) </em>
+                    <br> <b> link: </b> <a href="https://arxiv.org/abs/1906.11286" style="color:#268fd6">https://arxiv.org/abs/1906.11286</a>
                     <br>
                     <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
                 </p>
 
                 <h3 style="text-transform:none"> Method </h3>
-                
-<p class="mb-5 text-primary">
-Inspired by the neurological and psychiatric literature, we build upon the standard Q-Learning, a state-of-art approach to reinforcement learning problem, and extend it to a parametric family of models, called Split-QL, where the reward information is split into two streams, positive and negative. The model puts different weight parameters on the incoming positive and negative rewards, and imposes different discounting factors on positive and negative reward accumulated in the past. This simple but powerful extension of Q-learning allows to capture a variety of reward-processing biases observed in human behavior. Below is our algorithm and parameters:
+
+                <p class="mb-5 text-primary">
+                    Inspired by the neurological and psychiatric literature, we build upon the standard Q-Learning, a state-of-art approach to reinforcement learning problem, and extend it to a parametric family of models, called Split-QL, where the reward information is split into two streams, positive and negative. The model puts different weight parameters on the incoming positive and negative rewards, and imposes different discounting factors on positive and negative reward accumulated in the past. This simple but powerful extension of Q-learning allows to capture a variety of reward-processing biases observed in human behavior. Below is our algorithm and parameters:
                     <br>
                     <img src="./img/algorithm.png" alt="" class="photo" width="80%">
                 </p>
 
                 <h3 style="text-transform:none"> Results </h3>
 
-<p class="mb-5 text-primary">
+                <p class="mb-5 text-primary">
 
-    Empirically, we evaluated the algorithms in three settings: the gambling game of a simple Markov Decision Process (MDP), a real-life Iowa Gambling Task (IGT) and the PacMan computer game with different stationarities.
+                    Empirically, we evaluated the algorithms in three settings: the gambling game of a simple Markov Decision Process (MDP), a real-life Iowa Gambling Task (IGT) and the PacMan computer game with different stationarities.
+                    <br> In the MDP and IGT tasks, our algorithms outperform baseline in most times.
                     <br>
-                    In the MDP and IGT tasks, our algorithms outperform baseline in most times.
-                                        <br>
-<img src="./img/f1.png" alt="" class="photo" width="80%">
+                    <img src="./img/f1.png" alt="" class="photo" width="80%">
                     <img src="./img/f2.png" alt="" class="photo" width="60%">
-                    <br>
-
-                    In the IGT experiment, the behavioral trajectories of the "mental" agents cluster by the psychiatric conditions with real human data.
+                    <br> In the IGT experiment, the behavioral trajectories of the "mental" agents cluster by the psychiatric conditions with real human data.
                     <br>
 
                     <img src="./img/f3.png" alt="" class="photo" width="80%">
+                    <br> In the PacMan experiment, our two-stream-reward paradigm demonstrated constant advantages over the baseline algorithms.
                     <br>
-
-                    In the PacMan experiment, our two-stream-reward paradigm demonstrated constant advantages over the baseline algorithms.
-                                        <br>
-<img src="./img/f4.png" alt="" class="photo" width="80%">
+                    <img src="./img/f4.png" alt="" class="photo" width="80%">
                 </p>
 
                 <h3 style="text-transform:none"> Ongoing work </h3>
 
-<p class="mb-5 text-primary">
-    As an extension, I am building a smartphone app to let user play a game for a few rounds and reveals his/her clinical tendency to a spectrum of psychiatric diseases -- a easy and fun way to diagnose and monitor mental health conditions for patients. Stay tuned!
+                <p class="mb-5 text-primary">
+                    As an extension, I am building a smartphone app to let user play a game for a few rounds and reveals his/her clinical tendency to a spectrum of psychiatric diseases -- a easy and fun way to diagnose and monitor mental health conditions for patients. Stay tuned!
                     <br>
                     <!-- <img src="../../img/random/sleep.jpg" alt="" class="photo"> -->
                 </p>
-   
 
-                    <h3 style="text-transform:none"> Watch some "mental" agents playing PacMan </h3>
+                <h3 style="text-transform:none"> Watch some "mental" agents playing PacMan </h3>
 
-<div class="photorow">
+                <div class="photorow">
                     <div class="photocolumn">
                         <div class="simplecontainer">
                             <img src="./img/AZ.gif" alt="" class="photo">
@@ -138,7 +133,7 @@ Inspired by the neurological and psychiatric literature, we build upon the stand
                         </div>
                     </div>
                     <div class="photocolumn">
-                                                <div class="simplecontainer">
+                        <div class="simplecontainer">
                             <img src="./img/PD.gif" alt="" class="photo">
                             <div class="overlay"> Parkinson's </div>
                         </div>
@@ -154,10 +149,9 @@ Inspired by the neurological and psychiatric literature, we build upon the stand
                             <img src="./img/SQL.gif" alt="" class="photo">
                             <div class="overlay"> Split Q-Learning </div>
                         </div>
-                        
+
                     </div>
                 </div>
-
 
             </div>
         </section>
