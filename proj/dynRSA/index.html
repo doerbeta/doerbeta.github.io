@@ -64,7 +64,7 @@
                 <p class="mb-5 text-primary">
                     To capture the neural dynamics, the framework involves four steps (as in the figure below). First each time frame of neural activity is analyzed separately in a representational similarity analysis (RSA) paradigm. This could involve, for example, spike counts performed in a temporal sliding window to obtain a neural population activity pattern for each experimental condition. Second, for each time frame, the representational dissimilarity is estimated for each pair of experimental conditions and assembled in the representational dissimilarity matrix (RDM). Stacking these RDMs along the time dimension results in an RDM movie. Third, each RDM is separately subjected to multidimensional scaling (MDS) to obtain, for each time frame, a 2d or 3d configuration of the points for visualization. Fourth, the configurations are aligned to each other using Generalized Procrustes Analysis (GPA), and finally, the aligned configurations are presented together. 
                     <br>
-                    <img src="./img/algorithm.png" alt=""  style="width:80%;display:block;text-align:center">
+                    <img src="./img/algorithm.png" alt=""  style="width:80%;display:block;margin-left:auto;margin-right:auto;">
                     <!-- <br> -->
                 </p>
 
@@ -82,13 +82,13 @@
 
                     <br> We can also easily visualize the trajectory with time as the third dimension (see below, with each colored trajectory as the average activity of the different stimuli of the same image category). Dissecting temporal segment into 2d plots, we can gain interesting biological insights like: the categories faces and fruits diverges become discriminable rapidly in the IT population code due to their distinct visual dissimilarity, while places, objects and body parts di- verge much later in time. Among the three late classes, the separation of the objects and body parts happens even later in time, suggesting a hierarchical process of categorization.
                     <br>
-                    <img src="./img/pMDS.png" alt=""  style="width:100%;display:block;text-align:center">
+                    <img src="./img/pMDS.png" alt=""  style="width:100%;display:block;margin-left:auto;margin-right:auto;">
                     <br> We can even perform downstream visualizations, such as plotting the area of the convex hulls of the representational space of the same image category (i.e. how big is does the brain, as a computational model, holds the abstract representations of all 20 different image instances of category, say "faces", over time).
                     <br>
                     <img src="./img/downstream.png" alt=""  style="width:100%;display:block;text-align:center">
                     <br> Here we can compare a traditional method to visualize a time frame (the heatmaps on the bottom are the demonstration of a representational dissimilarity matrix), with the backbone that we are using (the scatter plots on the top are the examples of visualizing them with multidimensional scaling. Neither methods gave us a complete intuition of how the trajectories of the abstract representations evolve over time as my method above did.
                     <br>
-                    <img src="./img/mdsvrdm.png" alt=""  style="width:100%;display:block;text-align:center">
+                    <img src="./img/mdsvrdm.png" alt=""  style="width:100%;display:block;margin-left:auto;margin-right:auto;">
                 </p>
 
                 <h3 style="text-transform:none"> Ongoing work </h3>
