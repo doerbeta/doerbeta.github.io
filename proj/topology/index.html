@@ -63,14 +63,20 @@
                 <h3 style="text-transform:none"> Topological Simplicial Analysis (TSA) </h3>
 
                 <p class="mb-5 text-primary">
-                   
-
+    
+                    Here we benchmarked on a zebrafish developmental single-cell RNA sequencing data with 12 time steps. As shown, scTSA identifies the critical stage (gastrulation) of development in cell complexity transition, , matching our understanding in the developmental biology that it is a process where the embryo begins differentiation into distinct cell types.
                     <br>
                     <img src="./img/stage.png" alt=""  style="width:80%;display:block;margin-left:auto;margin-right:auto;">
                     <br>
+                    <br> Normalized over the null model, we observe some interesting simplicial dynamics across developmental stages. (Left) Number of n-simplices computed from 100 sampled data points in each time points. (Right) Normalized number of n-simplices computed as the ratio of the data over null models.}
+                    <br>
                     <img src="./img/normalized.png" alt=""  style="width:80%;display:block;margin-left:auto;margin-right:auto;">
                     <br>
+                    <br> Here we see that given the normalized cell complexity, we can map out some interesting trajectories in the higher-order and lower-order domains of the simplicial space. Below is the transition of lower-order and higher-order normalized cell complexity across time. The arrow indicates the transition between the centroids in each groups.  
+                    <br>
                     <img src="./img/mapping.png" alt=""  style="width:80%;display:block;margin-left:auto;margin-right:auto;">
+                    <br>
+                    <br> Below demonstrated the hierarchical clustering of cell types. (Left) with Betti numbers. (Right) with simplicial complexity. The simplicial complexity offers a more reasonable clustering performance as a more distinctive summary statistics.
                     <br>
                     <img src="./img/lineage.png" alt=""  style="width:80%;display:block;margin-left:auto;margin-right:auto;">
                 </p>
@@ -78,18 +84,25 @@
                 <h3 style="text-transform:none"> Temporal Topological Data Analysis (tTDA) </h3>
 
                 <p class="mb-5 text-primary">
-                   
+                   This method aims to visualize time-stamped high-dimensional data with double filtration in the topological data analysis. Given any type of time-stamped data, single-cell gene expression data , text from therapy sessions, stock market price etc., we can dissect the temporal domain with an additional multiplicative filtration criterion. 
+                   <br> 
+                   <br> With this method, we can potentially answer interesting questions like: Does Schizophrenia patients tend to use cyclic linguistic features or constantly distract on topics? Do the development of zebrafish embryo follow more than one tracks during cellular differentiation? Does the brain use a recurrent or a feedforward computation strategy in understanding a scene? Does human visual processing have a multi-scale oscillatory regime in different brain regions?...
+
+                   <br>
+                   <br> For instance, in this below zebrafish embryogenesis single-cell RNA sequencing data with 12 time steps, traditional TDA methods fail to extract a correct temporal flow in the data. (Left) TDA; (Right) t-SNE.
 
                     <br>
                     <img src="./img/ttdawhy.png" alt=""  style="width:80%;display:block;margin-left:auto;margin-right:auto;">
                     <br>
+                    <br> However, tTDA unravels the correct temporal skeletons and offers useful biological insights (Right).
+                    <br> 
                     <img src="./img/ttda.png" alt=""  style="width:80%;display:block;margin-left:auto;margin-right:auto;">
                 </p>
 
                 <h3 style="text-transform:none"> Interactive Topological Data Analysis (iTDA) </h3>
 
                 <p class="mb-5 text-primary">
-                   
+                    This is a work in progress where I wish to develop an interactive web application where users can click to switch between different visualization methods in high-dimensional data. The core feature would be its focus on the TDA methods, where the user can specify the parameters for all internal geometric computation and intuitively select for the best hyperparameters.
                     <br>
                     <img src="./img/itda.png" alt=""  style="width:80%;display:block;margin-left:auto;margin-right:auto;">
                 </p>
