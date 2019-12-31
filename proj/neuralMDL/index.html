@@ -29,7 +29,7 @@
                 <h3 style="text-transform:none"> TL;DR </h3>
 
                 <p class="text-primary">
-                    I develop a novel visualization and inference framework to compare human brain data (e.g. neuroimaging, neural recording) with computational models (e.g. neural networks) taking the signal dynamics into account, which can (1) help neuroscientists understand how brain encode and decode information over time, (2) help create better AI algorithms inspired by these discoveries, and (3) help visualize the abstract concept of representations in the brain and identify critical stages in human visual processing.
+                    Treating each layer of neurons in a neural network as a communication system, I formulate the optimization process as a model selection process. Under this assumption, I can incrementally compute the minimum description length of each layer as an unsupervised attention mechanism, facilitating our understanding of the theory behind deep learning.
                     <br>
                     <br>
 
@@ -60,7 +60,7 @@
                 <h3 style="text-transform:none"> Neural Networks as a model selection process </h3>
 
                 <p class="mb-5 text-primary">
-
+                    The main idea of the project is that we consider the neural network optimization process as a partially observable model selection problem, where the best model being selected is the current state of learned model parameters:
                     <br>
                     <br>
                     <img src="./img/mmnn.png" alt=""  style="width:60%;display:block;margin-left:auto;margin-right:auto;">
@@ -70,13 +70,19 @@
                 <h3 style="text-transform:none"> Results </h3>
 
                 <p class="mb-5 text-primary">
-                    
+                    We tested it in several scenarios. MNIST, the classical computer vision problem, for instance, offers a lens for a simple two-layer neural network with or without a normalization factor (computed as the incremental minimum description length that I proposed in the paper). Here shown is a variant of the original problem, where I artificially installed an imbalanced distribution onto the training set such that certain class is highly downsampled. Since now we can approximate it directly, we can visualize them across the training time:
                     <br>
                     <img src="./img/mnist.png" alt=""  style="width:80%;display:block;margin-left:auto;margin-right:auto;">
                     <br>
+                    <br> We may also see that, with the regularity normalization I proposed, the model is much more robust to the nonstationary data distribution in the imbalanced MNIST problem.
+                    <br>
                     <img src="./img/table.png" alt=""  style="width:100%;display:block;margin-left:auto;margin-right:auto;">
                     <br>
+                    <br> Similarly, we can apply the same regularization to the reinforcement learning games, e.g. LunarLanding v2 game in the OpenAI gym environment. We can track the unsupervised attention mechanism:
+                    <br>
                     <img src="./img/dqn.png" alt=""  style="width:80%;display:block;margin-left:auto;margin-right:auto;">
+                    <br>
+                    <br> We can also see that the performance is better with our regularization method.
                     <br>
                     <img src="./img/game.png" alt=""  style="width:80%;display:block;margin-left:auto;margin-right:auto;">
                     
