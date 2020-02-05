@@ -1,14 +1,14 @@
 #loading {
-    background: url('../img/random/spinning_head.gif');
+    background: url('../img/random/spinning_head.gif'), url('../img/random/white.png');
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    /*width: 100%;*/
+    width: 100%;
     z-index: 9999999;  
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 60% 60%, cover;
 }
 
 * {
