@@ -108,7 +108,7 @@ footer {
         font-size: 1rem;
     }
 }
-.field  a:hover{
+.field span:hover{
     color: #BD5D38;
     -webkit-filter: hue-rotate(130deg);
     filter: hue-rotate(130deg);
