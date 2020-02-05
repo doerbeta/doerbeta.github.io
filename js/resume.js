@@ -1,3 +1,10 @@
+function hideLoader() {
+    $('#loading').hide();
+}
+
+$(window).ready(hideLoader);
+setTimeout(hideLoader, 20 * 1000);
+
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
