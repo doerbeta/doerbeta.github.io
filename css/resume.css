@@ -110,7 +110,8 @@ footer {
 }
 .field  a:hover{
     color: #BD5D38;
-    filter: hue-rotate(180deg);
+    -webkit-filter: hue-rotate(130deg);
+    filter: hue-rotate(130deg);
 }
 
 /* Create four equal columns that sits next to each other */
