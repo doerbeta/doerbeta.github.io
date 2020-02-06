@@ -135,7 +135,7 @@ footer {
 }
 
 .field:hover .img-top {
-    display: inline-block;
+    display: inline;
 }
 
 .field:hover .img-bottom {

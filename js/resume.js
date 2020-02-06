@@ -7,32 +7,23 @@ function showImg() {
     document.getElementById("profileimg").src = "./img/profiles/profile500.jpg"; 
 }
 
-$("#field").hover(function(){
-    $('#questions').html("brain");
-    }, function(){$('#questions').html("");});
+function changeText(text) {
+  var display = document.getElementById('questions');
+  display.innerHTML = text;
+}
+   
+function fieldB() { changeText('brain');}
+function fieldR() { changeText('intelligence');}
+function fieldD() { changeText('design');}
+function fieldT() { changeText('topology');}
+function fieldP() { changeText('psychology');}
+function fieldA() { changeText('perception');}
 
-
-$("#field-r").hover(function(){
-    $('#questions').html("intelligence");
-    }, function(){$('#questions').html("");});
-
-
-$("#field-d").hover(function(){
-    $('#questions').html("design");
-    }, function(){$('#questions').html("");});
-
-$("#field-p").hover(function(){
-    $('#questions').html("psychology");
-    }, function(){$('#questions').html("");});
-
-$("#field-t").hover(function(){
-    $('#questions').html("topology");
-    }, function(){$('#questions').html("");});
-
-
-$("#field-a").hover(function(){
-    $('#questions').html("perception");
-    }, function(){$('#questions').html("");});
+function defaultText(text) {
+  var display = document.getElementById('questions');
+  display.innerHTML = "";
+}
+          
 
 function waithideLoader() {
     $(window).ready(hideLoader);
