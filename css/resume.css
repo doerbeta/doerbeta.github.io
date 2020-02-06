@@ -151,22 +151,22 @@ footer {
     color: #BD5D38;
 }
 
-.field-b:hover .field-img {
+.field-b:hover:after .field-img {
     content: url('./img/fields/brain-o.png');
 }
-.field-r:hover .field-img {
+.field-r:hover:after .field-img {
     content: url('./img/fields/robot-o.png');
 }
-.field-d:hover .field-img {
+.field-d:hover:after .field-img {
     content: url('./img/fields/design-o.png');
 }
-.field-p:hover .field-img {
+.field-p:hover:after .field-img {
     content: url('./img/fields/psych-o.png');
 }
-.field-a:hover .field-img {
+.field-a:hover:after .field-img {
     content: url('./img/fields/art-o.png');
 }
-.field-t:hover .field-img {
+.field-t:hover:after .field-img {
     content: url('./img/fields/topology-o.png');
 }
 
