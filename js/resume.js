@@ -12,7 +12,7 @@ function waithideLoader() {
 }
 
 setTimeout(waithideLoader, 4 * 1000);
-setTimeout(showImg, 2 * 1000);
+setTimeout(showImg, 1 * 1000);
 setTimeout(hideLoader, 20 * 1000);
 
 var coll = document.getElementsByClassName("collapsible");
