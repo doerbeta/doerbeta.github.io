@@ -2,11 +2,16 @@ function hideLoader() {
     $('#loading').hide();
 }
 
+function showImg() {
+    $('#profileimg').show();
+}
+
 function waithideLoader() {
     $(window).ready(hideLoader);
 }
 
-setTimeout(waithideLoader, 5 * 1000);
+setTimeout(waithideLoader, 4 * 1000);
+setTimeout(showImg, 2 * 1000);
 setTimeout(hideLoader, 20 * 1000);
 
 var coll = document.getElementsByClassName("collapsible");

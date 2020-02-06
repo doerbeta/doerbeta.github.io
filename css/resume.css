@@ -11,6 +11,10 @@
     background-size: 80%, cover;
 }
 
+#profileimg {
+    visibility: hidden;
+}
+
 * {
     box-sizing: border-box;
 }
