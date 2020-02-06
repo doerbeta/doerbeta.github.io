@@ -24,10 +24,10 @@ function defaultText(text) {
   display.innerHTML = "<span style='color: white;'>How to best visualize high-dimensional dynamic data? How to generate creative design computationally given simple aesthetic prior? How to model human creativity? How to generate creative processes with state-space language?</span>";
 }
       
-$(".field-img.field-b").hover(function(){
-  $(this).attr("src", "./img/fields/brain-o.png");
+$('.field-b').hover(function(){
+  $('.field-img.field-b').attr("src", "./img/fields/brain-o.png");
   }, function(){
-  $(this).attr("src", "./img/fields/brain.png");
+  $('.field-img.field-b').attr("src", "./img/fields/brain.png");
 });
 
 function waithideLoader() {
