@@ -8,32 +8,31 @@ function showImg() {
 }
 
 $("#field").hover(function(){
-    document.getElementById('questions').innerHTML = "brain";
-    }, function(){ document.getElementById('questions').innerHTML = "";});
+    $('#questions').html("brain");
+    }, function(){$('#questions').html("");});
 
 
 $("#field-r").hover(function(){
-    document.getElementById('questions').innerHTML = "intelligence";
-    }, function(){ document.getElementById('questions').innerHTML = "";});
+    $('#questions').html("intelligence");
+    }, function(){$('#questions').html("");});
 
 
 $("#field-d").hover(function(){
-    document.getElementById('questions').innerHTML = "design";
-    }, function(){ document.getElementById('questions').innerHTML = "";});
-
+    $('#questions').html("design");
+    }, function(){$('#questions').html("");});
 
 $("#field-p").hover(function(){
-    document.getElementById('questions').innerHTML = "psychology";
-    }, function(){ document.getElementById('questions').innerHTML = "";});
+    $('#questions').html("psychology");
+    }, function(){$('#questions').html("");});
 
 $("#field-t").hover(function(){
-    document.getElementById('questions').innerHTML = "topology";
-    }, function(){ document.getElementById('questions').innerHTML = "";});
+    $('#questions').html("topology");
+    }, function(){$('#questions').html("");});
 
 
 $("#field-a").hover(function(){
-    document.getElementById('questions').innerHTML = "perception";
-    }, function(){ document.getElementById('questions').innerHTML = "";});
+    $('#questions').html("perception");
+    }, function(){$('#questions').html("");});
 
 function waithideLoader() {
     $(window).ready(hideLoader);
