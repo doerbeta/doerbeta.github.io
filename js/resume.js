@@ -23,12 +23,43 @@ function defaultText(text) {
   var display = document.getElementById('questions');
   display.innerHTML = "<span style='color: white;'>How to best visualize high-dimensional dynamic data? How to generate creative design computationally given simple aesthetic prior? How to model human creativity? How to generate creative processes with state-space language?</span>";
 }
-      
-$('.field-b').hover(function(){
-  $('.field-img.field-b').attr("src", "./img/fields/brain-o.png");
-  }, function(){
-  $('.field-img.field-b').attr("src", "./img/fields/brain.png");
-});
+ 
+$(".field-b").hover(function(){
+$(this).attr("src", "./img/fields/brain-o.png");
+}, function(){
+$(this).attr("src", "./img/fields/brain.png");
+});   
+
+$(".field-r").hover(function(){
+$(this).attr("src", "./img/fields/robot-o.png");
+}, function(){
+$(this).attr("src", "./img/fields/robot.png");
+});   
+
+$(".field-d").hover(function(){
+$(this).attr("src", "./img/fields/design-o.png");
+}, function(){
+$(this).attr("src", "./img/fields/design.png");
+});   
+
+$(".field-a").hover(function(){
+$(this).attr("src", "./img/fields/art-o.png");
+}, function(){
+$(this).attr("src", "./img/fields/art.png");
+}); 
+
+$(".field-p").hover(function(){
+$(this).attr("src", "./img/fields/psych-o.png");
+}, function(){
+$(this).attr("src", "./img/fields/psych.png");
+});   
+
+$(".field-t").hover(function(){
+$(this).attr("src", "./img/fields/topology-o.png");
+}, function(){
+$(this).attr("src", "./img/fields/topology.png");
+});   
+
 
 function waithideLoader() {
     $(window).ready(hideLoader);
