@@ -151,6 +151,25 @@ footer {
     color: #BD5D38;
 }
 
+.field-b:hover .field-img {
+    src: './img/fields/brain-o.png';
+}
+.field-r:hover .field-img {
+    src: './img/fields/robot-o.png';
+}
+.field-d:hover .field-img {
+    src: './img/fields/design-o.png';
+}
+.field-p:hover .field-img {
+    src: './img/fields/psych-o.png';
+}
+.field-a:hover .field-img {
+    src: './img/fields/art-o.png';
+}
+.field-t:hover .field-img {
+    src: './img/fields/topology-o.png';
+}
+
 /* Create four equal columns that sits next to each other */
 
 .photocolumn {
