@@ -1,5 +1,5 @@
 #loading {
-    background: url('https://www.baihan.nyc/img/random/spinning_head.gif'), url('https://www.baihan.nyc/img/random/white.png');
+    background: url('../img/random/spinning_head.gif'), url('../img/random/white.png');
     position: absolute;
     top: 0;
     left: 0;
@@ -151,23 +151,42 @@ footer {
     color: #BD5D38;
 }
 
+.field-b .field-img {
+    content: url('../img/fields/brain.png');
+}
+.field-r .field-img {
+    content: url('../img/fields/robot.png');
+}
+.field-d .field-img {
+    content: url('../img/fields/design.png');
+}
+.field-p .field-img {
+    content: url('../img/fields/psych.png');
+}
+.field-a .field-img {
+    content: url('../img/fields/art.png');
+}
+.field-t .field-img {
+    content: url('../img/fields/topology.png');
+}
+
 .field-b:hover:after .field-img {
-    content: url('./img/fields/brain-o.png');
+    content: url('../img/fields/brain-o.png');
 }
 .field-r:hover:after .field-img {
-    content: url('./img/fields/robot-o.png');
+    content: url('../img/fields/robot-o.png');
 }
 .field-d:hover:after .field-img {
-    content: url('./img/fields/design-o.png');
+    content: url('../img/fields/design-o.png');
 }
 .field-p:hover:after .field-img {
-    content: url('./img/fields/psych-o.png');
+    content: url('../img/fields/psych-o.png');
 }
 .field-a:hover:after .field-img {
-    content: url('./img/fields/art-o.png');
+    content: url('../img/fields/art-o.png');
 }
 .field-t:hover:after .field-img {
-    content: url('./img/fields/topology-o.png');
+    content: url('../img/fields/topology-o.png');
 }
 
 /* Create four equal columns that sits next to each other */
