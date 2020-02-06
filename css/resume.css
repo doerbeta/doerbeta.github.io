@@ -11,10 +11,6 @@
     background-size: 80%, cover;
 }
 
-#profileimg {
-    visibility: hidden;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -129,13 +125,24 @@ footer {
     font-family: 'Patrick Hand SC', cursive;
 }
 
-.field:hover{
-    color: #BD5D38;
+.field-img{
+    width: 80%;
 }
 
-.field:hover .field-img{
-    -webkit-filter: hue-rotate(45deg);
-    filter: hue-rotate(45deg);
+.field-img .img-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.field-img:hover .img-top {
+    display: inline;
+}
+
+.field:hover{
+    color: #BD5D38;
 }
 
 /* Create four equal columns that sits next to each other */

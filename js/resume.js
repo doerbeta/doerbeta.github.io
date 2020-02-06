@@ -4,32 +4,36 @@ function hideLoader() {
 
 function showImg() {
     // $('#profileimg').show();
-    document.getElementById("profileimg").visibility = "visible"; 
+    document.getElementById("profileimg").src = "./img/profiles/profile500.jpg"; 
 }
 
 $("#field-b").hover(function(){
-    document.getElementById('field-b').innerHTML = "brain";
-    }, function(){ document.getElementById('field-b').innerHTML = "";});
+    document.getElementById('questions').innerHTML = "brain";
+    }, function(){ document.getElementById('questions').innerHTML = "";});
 
 
-$("#field-b").hover(function(){
-    document.getElementById('field-r').innerHTML = "intelligence";
-    }, function(){ document.getElementById('field-r').innerHTML = "";});
+$("#field-r").hover(function(){
+    document.getElementById('questions').innerHTML = "intelligence";
+    }, function(){ document.getElementById('questions').innerHTML = "";});
 
 
-$("#field-b").hover(function(){
-    document.getElementById('field-d').innerHTML = "design";
-    }, function(){ document.getElementById('field-d').innerHTML = "";});
+$("#field-d").hover(function(){
+    document.getElementById('questions').innerHTML = "design";
+    }, function(){ document.getElementById('questions').innerHTML = "";});
 
 
-$("#field-b").hover(function(){
-    document.getElementById('field-p').innerHTML = "psychology";
-    }, function(){ document.getElementById('field-p').innerHTML = "";});
+$("#field-p").hover(function(){
+    document.getElementById('questions').innerHTML = "psychology";
+    }, function(){ document.getElementById('questions').innerHTML = "";});
+
+$("#field-t").hover(function(){
+    document.getElementById('questions').innerHTML = "topology";
+    }, function(){ document.getElementById('questions').innerHTML = "";});
 
 
-$("#field-b").hover(function(){
-    document.getElementById('field-a').innerHTML = "perception";
-    }, function(){ document.getElementById('field-a').innerHTML = "";});
+$("#field-a").hover(function(){
+    document.getElementById('questions').innerHTML = "perception";
+    }, function(){ document.getElementById('questions').innerHTML = "";});
 
 function waithideLoader() {
     $(window).ready(hideLoader);
