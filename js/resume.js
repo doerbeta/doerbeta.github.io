@@ -4,8 +4,32 @@ function hideLoader() {
 
 function showImg() {
     // $('#profileimg').show();
-    document.getElementById("profileimg").src = "img/profiles/profile500.jpg"; 
+    document.getElementById("profileimg").src = "https://www.baihan.nyc/img/profiles/profile500.jpg"; 
 }
+
+$("#field-b").hover(function(){
+    document.getElementById("#field-b").innerHTML = "brain";
+    }, function(){ document.getElementById("#field-b").innerHTML = "";});
+
+
+$("#field-b").hover(function(){
+    document.getElementById("#field-r").innerHTML = "intelligence";
+    }, function(){ document.getElementById("#field-r").innerHTML = "";});
+
+
+$("#field-b").hover(function(){
+    document.getElementById("#field-d").innerHTML = "design";
+    }, function(){ document.getElementById("#field-d").innerHTML = "";});
+
+
+$("#field-b").hover(function(){
+    document.getElementById("#field-p").innerHTML = "psychology";
+    }, function(){ document.getElementById("#field-p").innerHTML = "";});
+
+
+$("#field-b").hover(function(){
+    document.getElementById("#field-a").innerHTML = "perception";
+    }, function(){ document.getElementById("#field-a").innerHTML = "";});
 
 function waithideLoader() {
     $(window).ready(hideLoader);
