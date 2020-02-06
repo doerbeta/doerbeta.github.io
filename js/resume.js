@@ -4,7 +4,7 @@ function hideLoader() {
 
 function showImg() {
     // $('#profileimg').show();
-    document.getElementById("profileimg").src = "../img/profiles/profile500.jpg"; 
+    document.getElementById("profileimg").visibility = "visible"; 
 }
 
 $("#field-b").hover(function(){

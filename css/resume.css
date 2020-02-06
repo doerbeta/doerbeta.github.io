@@ -125,6 +125,7 @@ footer {
 }
 
 .handwritten {
+    color: #BD5D38;
     font-family: 'Patrick Hand SC', cursive;
 }
 
@@ -132,8 +133,7 @@ footer {
     color: #BD5D38;
 }
 
-.field-img:hover{
-    color: #BD5D38;
+.field:hover .field-img{
     -webkit-filter: hue-rotate(45deg);
     filter: hue-rotate(45deg);
 }
