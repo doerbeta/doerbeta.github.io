@@ -127,8 +127,8 @@ footer {
 */}
 
 .field-img{
-    width: 80%;
-    display: inline;
+    /*width: 80%;*/
+    display: inline-block;
 }
 
 .img-top {

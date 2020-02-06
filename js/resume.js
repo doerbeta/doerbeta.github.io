@@ -13,7 +13,7 @@ function changeText(text) {
 }
    
 function fieldB() { changeText('How to capture the information flow of the brain in a dynamic domain? How to compare brain with models? How is brain generative or adversarial? How do we understand the biological constraints of these neural computations?');}
-function fieldR() { changeText('How to develop AI systems that generalize across tasks and evolve across environments? How to harness artificial agents to model human behaviors through few-shot interactions? How to interpret the neural computations in deep networks during learning, adapting and failing?');}
+function fieldR() { changeText('How to develop AI that generalize across tasks and evolve across environments? How to model human behaviors with artificial agents via few-shot interactions? How to interpret the neural computations in deep networks?');}
 function fieldD() { changeText('How to best visualize high-dimensional dynamic data? How to generate creative design computationally given simple aesthetic prior? How to model human creativity? Can we understand creative processes with state-space language?');}
 function fieldT() { changeText('How to represent complex data and their internal structures? What is the proper mathematical language that is both interpretable and informative? Should these invariant graphical structures be static, dynamic, or interactive?');}
 function fieldP() { changeText('How do mind work in general? Is there a cogntive map for thought process? What is the time resolution of thinking? What is a meta mechanism to judicate between competing processes?');}
