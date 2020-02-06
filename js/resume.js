@@ -3,7 +3,8 @@ function hideLoader() {
 }
 
 function showImg() {
-    $('#profileimg').show();
+    // $('#profileimg').show();
+    document.getElementById("profileimg").src = "img/profiles/profile500.jpg"; 
 }
 
 function waithideLoader() {
