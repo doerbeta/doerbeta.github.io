@@ -128,11 +128,14 @@ footer {
     font-family: 'Patrick Hand SC', cursive;
 }
 
-.field .field-img:hover,
 .field:hover{
     color: #BD5D38;
-    -webkit-filter: hue-rotate(30deg);
-    filter: hue-rotate(30deg);
+}
+
+.field-img:hover{
+    color: #BD5D38;
+    -webkit-filter: hue-rotate(45deg);
+    filter: hue-rotate(45deg);
 }
 
 /* Create four equal columns that sits next to each other */
