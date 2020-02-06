@@ -129,7 +129,7 @@ footer {
     width: 80%;
 }
 
-.field-img .img-top {
+.img-top {
     display: none;
     position: absolute;
     top: 0;
@@ -137,11 +137,11 @@ footer {
     z-index: 99;
 }
 
-.field-img:hover .img-top {
+.field:hover .img-top {
     display: inline;
 }
 
-.field:hover{
+.field:hover {
     color: #BD5D38;
 }
 

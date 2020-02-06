@@ -7,7 +7,7 @@ function showImg() {
     document.getElementById("profileimg").src = "./img/profiles/profile500.jpg"; 
 }
 
-$("#field-b").hover(function(){
+$("#field").hover(function(){
     document.getElementById('questions').innerHTML = "brain";
     }, function(){ document.getElementById('questions').innerHTML = "";});
 
