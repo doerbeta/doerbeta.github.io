@@ -1,3 +1,12 @@
+function hideLoader() {
+    $('#loading').hide();
+}
+function waithideLoader() {
+    $(window).ready(hideLoader);
+}
+setTimeout(waithideLoader, 1 * 1000);
+setTimeout(hideLoader, 10 * 1000);
+
 function showImg() {
     // $('#profileimg').show();
     document.getElementById("profileimg").src = "./img/profiles/profile500.jpg"; 
