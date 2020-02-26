@@ -182,12 +182,12 @@
   };
 
   var material = new THREE.LineBasicMaterial({
-    color: 0x00ff00
+    color: 0x00ff00,
     linewidth: 3
   });
 
   var yellowMaterial = new THREE.LineBasicMaterial({
-    color: 0x00ffff
+    color: 0x00ffff,
     linewidth: 3
   });
 
