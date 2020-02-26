@@ -197,14 +197,14 @@
   var renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("canvas") });
 
   function resize() {
-    renderer.domElement.style.width = '80%';
+    renderer.domElement.style.width = '100%';
     renderer.domElement.style.height = 'auto';
 
     var resolution = renderer.domElement.clientWidth / 16 * 10;
     renderer.setPixelRatio(window.devicePixelRatio ? window.devicePixelRatio : 1);
 
     renderer.setSize(resolution * aspectRatio, resolution);
-    renderer.domElement.style.width = '80%';
+    renderer.domElement.style.width = '100%';
     renderer.domElement.style.height = 'auto';
 
     camera.aspect = resolution * aspectRatio / resolution;
