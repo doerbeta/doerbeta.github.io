@@ -22,6 +22,8 @@
     <script src="../../js/d3.js"></script>
     <script src="../../js/d3-scale-chromatic.js"></script>
 
+    <link href="main.css" rel="stylesheet">
+
 </head>
 
 <style type="text/css">
@@ -51,7 +53,32 @@
                 <p class="mb-5 text-primary">
                     <br> 
                     <br>
-                    
+                </p>   
+
+<div class="row">
+  <div id="showcase" class="col">
+    <div id="audioControl">
+      <p>Allow microphone access or play this audio file to see a demo.</p>
+      <audio id="elvisSong" controls src="ripitup.mp3"></audio>
+    </div>
+    <canvas></canvas>
+    <div id="legend">
+      <div class="key-item">
+        <div class="key-color pink"></div><div class="key-text">Root Mean Squared (RMS)</div>
+      </div>
+      <div class="key-item">
+        <div class="key-color yellow"></div><div class="key-text">Spectral Centroid</div>
+      </div>
+      <div class="key-item">
+        <div class="key-color blue"></div><div class="key-text">Spectral Rolloff</div>
+      </div>
+    </div>
+    <div id="chroma"></div>
+    <div id="mfcc"></div>
+  </div>
+  <hr>
+</div>
+<script src="main.js"></script>
 
             </div>
         </section>
