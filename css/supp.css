@@ -91,21 +91,21 @@ div#legend {
   content: 'MFCC bands:';
   margin-right: 10px;
   display: inline-block;
-  text-align: left;
+  text-align: center;
 }
 
 #showcase #mfcc {
   margin-top: 20px;
   display: flex;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
 }
 
 #showcase .mfcc-band {
   flex: 0 1 28px;
   height: 28px;
   display: inline-block;
-  text-align: left;
+  text-align: center;
   padding-top: 7px;
   font-size: 10px;
   color: #ffffff;
