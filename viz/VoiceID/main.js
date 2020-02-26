@@ -197,14 +197,14 @@
   var renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("canvas") });
 
   function resize() {
-    renderer.domElement.style.width = '100%';
+    renderer.domElement.style.width = '30%';
     renderer.domElement.style.height = 'auto';
 
     var resolution = renderer.domElement.clientWidth / 16 * 10;
     renderer.setPixelRatio(window.devicePixelRatio ? window.devicePixelRatio : 1);
 
     renderer.setSize(resolution * aspectRatio, resolution);
-    renderer.domElement.style.width = '100%';
+    renderer.domElement.style.width = '30%';
     renderer.domElement.style.height = 'auto';
 
     camera.aspect = resolution * aspectRatio / resolution;
@@ -274,6 +274,8 @@
   var features = null;
   var chromaWrapper = document.querySelector('#chroma');
   var mfccWrapper = document.querySelector('#mfcc');
+
+  var points = [40, 100, 1, 5, 25, 10];
 
   function render() {
     features = a.get(['amplitudeSpectrum', 'spectralCentroid', 'spectralRolloff', 'loudness', 'rms', 'chroma', 'mfcc']);
