@@ -4,7 +4,11 @@ function hideLoader() {
 function waithideLoader() {
     $(window).ready(hideLoader);
 }
+setTimeout(waithideLoader, 0 * 1000);
 setTimeout(waithideLoader, 1 * 1000);
+setTimeout(waithideLoader, 2 * 1000);
+setTimeout(waithideLoader, 3 * 1000);
+setTimeout(waithideLoader, 4 * 1000);
 setTimeout(hideLoader, 10 * 1000);
 
 function showImg() {
