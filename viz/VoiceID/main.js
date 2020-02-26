@@ -183,10 +183,12 @@
 
   var material = new THREE.LineBasicMaterial({
     color: 0x00ff00
+    linewidth: 3
   });
 
   var yellowMaterial = new THREE.LineBasicMaterial({
     color: 0x00ffff
+    linewidth: 3
   });
 
   var ffts = initializeFFTs(20, bufferSize);
@@ -229,6 +231,9 @@
   var centroidArrow = new THREE.ArrowHelper(dir, origin, length, hex);
   var rolloffArrow = new THREE.ArrowHelper(dir, origin, length, 0x0000ff);
   var rmsArrow = new THREE.ArrowHelper(rightDir, origin, length, 0xff00ff);
+  centroidArrow.line.material.linewidth = 3;
+  rolloffArrow.line.material.linewidth = 3;
+  rmsArrow.line.material.linewidth = 3;
   var lines = new THREE.Group(); // Lets create a seperate group for our lines
   // let loudnessLines = new THREE.Group();
   scene.add(centroidArrow);
