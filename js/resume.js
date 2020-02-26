@@ -1,7 +1,3 @@
-function hideLoader() {
-    $('#loading').hide();
-}
-
 function showImg() {
     // $('#profileimg').show();
     document.getElementById("profileimg").src = "./img/profiles/profile500.jpg"; 
@@ -60,14 +56,7 @@ $(this).attr("src", "./img/fields/topology-o.png");
 $(this).attr("src", "./img/fields/topology.png");
 });   
 
-
-function waithideLoader() {
-    $(window).ready(hideLoader);
-}
-
-setTimeout(waithideLoader, 4 * 1000);
 setTimeout(showImg, 1 * 1000);
-setTimeout(hideLoader, 20 * 1000);
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
