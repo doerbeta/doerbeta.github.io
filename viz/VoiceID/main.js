@@ -393,7 +393,7 @@
         // linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
         document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...';
         nspeakers = nspeakers + 1;
-        // alert(features.mfcc);
+        alert(features.mfcc, Meyda.numberOfMFCCCoefficients);
       };
 
     }
