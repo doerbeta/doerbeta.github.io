@@ -282,25 +282,14 @@
   var points = [40, 100, 1, 5, 25, 10];
   var usrs_name = ['usr1','usr2','usr3','usr4','usr5','usr6','usr7','usr8','usr9','usr10','usr11','usr12']
 
-  function add(type) {
-    //Create an input type dynamically.
-    // var element = document.createElement("button");
-    // //Assign different attributes to the element.
-    // // element.type = type;
-    // element.value = type; // Really? You want the default value to be the type string?
-    // element.name = type; // And the name too?
-    // element.onclicck = function() { // Note this is a function
-    //   alert("blabla");
-    // };
-    usrs.innerHTML = usrs.innerHTML + '<div class="row"><div class="col"><button class="button button1" id="' + type +'">'+type+'</button></div><div class="col"><div id="mfcc0" class="fband"></div></div></div>'
-  //   var foo = document.getElementById("arms");
-  //   //Append the element in page (in span).
-  //   arms.appendChild(element);
+  function add(n) {
+    usrs.innerHTML = usrs.innerHTML + '\n<div class="row"><div class="col"><button class="button button1" id="usr' + n +'">User '+n+'</button></div><div class="col"><div id="mfcc'+n+'" class="fband"></div></div></div>';
   }
 
   document.getElementById("new").onclick = function() {
-    add(usrs_name[nspeakers]);
+    add(nspeakers);
     nspeakers = nspeakers + 1;
+    alert(nspeakers);
   };
 
   function render() {
