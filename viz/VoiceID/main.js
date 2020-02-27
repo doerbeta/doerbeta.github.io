@@ -281,9 +281,25 @@
   var points = [40, 100, 1, 5, 25, 10];
   var usrs_name = ['usr1','usr2','usr3','usr4','usr5','usr6','usr7','usr8','usr9','usr10','usr11','usr12']
 
-  function addbtn() {
-    
+  function add(type) {
+    //Create an input type dynamically.
+    var element = document.createElement("button");
+    //Assign different attributes to the element.
+    // element.type = type;
+    element.value = type; // Really? You want the default value to be the type string?
+    element.name = type; // And the name too?
+    element.onclick = function() { // Note this is a function
+      alert("blabla");
+    };
+
+    var foo = document.getElementById("fooBar");
+    //Append the element in page (in span).
+    foo.appendChild(element);
   }
+  document.getElementById("new").onclick = function() {
+    add(usrs_name[nspeakers]);
+    nspeakers = nspeakers + 1
+  };
 
   function render() {
     features = a.get(['amplitudeSpectrum', 'spectralCentroid', 'spectralRolloff', 'loudness', 'rms', 'chroma', 'mfcc']);
