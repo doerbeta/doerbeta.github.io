@@ -288,7 +288,7 @@
 
   var points = [40, 100, 1, 5, 25, 10];
 
-  function add(n) {
+  function addBtn(n) {
     usrs.innerHTML = usrs.innerHTML + '\n<div class="row"><div class="col"><button class="button button1" id="usr' + n +'">User '+n+'</button></div><div class="col"><div id="mfcc'+n+'" class="fband"></div></div></div>';
   }
 
@@ -388,12 +388,12 @@
 
 
       document.getElementById("new").onclick = function() {
-        add(nspeakers);
+        addBtn(nspeakers);
         arms.push('usr'+nspeakers);
         linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
         document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...';
         nspeakers = nspeakers + 1;
-        alert(features.mfcc);
+        // alert(features.mfcc);
       };
 
     }
