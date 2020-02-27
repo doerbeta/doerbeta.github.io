@@ -27,7 +27,7 @@ audio {
 .key-item {
   font-size: small;
   text-align: center;
-  display: inline;
+  display: block;
   margin: 0 15px;
   vertical-align: middle;
 }
