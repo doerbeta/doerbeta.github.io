@@ -277,7 +277,14 @@
   var usrn = document.querySelector('#mfcc0');
   var usrs = document.querySelector('#arms');
   var arms = ['none','new'];
+  var linucb = [initLinUCBArm(Meyda.numberOfMFCCCoefficients),initLinUCBArm(Meyda.numberOfMFCCCoefficients)]
   var nspeakers = 0;
+
+  function initLinUCBArm(d) {
+    var A = math.identity(d);
+    var b = new Array(d).fill(0);
+    return [A,b];
+  }
 
   var points = [40, 100, 1, 5, 25, 10];
 
@@ -378,12 +385,17 @@
       //   loudnessLines.remove(loudnessLines.children[c]); //forEach is slow
       // }
 
+
+
       document.getElementById("new").onclick = function() {
         add(nspeakers);
+        arms.push('usr'+nspeakers);
+        linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
+        document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...'
         nspeakers = nspeakers + 1;
-        alert(nspeakers);
+        alert(Meyda.numberOfMFCCCoefficients,features.mfcc);
       };
-      
+
     }
 
     requestAnimationFrame(render);
