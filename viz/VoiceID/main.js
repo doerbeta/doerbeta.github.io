@@ -276,7 +276,7 @@
   var mfccWrapper = document.querySelector('#mfcc');
   var usrn = document.querySelector('#mfcc0');
   var usrs = document.querySelector('#arms');
-  // var arms = ['none','new'];
+  var arms = ['none','new'];
   // var linucb = [initLinUCBArm(Meyda.numberOfMFCCCoefficients),initLinUCBArm(Meyda.numberOfMFCCCoefficients)];
   var nspeakers = 0;
 
@@ -389,11 +389,11 @@
 
       document.getElementById("new").onclick = function() {
         addBtn(nspeakers);
-        // arms.push('usr'+nspeakers);
+        arms.push('usr'+nspeakers);
         // linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
         document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...';
         nspeakers = nspeakers + 1;
-        alert(features.mfcc, Meyda.numberOfMFCCCoefficients);
+        alert(Meyda.numberOfMFCCCoefficients);
       };
 
     }
