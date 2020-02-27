@@ -431,7 +431,7 @@
         clickers.push(document.querySelector('#btnusr'+nspeakers));
         document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...';
         nspeakers = nspeakers + 1;
-        if (action == 1) {
+        if (action === 1) {
           updateArm(1,x,pos_reward);
         } else {
           updateArm(1,x,neg_reward);
@@ -440,7 +440,7 @@
 
       document.getElementById("btnnone").onclick = function() {
         document.getElementById("voiceid").innerHTML = 'No one is speaking...';
-        if (action == 2) {
+        if (action === 2) {
           updateArm(2,x,pos_reward);
         } else {
           updateArm(2,x,neg_reward);
@@ -450,7 +450,7 @@
       for (var i = 0; i < nspeakers; i++) {
         clickers[i+2].onclick = function() {
           document.getElementById("voiceid").innerHTML = 'User '+i+' is speaking...';
-          if (action = i+2) {
+          if (action === i+2) {
             updateArm(i+2,x,pos_reward);
           } else {
             updateArm(i+2,x,neg_reward);
