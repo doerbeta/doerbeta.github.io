@@ -450,12 +450,12 @@
       for (var i = 0; i < nspeakers; i++) {
         clickers[i+2].onclick = function() {
           document.getElementById("voiceid").innerHTML = 'User '+i+' is speaking...';
-          if (i+2 == action) {
+          if (action = i+2) {
             updateArm(i+2,x,pos_reward);
           } else {
             updateArm(i+2,x,neg_reward);
           }
-        }
+        };
       }
 
     }
