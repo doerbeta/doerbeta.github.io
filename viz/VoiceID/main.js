@@ -271,20 +271,20 @@
 
   // scene.add(loudnessLines);
 
+  function initLinUCBArm(d) {
+    var A = math.identity(d);
+    var b = new Array(d).fill(0);
+    return [A,b];
+  }
+
   var features = null;
   var chromaWrapper = document.querySelector('#chroma');
   var mfccWrapper = document.querySelector('#mfcc');
   var usrn = document.querySelector('#mfcc0');
   var usrs = document.querySelector('#arms');
   var arms = ['none','new'];
-  // var linucb = [initLinUCBArm(Meyda.numberOfMFCCCoefficients),initLinUCBArm(Meyda.numberOfMFCCCoefficients)];
+  var linucb = [initLinUCBArm(Meyda.numberOfMFCCCoefficients),initLinUCBArm(Meyda.numberOfMFCCCoefficients)];
   var nspeakers = 0;
-
-  function initLinUCBArm(d) {
-    var A = math.identity(d);
-    var b = new Array(d).fill(0);
-    return [A,b];
-  }
 
   var points = [40, 100, 1, 5, 25, 10];
 
@@ -390,10 +390,10 @@
       document.getElementById("new").onclick = function() {
         addBtn(nspeakers);
         arms.push('usr'+nspeakers);
-        // linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
+        linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
         document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...';
         nspeakers = nspeakers + 1;
-        alert(Meyda.numberOfMFCCCoefficients);
+        // alert(Meyda.numberOfMFCCCoefficients);
       };
 
     }
