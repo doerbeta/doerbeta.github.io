@@ -276,11 +276,10 @@
   var mfccWrapper = document.querySelector('#mfcc');
   var usrn = document.querySelector('#mfcc0');
   var usrs = document.querySelector('#arms');
-  var arms = ['none','new']
-  var nspeakers = 0
+  var arms = ['none','new'];
+  var nspeakers = 0;
 
   var points = [40, 100, 1, 5, 25, 10];
-  var usrs_name = ['usr1','usr2','usr3','usr4','usr5','usr6','usr7','usr8','usr9','usr10','usr11','usr12']
 
   function add(n) {
     usrs.innerHTML = usrs.innerHTML + '\n<div class="row"><div class="col"><button class="button button1" id="usr' + n +'">User '+n+'</button></div><div class="col"><div id="mfcc'+n+'" class="fband"></div></div></div>';
@@ -290,7 +289,7 @@
     add(nspeakers);
     nspeakers = nspeakers + 1;
     alert(nspeakers);
-  };
+  }
 
   function render() {
     features = a.get(['amplitudeSpectrum', 'spectralCentroid', 'spectralRolloff', 'loudness', 'rms', 'chroma', 'mfcc']);
