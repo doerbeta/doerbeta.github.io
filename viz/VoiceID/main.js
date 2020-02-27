@@ -274,14 +274,16 @@
   var features = null;
   var chromaWrapper = document.querySelector('#chroma');
   var mfccWrapper = document.querySelector('#mfcc');
-  var usrn = document.querySelector('#mfcc0');
-  var usr1 = document.querySelector('#mfcc1');
-  var usr2 = document.querySelector('#mfcc2');
-  var usr3 = document.querySelector('#mfcc3');
-  var usr4 = document.querySelector('#mfcc4');
-  var usr5 = document.querySelector('#mfcc5');
+  var usrs = document.querySelector('#arms');
+  var arms = ['none','new']
+  var nspeakers = 0
 
   var points = [40, 100, 1, 5, 25, 10];
+  var usrs_name = ['usr1','usr2','usr3','usr4','usr5','usr6','usr7','usr8','usr9','usr10','usr11','usr12']
+
+  function addbtn() {
+    
+  }
 
   function render() {
     features = a.get(['amplitudeSpectrum', 'spectralCentroid', 'spectralRolloff', 'loudness', 'rms', 'chroma', 'mfcc']);
@@ -298,7 +300,7 @@
         }, '');
       }
 
-      if (usrn) {
+      if (usrs) {
         usrn.innerHTML = points.reduce(function (acc, v,i) {
           return acc + '\n         <div class="mfcc-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
         }, '');

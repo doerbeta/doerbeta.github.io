@@ -1,5 +1,6 @@
 #loading {
-    background: url('../img/random/spinning_head.gif'), url('../img/random/white.png');
+    /*background: url('../img/random/spinning_head.gif'), url('../img/random/white.png');*/
+    background: url('../img/random/loader_3.gif'), rgb(38, 38, 38);
     position: absolute;
     top: 0;
     left: 0;
