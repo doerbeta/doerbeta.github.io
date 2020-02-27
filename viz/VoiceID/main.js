@@ -274,6 +274,7 @@
   var features = null;
   var chromaWrapper = document.querySelector('#chroma');
   var mfccWrapper = document.querySelector('#mfcc');
+  var usrn = document.querySelector('#mfcc0');
   var usrs = document.querySelector('#arms');
   var arms = ['none','new']
   var nspeakers = 0
@@ -288,14 +289,15 @@
     // // element.type = type;
     // element.value = type; // Really? You want the default value to be the type string?
     // element.name = type; // And the name too?
-    // element.onclick = function() { // Note this is a function
+    // element.onclicck = function() { // Note this is a function
     //   alert("blabla");
     // };
     usrs.innerHTML = usrs.innerHTML + '<div class="row"><div class="col"><button class="button button1" id="' + type +'">'+type+'</button></div><div class="col"><div id="mfcc0" class="fband"></div></div></div>'
   //   var foo = document.getElementById("arms");
   //   //Append the element in page (in span).
   //   arms.appendChild(element);
-  // }
+  }
+    
   document.getElementById("new").onclick = function() {
     add(usrs_name[nspeakers]);
     nspeakers = nspeakers + 1
