@@ -297,10 +297,10 @@
   //   //Append the element in page (in span).
   //   arms.appendChild(element);
   }
-    
+
   document.getElementById("new").onclick = function() {
     add(usrs_name[nspeakers]);
-    nspeakers = nspeakers + 1
+    nspeakers = nspeakers + 1;
   };
 
   function render() {
