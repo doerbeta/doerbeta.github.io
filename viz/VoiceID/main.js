@@ -277,7 +277,7 @@
   var usrn = document.querySelector('#mfcc0');
   var usrs = document.querySelector('#arms');
   var arms = ['none','new'];
-  var linucb = [initLinUCBArm(Meyda.numberOfMFCCCoefficients),initLinUCBArm(Meyda.numberOfMFCCCoefficients)]
+  var linucb = [initLinUCBArm(Meyda.numberOfMFCCCoefficients),initLinUCBArm(Meyda.numberOfMFCCCoefficients)];
   var nspeakers = 0;
 
   function initLinUCBArm(d) {
