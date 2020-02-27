@@ -285,11 +285,11 @@
     usrs.innerHTML = usrs.innerHTML + '\n<div class="row"><div class="col"><button class="button button1" id="usr' + n +'">User '+n+'</button></div><div class="col"><div id="mfcc'+n+'" class="fband"></div></div></div>';
   }
 
-  function newBtn() {
+  document.getElementById("new").onclick = function() {
     add(nspeakers);
     nspeakers = nspeakers + 1;
     alert(nspeakers);
-  }
+  };
 
   function render() {
     features = a.get(['amplitudeSpectrum', 'spectralCentroid', 'spectralRolloff', 'loudness', 'rms', 'chroma', 'mfcc']);
