@@ -286,7 +286,7 @@
     usrs.innerHTML = usrs.innerHTML + '\n<div class="row"><div class="col"><button class="button button1" id="usr' + n +'">User '+n+'</button></div><div class="col"><div id="mfcc'+n+'" class="fband"></div></div></div>';
   }
 
-  document.getElementById("new").onclick = function() {
+  function newBtn() {
     add(nspeakers);
     nspeakers = nspeakers + 1;
     alert(nspeakers);
