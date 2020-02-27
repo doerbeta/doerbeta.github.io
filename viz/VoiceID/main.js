@@ -289,6 +289,9 @@
   var ucb_alpha = 0.1;
 
   function getTheta(n) {
+    console.log(linucb[n]);
+    console.log(linucb[n][0]);
+    console.log(linucb[n][1]);
     return math.multiply(math.inv(linucb[n][0]), linucb[n][1]);
   }
 

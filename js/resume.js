@@ -13,7 +13,7 @@ setTimeout(hideLoader, 10 * 1000);
 
 function showImg() {
     // $('#profileimg').show();
-    document.getElementById("profileimg").src = "./img/profiles/profile500.jpg"; 
+    document.getElementById("profileimg").src = "https://www.baihan.nyc/img/profiles/profile500.jpg"; 
 }
 
 function changeText(text) {
