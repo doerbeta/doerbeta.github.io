@@ -63,21 +63,21 @@ div#legend {
   vertical-align: middle;
 }
 
-#showcase #chroma::before {
+ #chroma::before {
   content: 'Chroma bands:';
   margin-right: 10px;
   display: inline-block;
   text-align: left;
 }
 
-#showcase #chroma {
+#chroma {
   margin-top: 20px;
   display: flex;
   justify-content: left;
   align-items: left;
 }
 
-#showcase .chroma-band {
+.chroma-band {
   flex: 0 1 28px;
   height: 28px;
   display: inline-block;
@@ -87,21 +87,21 @@ div#legend {
   color: #ffffff;
 }
 
-#showcase #mfcc::before {
+#mfcc::before {
   content: 'MFCC bands:';
   margin-right: 10px;
   display: inline-block;
   text-align: center;
 }
 
-#showcase #mfcc {
+#mfcc {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#showcase .mfcc-band {
+.mfcc-band {
   flex: 0 1 28px;
   height: 28px;
   display: inline-block;
