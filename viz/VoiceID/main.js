@@ -391,7 +391,7 @@
         addBtn(nspeakers);
         // arms.push('usr'+nspeakers);
         // linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
-        // document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...';
+        document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...';
         nspeakers = nspeakers + 1;
         // alert(features.mfcc);
       };
