@@ -283,19 +283,19 @@
 
   function add(type) {
     //Create an input type dynamically.
-    var element = document.createElement("button");
-    //Assign different attributes to the element.
-    // element.type = type;
-    element.value = type; // Really? You want the default value to be the type string?
-    element.name = type; // And the name too?
-    element.onclick = function() { // Note this is a function
-      alert("blabla");
-    };
-
-    var foo = document.getElementById("fooBar");
-    //Append the element in page (in span).
-    foo.appendChild(element);
-  }
+    // var element = document.createElement("button");
+    // //Assign different attributes to the element.
+    // // element.type = type;
+    // element.value = type; // Really? You want the default value to be the type string?
+    // element.name = type; // And the name too?
+    // element.onclick = function() { // Note this is a function
+    //   alert("blabla");
+    // };
+    usrs.innerHTML = usrs.innerHTML + '<div class="row"><div class="col"><button class="button button1" id="' + type +'">'+type+'</button></div><div class="col"><div id="mfcc0" class="fband"></div></div></div>'
+  //   var foo = document.getElementById("arms");
+  //   //Append the element in page (in span).
+  //   arms.appendChild(element);
+  // }
   document.getElementById("new").onclick = function() {
     add(usrs_name[nspeakers]);
     nspeakers = nspeakers + 1

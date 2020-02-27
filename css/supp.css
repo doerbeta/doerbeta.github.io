@@ -88,7 +88,7 @@ div#legend {
 }
 
 #mfcc::before {
-  content: 'MFCC bands:';
+  content: 'MFCC:';
   margin-right: 10px;
   display: inline-block;
   text-align: center;
