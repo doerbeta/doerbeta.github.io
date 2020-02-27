@@ -280,9 +280,10 @@
   var features = null;
   var chromaWrapper = document.querySelector('#chroma');
   var mfccWrapper = document.querySelector('#mfcc');
+  var clickers = [document.querySelector('#btnnone'),document.querySelector('#btnnew')];
   var thetabands = [document.querySelector('#thetanone'),document.querySelector('#thetanew')];
   var usrs = document.querySelector('#arms');
-  var arms = ['none','new'];
+  var arms = ['No one','A new user'];
   var linucb = [initLinUCBArm(Meyda.numberOfMFCCCoefficients),initLinUCBArm(Meyda.numberOfMFCCCoefficients)];
   var nspeakers = 0;
   var ucb_alpha = 0.1;
@@ -316,7 +317,7 @@
   var points = [40, 100, 1, 5, 25, 10];
 
   function addBtn(n) {
-    usrs.innerHTML = usrs.innerHTML + '\n<div class="row"><div class="col"><button class="button button1" id="usr' + n +'">User '+n+'</button></div><div class="col"><div id="mfcc'+n+'" class="fband"></div></div></div>';
+    usrs.innerHTML = usrs.innerHTML + '\n<div class="row"><div class="col"><button class="button button1" id="btnusr' + n +'">User '+n+'</button></div><div class="col"><div id="mfcc'+n+'" class="fband"></div></div></div>';
   }
 
   function render() {
@@ -412,15 +413,50 @@
       //   }, '');
       // }
 
-      document.getElementById("new").onclick = function() {
+      var x = math.transpose(features.mfcc);
+      var action = getArm(x);
+      var pos_reward = 1;
+      var neg_reward = 0;
+
+      document.getElementById("voiceid").innerHTML = arms[action]+' is speaking...';
+      console.log(action);
+      clickers[action].style.backgroundColor = "#4CAF50";
+      clickers[action].style.color =  "white";
+
+      document.getElementById("btnnew").onclick = function() {
         addBtn(nspeakers);
-        arms.push('usr'+nspeakers);
+        arms.push('User '+nspeakers);
         linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
         thetabands.push(document.querySelector('#theta'+nspeakers));
+        clickers.push(document.querySelector('#btnusr'+nspeakers));
         document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...';
         nspeakers = nspeakers + 1;
-        alert(Meyda.numberOfMFCCCoefficients);
+        if (action == 1) {
+          updateArm(1,x,pos_reward);
+        } else {
+          updateArm(1,x,neg_reward);
+        }
       };
+
+      document.getElementById("btnnone").onclick = function() {
+        document.getElementById("voiceid").innerHTML = 'No one is speaking...';
+        if (action == 2) {
+          updateArm(2,x,pos_reward);
+        } else {
+          updateArm(2,x,neg_reward);
+        }
+      };
+
+      for (var i = 0; i < nspeakers; i++) {
+        clickers[i+2].onclick = function() {
+          document.getElementById("voiceid").innerHTML = 'User '+i+' is speaking...';
+          if (i+2 == action) {
+            updateArm(i+2,x,pos_reward);
+          } else {
+            updateArm(i+2,x,neg_reward);
+          }
+        }
+      }
 
     }
 
