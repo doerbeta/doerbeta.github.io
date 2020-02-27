@@ -276,8 +276,8 @@
   var mfccWrapper = document.querySelector('#mfcc');
   var usrn = document.querySelector('#mfcc0');
   var usrs = document.querySelector('#arms');
-  var arms = ['none','new'];
-  var linucb = [initLinUCBArm(Meyda.numberOfMFCCCoefficients),initLinUCBArm(Meyda.numberOfMFCCCoefficients)];
+  // var arms = ['none','new'];
+  // var linucb = [initLinUCBArm(Meyda.numberOfMFCCCoefficients),initLinUCBArm(Meyda.numberOfMFCCCoefficients)];
   var nspeakers = 0;
 
   function initLinUCBArm(d) {
@@ -307,7 +307,7 @@
         }, '');
       }
 
-      if (usrs) {
+      if (usrn) {
         usrn.innerHTML = points.reduce(function (acc, v,i) {
           return acc + '\n         <div class="mfcc-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
         }, '');
@@ -389,9 +389,9 @@
 
       document.getElementById("new").onclick = function() {
         addBtn(nspeakers);
-        arms.push('usr'+nspeakers);
-        linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
-        document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...';
+        // arms.push('usr'+nspeakers);
+        // linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
+        // document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...';
         nspeakers = nspeakers + 1;
         // alert(features.mfcc);
       };
