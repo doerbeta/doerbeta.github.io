@@ -27,7 +27,7 @@ audio {
 .key-item {
   font-size: small;
   text-align: center;
-  display: block;
+  display: inline;
   margin: 0 15px;
   vertical-align: middle;
 }
@@ -95,6 +95,21 @@ div#legend {
 }
 
 #mfcc {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.fband::before {
+  content: '';
+  margin-right: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+.fband {
   margin-top: 20px;
   display: flex;
   justify-content: center;
