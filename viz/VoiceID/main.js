@@ -280,11 +280,38 @@
   var features = null;
   var chromaWrapper = document.querySelector('#chroma');
   var mfccWrapper = document.querySelector('#mfcc');
-  var usrn = document.querySelector('#mfcc0');
+  var thetabands = [document.querySelector('#thetanone'),document.querySelector('#thetanew')];
   var usrs = document.querySelector('#arms');
   var arms = ['none','new'];
   var linucb = [initLinUCBArm(Meyda.numberOfMFCCCoefficients),initLinUCBArm(Meyda.numberOfMFCCCoefficients)];
   var nspeakers = 0;
+  var ucb_alpha = 0.1;
+
+  function getTheta(n) {
+    return math.multiply(math.inv(linucb[n][0]), linucb[n][1]);
+  }
+
+  function getUCBp(n,x) {
+    return math.multiply(math.transpose(getTheta(n)),x) + ucb_alpha * math.sqrt(math.multiply(math.transpose(x),math.inv(linucb[n][0]),x));
+  }
+
+  function getArm(x) {
+    var max_p = - math.Infinity;
+    var best_arm = -1;
+    for (var i = 0; i < arms.length; i++) {
+      var p = getUCBp(i,x);
+      if (p > max_p) {
+        max_p = p;
+        best_arm = i;
+      }
+    }
+    return best_arm;
+  }
+
+  function updateArm(n,x,r) {
+    linucb[n][0] = linucb[n][0]+ math.multiply(x,math.transpose(x));
+    linucb[n][1] = linucb[n][1]+ math.multiply(r, x);
+  }
 
   var points = [40, 100, 1, 5, 25, 10];
 
@@ -304,12 +331,6 @@
       if (mfccWrapper && features.mfcc) {
         mfccWrapper.innerHTML = features.mfcc.reduce(function (acc, v, i) {
           return acc + '\n          <div class="mfcc-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
-        }, '');
-      }
-
-      if (usrn) {
-        usrn.innerHTML = points.reduce(function (acc, v,i) {
-          return acc + '\n         <div class="mfcc-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
         }, '');
       }
 
@@ -385,15 +406,20 @@
       //   loudnessLines.remove(loudnessLines.children[c]); //forEach is slow
       // }
 
-
+      // if (thetabands) {
+      //   usrn.innerHTML = points.reduce(function (acc, v,i) {
+      //     return acc + '\n         <div class="mfcc-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
+      //   }, '');
+      // }
 
       document.getElementById("new").onclick = function() {
         addBtn(nspeakers);
         arms.push('usr'+nspeakers);
         linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
+        thetabands.push(document.querySelector('#theta'+nspeakers));
         document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...';
         nspeakers = nspeakers + 1;
-        // alert(Meyda.numberOfMFCCCoefficients);
+        alert(Meyda.numberOfMFCCCoefficients);
       };
 
     }
