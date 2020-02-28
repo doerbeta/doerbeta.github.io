@@ -313,8 +313,9 @@
   }
 
   function updateArm(n,x,r) {
-    linucb[n][0] = linucb[n][0]+ math.multiply(x,math.transpose(x));
-    linucb[n][1] = linucb[n][1]+ math.multiply(r, x);
+    console.log(x);
+    linucb[n][0] = math.add(linucb[n][0], math.multiply(x,math.transpose(x)));
+    linucb[n][1] = math.add(linucb[n][1], math.multiply(r, x));
   }
 
   var points = [40, 100, 1, 5, 25, 10];
