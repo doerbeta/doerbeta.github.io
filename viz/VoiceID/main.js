@@ -464,9 +464,9 @@
           var theta = getTheta(j);
           var theta_array = [];
           for (var k = 0; k < features.mfcc.length; k++) {
-            theta_array.push(theta[k]);
+            theta_array.push(math.subset(theta,math.index(k)));
             console.log(k);
-            console.log(theta[k]);
+            console.log(math.subset(theta,math.index(k)));
           }
           console.log(theta_array);
           console.log(features.mfcc);
