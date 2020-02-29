@@ -465,9 +465,10 @@
           var theta_array = [];
           console.log(math.size(theta));
           console.log(math.size(theta)[0]);
-          for (var k = 0; k < math.size(theta)[0]; k++) {
+          for (var k = 0; k < math.size(theta); k++) {
             theta_array.push(theta[k]);
             console.log(k);
+            console.log(theta[k]);
           }
           console.log(theta_array);
           console.log(features.mfcc);
