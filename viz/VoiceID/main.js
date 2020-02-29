@@ -459,11 +459,13 @@
       //   loudnessLines.remove(loudnessLines.children[c]); //forEach is slow
       // }
 
-      // if (thetabands) {
-      //   usrn.innerHTML = points.reduce(function (acc, v,i) {
-      //     return acc + '\n         <div class="mfcc-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
-      //   }, '');
-      // }
+      if (thetabands) {
+        for (var i = 0; i < thetabands.length; i++) {
+          thetabands[i].innerHTML = points.reduce(function (acc, v,i) {
+            return acc + '\n         <div class="theta-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
+          }, '');
+        }
+      }
 
       var x = math.transpose(features.mfcc);
       var action = getArm(x);
@@ -525,7 +527,7 @@
         var a_prime = nearestNeighbor(x);
         updateRewardMapping(a_prime,x,pos_reward);
       }
-      
+
     }
 
     requestAnimationFrame(render);
