@@ -461,10 +461,14 @@
 
       if (thetabands) {
         for (var j = 0; j < thetabands.length; j++) {
-          var theta = math.flatten(math.transpose(getTheta(j))).data;
-          console.log(theta);
+          var theta = math.flatten(math.transpose(getTheta(j)));
+          var theta_array = [];
+          for (var k = 0; k < theta.length; k++) {
+            theta_array.push(theta[k]);
+          }
+          console.log(theta_array);
           console.log(features.mfcc);
-          thetabands[i].innerHTML = theta.reduce(function (acc,v,i) {
+          thetabands[i].innerHTML = theta_array.reduce(function (acc,v,i) {
             return acc + '\n         <div class="theta-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
           }, '');
         }
