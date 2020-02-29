@@ -354,7 +354,7 @@
   }
 
   function addBtn(n) {
-    usrs.innerHTML = usrs.innerHTML + '\n<div class="row"><div class="col"><button class="button button1" id="btnusr' + n +'">User '+n+'</button></div><div class="col"><div id="mfcc'+n+'" class="fband"></div></div></div>';
+    usrs.innerHTML = usrs.innerHTML + '\n<div class="row"><div class="col"><button class="button button1" id="btnusr' + n +'">User '+n+'</button></div><div class="col"><div id="theta'+n+'" class="fband"></div></div></div>';
   }
 
   var points = [40, 100, 1, 5, 25, 10];
