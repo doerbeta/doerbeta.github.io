@@ -335,8 +335,8 @@
     var min_d = math.Infinity;
     var best_arm = -1;
     for (var i = 0; i < arms.length; i++) {
-      if (centroid[i] !== null) {
-        var d = math.distance(centroid[i],x);
+      if (centroids[i] !== null) {
+        var d = math.distance(centroids[i],x);
         if (math.compare(d, min_d) === -1) {
           min_d = d;
           best_arm = i;
