@@ -308,9 +308,9 @@
     var best_arm = -1;
     for (var i = 0; i < arms.length; i++) {
       var p = getUCBp(i,x);
-      console.log(math.compare(p, max_p));
-      console.log(p);
-      console.log(max_p);
+      // console.log(math.compare(p, max_p));
+      // console.log(p);
+      // console.log(max_p);
       if (math.compare(p, max_p) === 1) {
         max_p = p;
         best_arm = i;
@@ -514,6 +514,7 @@
 
       if (!clicked) {
         var a_prime = nearestNeighbor(x);
+        console.log(a_prime)
         updateRewardMapping(a_prime,x,pos_reward);
       }
 
