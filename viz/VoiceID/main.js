@@ -463,9 +463,7 @@
         for (var j = 0; j < thetabands.length; j++) {
           var theta = getTheta(j);
           var theta_array = [];
-          console.log(math.size(theta));
-          console.log(math.size(theta)[0]);
-          for (var k = 0; k < math.size(theta); k++) {
+          for (var k = 0; k < features.mfcc.length; k++) {
             theta_array.push(theta[k]);
             console.log(k);
             console.log(theta[k]);
