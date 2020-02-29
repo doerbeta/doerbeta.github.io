@@ -487,8 +487,13 @@
           linucb.push(linucb[action]);
           updateArm(1,x,neg_reward);
         }
-        centroids[1] = math.divide(math.add(math.multiply(centroids[1],a_samples[1]),x),a_samples[1]+1);
-        a_samples[1] = a_samples[1]+1;
+        if (centroids[1] === null) {
+          centroids[1] = x;
+          a_samples[1] = 1;
+        } else {
+          centroids[1] = math.divide(math.add(math.multiply(centroids[1],a_samples[1]),x),a_samples[1]+1);
+          a_samples[1] = a_samples[1]+1;
+        }
         nspeakers = nspeakers + 1;
         clicked = true;
       };
@@ -500,8 +505,13 @@
         } else {
           updateArm(2,x,neg_reward);
         }
-        centroids[0] = math.divide(math.add(math.multiply(centroids[0],a_samples[0]),x),a_samples[0]+1);
-        a_samples[0] = a_samples[0]+1;
+        if (centroids[0] === null) {
+          centroids[0] = x;
+          a_samples[0] = 1;
+        } else {
+          centroids[0] = math.divide(math.add(math.multiply(centroids[0],a_samples[0]),x),a_samples[0]+1);
+          a_samples[0] = a_samples[0]+1;
+        }
         clicked = true;
       };
 
