@@ -461,7 +461,8 @@
 
       if (thetabands) {
         for (var i = 0; i < thetabands.length; i++) {
-          thetabands[i].innerHTML = getTheta(i).reduce(function (acc, v,i) {
+          var theta = getTheta(i);
+          thetabands[i].innerHTML = theta.reduce(function (acc, v,i) {
             return acc + '\n         <div class="theta-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
           }, '');
         }
