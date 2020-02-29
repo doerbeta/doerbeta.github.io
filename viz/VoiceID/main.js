@@ -299,7 +299,7 @@
   }
 
   function getUCBp(n,x) {
-    return math.multiply(math.add(math.transpose(getTheta(n)),x), ucb_alpha * math.sqrt(math.multiply(math.transpose(x),math.inv(linucb[n][0]),x)));
+    return math.add(math.multiply(math.transpose(getTheta(n)),x), ucb_alpha * math.sqrt(math.multiply(math.transpose(x),math.inv(linucb[n][0]),x)));
   }
 
 
