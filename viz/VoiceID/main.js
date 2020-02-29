@@ -461,7 +461,7 @@
 
       if (thetabands) {
         for (var j = 0; j < thetabands.length; j++) {
-          var theta = math.flatten(getTheta(j));
+          var theta = math.flatten(math.transpose(getTheta(j)));
           console.log(theta);
           console.log(features.mfcc);
           thetabands[i].innerHTML = theta.reduce(function (acc,v,i) {
