@@ -308,7 +308,7 @@
     var best_arm = -1;
     for (var i = 0; i < arms.length; i++) {
       var p = getUCBp(i,x);
-      if (p > max_p) {
+      if (math.compare(p, max_p) > 0) {
         max_p = p;
         best_arm = i;
       }
