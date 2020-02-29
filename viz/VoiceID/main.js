@@ -335,8 +335,13 @@
     var min_d = math.Infinity;
     var best_arm = -1;
     for (var i = 0; i < arms.length; i++) {
+      console.log(centroids[i]);
       if (centroids[i] !== null) {
         var d = math.distance(centroids[i],x);
+        console.log(d);
+        console.log(min_d);
+        console.log(math.compare(d, min_d));
+
         if (math.compare(d, min_d) === -1) {
           min_d = d;
           best_arm = i;
@@ -514,7 +519,7 @@
 
       if (!clicked) {
         var a_prime = nearestNeighbor(x);
-        console.log(a_prime)
+        console.log(a_prime);
         updateRewardMapping(a_prime,x,pos_reward);
       }
 
