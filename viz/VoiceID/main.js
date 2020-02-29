@@ -463,10 +463,10 @@
         for (var j = 0; j < thetabands.length; j++) {
           var theta = getTheta(j);
           var theta_array = [];
-          for (var k = 0; k < theta.size; k++) {
+          for (var k = 0; k < math.size(theta); k++) {
             theta_array.push(theta[k]);
           }
-          console.log(theta.size);
+          console.log(math.size(theta));
           console.log(theta_array);
           console.log(features.mfcc);
           thetabands[i].innerHTML = theta_array.reduce(function (acc,v,i) {
