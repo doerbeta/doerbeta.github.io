@@ -136,12 +136,12 @@ div#legend {
   color: #ffffff;
 }
 
-/*.theta-band::before {
-  content: '';
+.fband::before {
+  content: '&theta;';
   margin-right: 10px;
   display: inline-block;
   text-align: center;
-}*/
+}
 
 #title-link {
   color:inherit;
