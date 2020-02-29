@@ -470,6 +470,18 @@
       var neg_reward = 0;
       var clicked = false;
 
+      document.getElementById("voiceid").innerHTML = arms[action]+' is speaking...';
+      console.log(action);
+      for (var i = 0; i < clickers.length; i++) {
+        if (math.equal(i,action)) {
+          clickers[i].style.backgroundColor = "#4CAF50";
+          clickers[i].style.color =  "white";
+        } else {
+          clickers[i].style.backgroundColor = "white";
+          clickers[i].style.color =  "#4CAF50";
+        }
+      }
+
       document.getElementById("btnnew").onclick = function() {
         addBtn(nspeakers);
         arms.push('User '+nspeakers);
@@ -533,17 +545,6 @@
         updateRewardMapping(a_prime,x,pos_reward);
       }
 
-      document.getElementById("voiceid").innerHTML = arms[action]+' is speaking...';
-      console.log(action);
-      for (var i = 0; i < clickers.length; i++) {
-        if (math.equal(i,action)) {
-          clickers[i].style.backgroundColor = "#4CAF50";
-          clickers[i].style.color =  "white";
-        } else {
-          clickers[i].style.backgroundColor = "white";
-          clickers[i].style.color =  "#4CAF50";
-        }
-      }
 
     }
 
