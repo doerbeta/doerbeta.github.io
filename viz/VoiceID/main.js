@@ -302,32 +302,11 @@
     return math.multiply(math.add(math.transpose(getTheta(n)),x), ucb_alpha * math.sqrt(math.multiply(math.transpose(x),math.inv(linucb[n][0]),x)));
   }
 
-  function shuffle(array) {
-    // var currentIndex = array.length, temporaryValue, randomIndex;
-    //
-    // // While there remain elements to shuffle...
-    // while (0 !== currentIndex) {
-    //
-    //   // Pick a remaining element...
-    //   randomIndex = Math.floor(Math.random() * currentIndex);
-    //   currentIndex -= 1;
-    //
-    //   // And swap it with the current element.
-    //   temporaryValue = array[currentIndex];
-    //   array[currentIndex] = array[randomIndex];
-    //   array[randomIndex] = temporaryValue;
-    // }
-    return array;
-  }
-
 
   function getArm(x) {
     var max_p = - math.Infinity;
     var best_arm = -1;
-    for (var j = 0; j < arms.length; j++) {
-      var shuffle_index = math.range(0,arms.length);
-      shuffle_index = shuffle(shuffle_index);
-      var i = shuffle_index[j];
+    for (var i = 0; i < arms.length; i++) {
       var p = getUCBp(i,x);
       if (p > max_p) {
         max_p = p;
