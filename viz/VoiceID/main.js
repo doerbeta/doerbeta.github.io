@@ -462,13 +462,18 @@
       if (thetabands) {
         for (var j = 0; j < thetabands.length; j++) {
           var theta = getTheta(j);
-          // var theta_array = [];
-          // math.forEach(theta, function(value) {
-          //   theta_array.push(value);
-          // });
-          thetabands[i].innerHTML = math.apply(theta,0,function (acc,v,i) {
+          var theta_array = [];
+          console.log(math.size(theta));
+          console.log(math.size(theta)[0]);
+          for (var k = 0; k < math.size(theta)[0]; k++) {
+            theta_array.push(theta[k]);
+            console.log(k);
+          }
+          console.log(theta_array);
+          console.log(features.mfcc);
+          thetabands[i].innerHTML = theta_array.reduce(function (acc,v,i) {
             return acc + '\n         <div class="theta-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
-          });
+          }, '');
         }
       }
 
