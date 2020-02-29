@@ -285,24 +285,48 @@
   var usrs = document.querySelector('#arms');
   var arms = ['No one','A new user'];
   var linucb = [initLinUCBArm(Meyda.numberOfMFCCCoefficients),initLinUCBArm(Meyda.numberOfMFCCCoefficients)];
+  var centroids = [null,null];
+  var a_samples = [0,0];
   var nspeakers = 0;
   var ucb_alpha = 0.1;
 
   function getTheta(n) {
-    console.log(linucb[n]);
-    console.log(linucb[n][0]);
-    console.log(linucb[n][1]);
+    // console.log(linucb[n]);
+    // console.log(linucb[n][0]);
+    // console.log(linucb[n][1]);
     return math.multiply(math.inv(linucb[n][0]), linucb[n][1]);
   }
 
   function getUCBp(n,x) {
-    return math.multiply(math.transpose(getTheta(n)),x) + ucb_alpha * math.sqrt(math.multiply(math.transpose(x),math.inv(linucb[n][0]),x));
+    return math.multiply(math.add(math.transpose(getTheta(n)),x), ucb_alpha * math.sqrt(math.multiply(math.transpose(x),math.inv(linucb[n][0]),x)));
   }
+
+  function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  }
+
 
   function getArm(x) {
     var max_p = - math.Infinity;
     var best_arm = -1;
-    for (var i = 0; i < arms.length; i++) {
+    for (var j = 0; j < arms.length; j++) {
+      var shuffle_index = math.range(0,arms.length);
+      shuffle_index = shuffle(shuffle_index);
+      var i = shuffle_index[j];
       var p = getUCBp(i,x);
       if (p > max_p) {
         max_p = p;
@@ -318,11 +342,35 @@
     linucb[n][1] = math.add(linucb[n][1], math.multiply(r, x));
   }
 
-  var points = [40, 100, 1, 5, 25, 10];
+  function updateRewardMapping(n,x,r) {
+    console.log(x);
+    // linucb[n][0] = math.add(linucb[n][0], math.multiply(x,math.transpose(x)));
+    linucb[n][1] = math.add(linucb[n][1], math.multiply(r, x));
+  }
+
+  function nearestNeighbor(x) {
+    var min_d = math.Infinity;
+    var best_arm = -1;
+    for (var j = 0; j < arms.length; j++) {
+      var shuffle_index = math.range(0,arms.length);
+      shuffle_index = shuffle(shuffle_index);
+      var i = shuffle_index[j];
+      if (centroid[i] !== null) {
+        var d = math.distance(centroid[i],x);
+        if (d > min_d) {
+          min_d = d;
+          best_arm = i;
+        }
+      }
+    }
+    return best_arm;
+  }
 
   function addBtn(n) {
     usrs.innerHTML = usrs.innerHTML + '\n<div class="row"><div class="col"><button class="button button1" id="btnusr' + n +'">User '+n+'</button></div><div class="col"><div id="mfcc'+n+'" class="fband"></div></div></div>';
   }
+
+  var points = [40, 100, 1, 5, 25, 10];
 
   function render() {
     features = a.get(['amplitudeSpectrum', 'spectralCentroid', 'spectralRolloff', 'loudness', 'rms', 'chroma', 'mfcc']);
@@ -421,6 +469,7 @@
       var action = getArm(x);
       var pos_reward = 1;
       var neg_reward = 0;
+      var clicked = false;
 
       document.getElementById("voiceid").innerHTML = arms[action]+' is speaking...';
       console.log(action);
@@ -430,38 +479,53 @@
       document.getElementById("btnnew").onclick = function() {
         addBtn(nspeakers);
         arms.push('User '+nspeakers);
-        linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
         thetabands.push(document.querySelector('#theta'+nspeakers));
         clickers.push(document.querySelector('#btnusr'+nspeakers));
         document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...';
-        nspeakers = nspeakers + 1;
-        if (action === 1) {
+        if (math.equal(action,1)) {
+          linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
           updateArm(1,x,pos_reward);
         } else {
+          linucb.push(linucb[action]);
           updateArm(1,x,neg_reward);
         }
+        centroids[1] = math.divide(math.add(math.multiply(centroids[1],a_samples[1]),x),a_samples[1]+1);
+        a_samples[1] = a_samples[1]+1;
+        nspeakers = nspeakers + 1;
+        clicked = true;
       };
 
       document.getElementById("btnnone").onclick = function() {
         document.getElementById("voiceid").innerHTML = 'No one is speaking...';
-        if (action === 2) {
+        if (math.equal(action,2)) {
           updateArm(2,x,pos_reward);
         } else {
           updateArm(2,x,neg_reward);
         }
+        centroids[0] = math.divide(math.add(math.multiply(centroids[0],a_samples[0]),x),a_samples[0]+1);
+        a_samples[0] = a_samples[0]+1;
+        clicked = true;
       };
 
       for (var i = 0; i < nspeakers; i++) {
         clickers[i+2].onclick = function() {
           document.getElementById("voiceid").innerHTML = 'User '+i+' is speaking...';
-          if (action === i+2) {
+          if (math.equal(action,i+2)) {
             updateArm(i+2,x,pos_reward);
           } else {
             updateArm(i+2,x,neg_reward);
           }
+          centroids[i+2] = math.divide(math.add(math.multiply(centroids[i+2],a_samples[i+2]),x),a_samples[i+2]+1);
+          a_samples[i+2] = a_samples[i+2]+1;
+          clicked = true;
         };
       }
 
+      if (!clicked) {
+        var a_prime = nearestNeighbor(x);
+        updateRewardMapping(a_prime,x,pos_reward);
+      }
+      
     }
 
     requestAnimationFrame(render);
