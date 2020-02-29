@@ -463,12 +463,9 @@
         for (var j = 0; j < thetabands.length; j++) {
           var theta = getTheta(j);
           var theta_array = [];
-          for (var k = 0; k < math.size(theta)[0]; k++) {
-            theta_array.push(theta[k]);
-          }
-          console.log(math.size(theta)[0]);
-          console.log(theta_array);
-          console.log(features.mfcc);
+          math.forEach(theta, function(value) {
+            theta_array.push(value);
+          });
           thetabands[i].innerHTML = theta_array.reduce(function (acc,v,i) {
             return acc + '\n         <div class="theta-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
           }, '');
