@@ -488,6 +488,8 @@
           linucb.push(linucb[action]);
           updateArm(1,x,neg_reward);
         }
+        centroids.push(x);
+        a_samples.push(1);
         if (centroids[1] === null) {
           centroids[1] = x;
           a_samples[1] = 1;
