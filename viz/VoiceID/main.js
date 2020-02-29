@@ -487,7 +487,7 @@
         arms.push('User '+nspeakers);
         thetabands.push(document.querySelector('#theta'+nspeakers));
         clickers.push(document.querySelector('#btnusr'+nspeakers));
-        document.getElementById("voiceid").innerHTML = 'User '+nspeakers+' is speaking...';
+        document.getElementById("voiceid").innerHTML = 'A new user is speaking...';
         if (math.equal(action,1)) {
           linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
           updateArm(1,x,pos_reward);
