@@ -461,11 +461,12 @@
 
       if (thetabands) {
         for (var j = 0; j < thetabands.length; j++) {
-          var theta = math.flatten(math.transpose(getTheta(j)));
+          var theta = getTheta(j);
           var theta_array = [];
           for (var k = 0; k < theta.length; k++) {
             theta_array.push(theta[k]);
           }
+          console.log(theta.length);
           console.log(theta_array);
           console.log(features.mfcc);
           thetabands[i].innerHTML = theta_array.reduce(function (acc,v,i) {
