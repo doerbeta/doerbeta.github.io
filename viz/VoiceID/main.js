@@ -308,7 +308,10 @@
     var best_arm = -1;
     for (var i = 0; i < arms.length; i++) {
       var p = getUCBp(i,x);
-      if (math.compare(p, max_p) > 0) {
+      if (math.compare(p, max_p) === 1) {
+        console.log(math.compare(p, max_p));
+        console.log(p);
+        console.log(max_p);
         max_p = p;
         best_arm = i;
       }
@@ -331,13 +334,10 @@
   function nearestNeighbor(x) {
     var min_d = math.Infinity;
     var best_arm = -1;
-    for (var j = 0; j < arms.length; j++) {
-      var shuffle_index = math.range(0,arms.length);
-      shuffle_index = shuffle(shuffle_index);
-      var i = shuffle_index[j];
+    for (var i = 0; i < arms.length; i++) {
       if (centroid[i] !== null) {
         var d = math.distance(centroid[i],x);
-        if (d > min_d) {
+        if (math.compare(d, min_d) === -1) {
           min_d = d;
           best_arm = i;
         }
