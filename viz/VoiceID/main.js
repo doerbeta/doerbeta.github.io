@@ -455,8 +455,8 @@
             // console.log(k);
             // console.log(math.subset(theta,math.index(k)));
           }
-          // console.log(thetabands);
-          // console.log(thetabands[j]);
+          console.log(thetabands);
+          console.log(thetabands[j]);
           thetabands[j].innerHTML = theta_array.reduce(function (acc,v,i) {
             return acc + '\n         <div class="theta-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
           }, '');
