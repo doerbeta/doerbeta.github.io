@@ -291,9 +291,9 @@
   var ucb_alpha = 0.1;
 
   function getTheta(n) {
-    // console.log(linucb[n]);
-    // console.log(linucb[n][0]);
-    // console.log(linucb[n][1]);
+    console.log(linucb[n]);
+    console.log(linucb[n][0]);
+    console.log(linucb[n][1]);
     return math.multiply(math.inv(linucb[n][0]), linucb[n][1]);
   }
 
@@ -461,7 +461,7 @@
 
       if (thetabands) {
         for (var i = 0; i < thetabands.length; i++) {
-          thetabands[i].innerHTML = points.reduce(function (acc, v,i) {
+          thetabands[i].innerHTML = getTheta(i).reduce(function (acc, v,i) {
             return acc + '\n         <div class="theta-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
           }, '');
         }
