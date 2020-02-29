@@ -335,7 +335,7 @@
     var min_d = math.Infinity;
     var best_arm = -1;
     for (var i = 0; i < arms.length; i++) {
-      // console.log(centroids[i]);
+      console.log(centroids[i]);
       if (centroids[i] !== null) {
         var d = math.distance(centroids[i],x);
         // console.log(d);
