@@ -291,10 +291,10 @@
   var ucb_alpha = 0.1;
 
   function getTheta(n) {
-    console.log(n);
-    console.log(linucb[n]);
-    console.log(linucb[n][0]);
-    console.log(linucb[n][1]);
+    // console.log(n);
+    // console.log(linucb[n]);
+    // console.log(linucb[n][0]);
+    // console.log(linucb[n][1]);
     return math.multiply(math.inv(linucb[n][0]), linucb[n][1]);
   }
 
@@ -308,10 +308,10 @@
     var best_arm = -1;
     for (var i = 0; i < arms.length; i++) {
       var p = getUCBp(i,x);
+      console.log(math.compare(p, max_p));
+      console.log(p);
+      console.log(max_p);
       if (math.compare(p, max_p) === 1) {
-        console.log(math.compare(p, max_p));
-        console.log(p);
-        console.log(max_p);
         max_p = p;
         best_arm = i;
       }
