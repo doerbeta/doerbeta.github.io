@@ -472,8 +472,15 @@
 
       document.getElementById("voiceid").innerHTML = arms[action]+' is speaking...';
       console.log(action);
-      clickers[action].style.backgroundColor = "#4CAF50";
-      clickers[action].style.color =  "white";
+      for (var i = 0; i < clickers.length; i++) {
+        if (math.equal(i,action)) {
+          clickers[action].style.backgroundColor = "#4CAF50";
+          clickers[action].style.color =  "white";
+        } else {
+          clickers[action].style.backgroundColor = "#white";
+          clickers[action].style.color =  "4CAF50";
+        }
+      }
 
       document.getElementById("btnnew").onclick = function() {
         addBtn(nspeakers);
