@@ -1046,7 +1046,7 @@
                                   linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
                                   updateArm(1,x,pos_reward);
                                 } else {
-                                  linucb.push(Array.from(linucb[action]));
+                                  linucb.push(linucb[action]);
                                   updateArm(1,x,neg_reward);
                                 }
                                 centroids.push(x);
