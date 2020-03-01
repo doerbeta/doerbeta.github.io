@@ -1,32 +1,32 @@
 function openInfo1() {
-  openInfo("Mental AI","https://www.baihan.nyc/img/publications/lin2020astory.gif","Watch an RL agent playing games with mental disorder symptoms.");
+  openInfo("Mental AI","https://www.baihan.nyc/img/publications/lin2020astory.gif","Watch an RL agent playing games with mental disorder symptoms. Ongoing work includes human behavioral modeling with clinical data and understanding how reward processing bias affect reinforcement learning in nonstationary setting.");
 }
 
 function openInfo2() {
-  openInfo("Dynamic Representational Similarity Analysis (dynRSA)","https://www.baihan.nyc/img/publications/lin2019visualize.gif","Observe the dynamical changes of neural representations for a brain or neural networks in action.");
+  openInfo("Dynamic Representational Similarity Analysis (dynRSA)","https://www.baihan.nyc/img/publications/lin2019visualize.gif","Observe the dynamical changes of neural representations for brains or neural networks in action. Ongoing work includes visualization and inference on recurrent neural networks given different time-stamped stimuli and neuroimaging recordings given different visual inputs.");
 }
 
 function openInfo3() {
-  openInfo("interactive Topological Data Analysis (iTDA)","https://www.baihan.nyc/img/publications/lin2019cliques2.png","Investigate the shape of the data through the lens of neighborhood information.");
+  openInfo("interactive Topological Data Analysis (iTDA)","https://www.baihan.nyc/img/publications/lin2019cliques2.png","Investigate the shape of the data through the lens of neighborhood information. Ongoing work includes higher-order simplicial characterization, temporal constraining topological mapping, dimensional reduction visualization etc.");
 }
 
 
 function openInfo4() {
-  openInfo("Neural Minimum Description Length","https://www.baihan.nyc/img/publications/lin2019unsupervised.png","Understand the model complexity of neural networks during learning, adapting and failing.");
+  openInfo("Neural Minimum Description Length (Neural MDL)","https://www.baihan.nyc/img/publications/lin2019unsupervised.png","Understand the model complexity of neural networks during learning, adapting and failing. Ongoing work includes information flow characterization with coding length, incrementally computed regularity-based normalizations as deep network regularization etc..");
 }
 
 function openInfo5() {
-  openInfo("Voice ID on the fly","https://www.baihan.nyc/img/publications/lin2020voice.gif","Interact with this AI system to help it learn about speaker identity in real-time.");
+  openInfo("Voice ID on the fly","https://www.baihan.nyc/img/publications/lin2020voice.gif","Interact with this AI system to help it learn about speaker identity in real-time. Ongoing work includes semi-supervision with self-supervision in contextual bandits, real-time feature extraction given adaptive parameters etc.");
 }
 
 function openInfo6() {
-  openInfo("Virtual-to-Real Mirrors/Windows (V2R)","https://www.baihan.nyc/img/publications/lin2020keep.gif","Experience your real world projected into a virtual space (e.g. AR, VR, or even a movie).");
+  openInfo("Virtual-to-Real Mirrors/Windows (V2R)","https://www.baihan.nyc/img/publications/lin2020keep.gif","Experience your real world projected into a virtual space (e.g. AR, VR, or even a movie). Ongoing work include V2R activation with interactive gesture detection, real-time style transform of virtual objects into real-world styles etc..");
 }
 
 function openInfo(title,image,text) {
   document.getElementById("info").style.width = "67%";
   document.getElementById("info").style.height = "67%";
-  document.getElementById("infotext").innerHTML = '<div class="row"><h3 class="infocontent">' + title + '</h3></div><br>' +
+  document.getElementById("infotext").innerHTML = '<div class="row"><h3 class="infocontent">&nbsp;&nbsp;' + title + '</h3></div><br>' +
       '<div class="infoimgcolumn"><img src=' + image + ' alt=""  style="width:100%;"></div>' +
       '<div class="infotextcolumn"><p class="infocontent"> ' + text + '</p></div>';
 }
