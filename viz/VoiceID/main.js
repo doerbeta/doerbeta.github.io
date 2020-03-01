@@ -289,6 +289,7 @@
           var a_samples = [0,0];
           var nspeakers = 0;
           var ucb_alpha = 0.1;
+          var epsilon = 0.2;
 
           function getTheta(n) {
             // console.log(n);
@@ -307,7 +308,7 @@
             var max_p = - math.Infinity;
             var best_arm = -1;
             for (var i = 0; i < arms.length; i++) {
-              console.log(arms.length);
+              // console.log(arms.length);
               var p = getUCBp(i,x);
               // console.log(math.compare(p, max_p));
               // console.log(p);
@@ -471,7 +472,8 @@
               var neg_reward = 0;
               var clicked = false;
 
-              // console.log(action);
+              console.log(action);
+              console.log(arms[action]);
               document.getElementById("voiceid").innerHTML = arms[action]+' is speaking...';
               for (var i = 0; i < clickers.length; i++) {
                 if (math.equal(i,action)) {
