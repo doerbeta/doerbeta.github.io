@@ -81,7 +81,7 @@ div#legend {
   background-image: url('https://www.baihan.nyc/viz/VoiceID/voiceID_logo.png');
   background-repeat: no-repeat;
   /*background-attachment: fixed;*/
-  background-size: 30% 30%;
+  background-size: 30% auto;
   background-position: top right; 
 }
 
