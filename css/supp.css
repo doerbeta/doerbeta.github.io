@@ -77,8 +77,8 @@ div#legend {
   align-items: left;
 }
 
-#voiceid-body {
-  background-image: url('https://www.baihan.nyc/viz/VoiceID/voiceID_logo.pdf');
+#voiceidbody {
+  background-image: url('https://www.baihan.nyc/viz/VoiceID/voiceID_logo.png');
   background-repeat: no-repeat;
   /*background-attachment: fixed;*/
   background-position: top right; 
