@@ -706,8 +706,8 @@ span {
     left:50%;
     transform:translate(-50%, -50%);
     border-radius: 20px;
-    border: 2px solid white; /* Green */
-
+    border: 2px solid white;
+    padding: 8px 8px 8px 8px;
 }
 
 .infocontent {
