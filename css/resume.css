@@ -698,7 +698,7 @@ span {
     overflow-x: hidden;
     overflow-y: hidden;
     transition: 0.5s ease;
-    padding-top: 0;
+    /*padding-top: 0;*/
     margin-left: auto;
     margin-right: auto;
     position:fixed;
