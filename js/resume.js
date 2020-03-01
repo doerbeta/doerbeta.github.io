@@ -1,3 +1,22 @@
+function openInfo1() {
+  openInfo("info1","info1text","Mental AI","https://www.baihan.nyc/img/publications/lin2020astory.gif","See an RL agent playing games with mental disorder symptoms...");
+}
+
+function closeInfo1() {
+  closeInfo("info1");
+}
+
+function openInfo(info,infotext,title,image,text) {
+  document.getElementById(info).style.width = "25%";
+  document.getElementById(info).style.height = "50%";
+  document.getElementById(infotext).innerHTML = '<h3>' + title + '</h3><img src=' + image + ' alt="" border="0" style="width:100%"> <p class="text-primary"> ' + text + '</p>';
+}
+
+function closeInfo(info) {
+  document.getElementById(info).style.width = "0";
+  document.getElementById(info).style.height = "0";
+}
+
 function hideLoader() {
     $('#loading').hide();
 }
