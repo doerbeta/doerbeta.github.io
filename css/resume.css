@@ -718,4 +718,5 @@ span {
     color: white;
     display: block;
     transition: 0.3s;
+    float: left;
 }
