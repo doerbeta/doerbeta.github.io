@@ -8,7 +8,7 @@ function closeInfo1() {
 
 function openInfo(info,infotext,title,image,text) {
   document.getElementById(info).style.width = "25%";
-  document.getElementById(info).style.height = "50%";
+  document.getElementById(info).style.height = "67%";
   document.getElementById(infotext).innerHTML = '<h3>' + title + '</h3><img src=' + image + ' alt="" border="0" style="width:100%"> <p class="text-primary"> ' + text + '</p>';
 }
 
