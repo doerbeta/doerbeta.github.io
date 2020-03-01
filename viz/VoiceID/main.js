@@ -318,7 +318,12 @@
                 best_arm = i;
               }
             }
-            return best_arm;
+            var random_arm = math.randomInt(arms.length);
+            if (Math.random() < epsilon) {
+              return random_arm;
+            } else {
+              return best_arm;
+            }
           }
 
           function updateArm(n,x,r) {
