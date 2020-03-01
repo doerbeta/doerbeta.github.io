@@ -322,13 +322,13 @@
           }
 
           function updateArm(n,x,r) {
-            console.log(x);
+            // console.log(x);
             linucb[n][0] = math.add(linucb[n][0], math.multiply(x,math.transpose(x)));
             linucb[n][1] = math.add(linucb[n][1], math.multiply(r, x));
           }
 
           function updateRewardMapping(n,x,r) {
-            console.log(x);
+            // console.log(x);
             // linucb[n][0] = math.add(linucb[n][0], math.multiply(x,math.transpose(x)));
             linucb[n][1] = math.add(linucb[n][1], math.multiply(r, x));
           }
@@ -337,8 +337,8 @@
             var min_d = math.Infinity;
             var best_arm = -1;
             for (var i = 0; i < arms.length; i++) {
-              console.log(i);
-              console.log(centroids[i]);
+              // console.log(i);
+              // console.log(centroids[i]);
               if (centroids[i] !== null) {
                 var d = math.distance(centroids[i],x);
                 // console.log(d);
