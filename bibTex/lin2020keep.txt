@@ -1,0 +1,6 @@
+@article{lin2020keep,
+  title={{Keep It Real: a Window to Real Reality in Virtual Reality}},
+  author={Lin, Baihan},
+  journal={under review},
+  year={2020}
+}

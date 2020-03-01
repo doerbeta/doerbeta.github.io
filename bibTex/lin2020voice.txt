@@ -1,0 +1,6 @@
+@article{lin2020voice,
+  title={{VoiceID on the fly: Real-time Register-free Online-learning Speaker Recognition}},
+  author={Lin, Baihan and Zhang, Xinxin},
+  journal={under review},
+  year={2020}
+}

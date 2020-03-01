@@ -1,0 +1,6 @@
+@article{lin2020unsupervised,
+  title={{Unsupervised Attention Mechanism across Neural Network Layers}},
+  author={Lin, Baihan},
+  journal={arXiv preprint arXiv:1902.10658},
+  year={2019}
+}
