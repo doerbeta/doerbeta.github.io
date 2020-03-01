@@ -1,42 +1,37 @@
 function openInfo1() {
-  openInfo("info1","info1text","Mental AI","https://www.baihan.nyc/img/publications/lin2020astory.gif","Watch an RL agent playing games with mental disorder symptoms.");
+  openInfo("Mental AI","https://www.baihan.nyc/img/publications/lin2020astory.gif","Watch an RL agent playing games with mental disorder symptoms.");
 }
 
 function openInfo2() {
-  openInfo("info2","info2text","Dynamic RSA","https://www.baihan.nyc/img/publications/lin2019visualize.gif","Observe the dynamical changes of neural representations for a brain or neural networks in action.");
+  openInfo("Dynamic Representational Similarity Analysis (dynRSA)","https://www.baihan.nyc/img/publications/lin2019visualize.gif","Observe the dynamical changes of neural representations for a brain or neural networks in action.");
 }
 
-function closeInfo1() {
-  closeInfo("info1");
-}
-
-function closeInfo2() {
-  closeInfo("info2");
-}
-
-function closeInfo3() {
-  closeInfo("info3");
+function openInfo3() {
+  openInfo("interactive Topological Data Analysis (iTDA)","https://www.baihan.nyc/img/publications/lin2019cliques2.png","Investigate the shape of the data through the lens of neighborhood information.");
 }
 
 
-function closeInfo4() {
-  closeInfo("info4");
+function openInfo4() {
+  openInfo("Neural Minimum Description Length","https://www.baihan.nyc/img/publications/lin2019unsupervised.png","Understand the model complexity of neural networks during learning, adapting and failing.");
 }
 
-
-function closeInfo5() {
-  closeInfo("info5");
+function openInfo5() {
+  openInfo("Voice ID on the fly","https://www.baihan.nyc/img/publications/lin2020voice.gif","Interact with this AI system to help it learn about speaker identity in real-time.");
 }
 
-function openInfo(info,infotext,title,image,text) {
-  document.getElementById(info).style.width = "67%";
-  document.getElementById(info).style.height = "67%";
-  document.getElementById(infotext).innerHTML = '<h3 class="infotext">' + title + '</h3><img src=' + image + ' alt="" border="0" style="width:100%"> <br><p class="infotext text-primary"> ' + text + '</p>';
+function openInfo6() {
+  openInfo("Virtual-to-Real Mirrors/Windows (V2R)","https://www.baihan.nyc/img/publications/lin2020keep.gif","Experience your real world projected into a virtual space (e.g. AR, VR, or even a movie).");
 }
 
-function closeInfo(info) {
-  document.getElementById(info).style.width = "0";
-  document.getElementById(info).style.height = "0";
+function openInfo(title,image,text) {
+  document.getElementById("info").style.width = "67%";
+  document.getElementById("info").style.height = "67%";
+  document.getElementById("infotext").innerHTML = '<h3 class="infocontent">' + title + '</h3><img src=' + image + ' alt="" border="0" style="width:50%"> <p class="infocontent text-primary"> ' + text + '</p>';
+}
+
+function closeInfo() {
+  document.getElementById("info").style.width = "0";
+  document.getElementById("info").style.height = "0";
 }
 
 function hideLoader() {
