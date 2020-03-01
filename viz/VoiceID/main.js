@@ -358,8 +358,6 @@
     usrs.innerHTML = usrs.innerHTML + '\n<div class="row"><div class="col"><button class="button button1" id="btnusr' + n +'">User '+n+'</button></div><div class="col"><div id="theta'+n+'" class="fband"></div></div></div>';
   }
 
-  var points = [40, 100, 1, 5, 25, 10];
-
   function render() {
     features = a.get(['amplitudeSpectrum', 'spectralCentroid', 'spectralRolloff', 'loudness', 'rms', 'chroma', 'mfcc']);
     if (features) {
@@ -492,7 +490,7 @@
           linucb.push(initLinUCBArm(Meyda.numberOfMFCCCoefficients));
           updateArm(1,x,pos_reward);
         } else {
-          linucb.push(linucb[action]);
+          linucb.push(Array.from(linucb[action]));
           updateArm(1,x,neg_reward);
         }
         centroids.push(x);
