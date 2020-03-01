@@ -727,6 +727,10 @@ span {
     padding: 5px;
 }
 
+.inforow {
+    text-align: center;
+}
+
 .infotextcolumn {
     float: left;
     width: 59.00%;
