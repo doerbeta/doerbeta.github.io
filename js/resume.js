@@ -1,9 +1,31 @@
 function openInfo1() {
-  openInfo("info1","info1text","Mental AI","https://www.baihan.nyc/img/publications/lin2020astory.gif","See an RL agent playing games with mental disorder symptoms...");
+  openInfo("info1","info1text","Mental AI","https://www.baihan.nyc/img/publications/lin2020astory.gif","Watch an RL agent playing games with mental disorder symptoms.");
+}
+
+function openInfo2() {
+  openInfo("info2","info2text","Dynamic RSA","https://www.baihan.nyc/img/publications/lin2019visualize.gif","Observe the dynamical changes of neural representations for a brain or neural networks in action.");
 }
 
 function closeInfo1() {
   closeInfo("info1");
+}
+
+function closeInfo2() {
+  closeInfo("info2");
+}
+
+function closeInfo3() {
+  closeInfo("info3");
+}
+
+
+function closeInfo4() {
+  closeInfo("info4");
+}
+
+
+function closeInfo5() {
+  closeInfo("info5");
 }
 
 function openInfo(info,infotext,title,image,text) {
