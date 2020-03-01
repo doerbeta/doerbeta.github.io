@@ -320,13 +320,13 @@
           }
 
           function updateArm(n,x,r) {
-            console.log(x);
+            // console.log(x);
             linucb[n][0] = math.add(linucb[n][0], math.multiply(x,math.transpose(x)));
             linucb[n][1] = math.add(linucb[n][1], math.multiply(r, x));
           }
 
           function updateRewardMapping(n,x,r) {
-            console.log(x);
+            // console.log(x);
             // linucb[n][0] = math.add(linucb[n][0], math.multiply(x,math.transpose(x)));
             linucb[n][1] = math.add(linucb[n][1], math.multiply(r, x));
           }
@@ -335,8 +335,8 @@
             var min_d = math.Infinity;
             var best_arm = -1;
             for (var i = 0; i < arms.length; i++) {
-              console.log(i);
-              console.log(centroids[i]);
+              // console.log(i);
+              // console.log(centroids[i]);
               if (centroids[i] !== null) {
                 var d = math.distance(centroids[i],x);
                 // console.log(d);
@@ -456,8 +456,8 @@
                     // console.log(k);
                     // console.log(math.subset(theta,math.index(k)));
                   }
-                  console.log(thetabands);
-                  console.log(thetabands[j]);
+                  // console.log(thetabands);
+                  // console.log(thetabands[j]);
                   thetabands[j].innerHTML = theta_array.reduce(function (acc,v,i) {
                     return acc + '\n         <div class="theta-band" style="background-color: rgba(0,' + Math.round(v + 25) * 5 + ',0,1)">' + i + '</div>';
                   }, '');
@@ -470,8 +470,8 @@
               var neg_reward = 0;
               var clicked = false;
 
-              document.getElementById("voiceid").innerHTML = arms[action]+' is speaking...';
               console.log(action);
+              document.getElementById("voiceid").innerHTML = arms[action]+' is speaking...';
               for (var i = 0; i < clickers.length; i++) {
                 if (math.equal(i,action)) {
                   clickers[i].style.backgroundColor = "#4CAF50";
