@@ -721,6 +721,17 @@ span {
     float: left;
 }
 
+.infotitle {
+    text-transform: none;
+    padding: 10px 10px 10px 10px;
+    /*text-decoration: none;*/
+    /*font-size: 1.25rem;*/
+    color: white;
+    /*display: block;*/
+    /*transition: 0.3s;*/
+    float: left;
+}
+
 .infoimgcolumn {
     float: left;
     width: 40.00%;
@@ -735,7 +746,7 @@ span {
     content: "";
     clear: both;
     display: table;
-    padding: 1px;
+    /*padding: 1px;*/
 }
 
 .infotextcolumn {
