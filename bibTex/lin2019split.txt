@@ -1,5 +1,5 @@
 @inproceedings{lin2019split-913,
-  title     = {Split {Q} Learning: Reinforcement Learning with Two-Stream Rewards},
+  title     = {{Split Q Learning: Reinforcement Learning with Two-Stream Rewards}},
   author    = {Lin, Baihan and Bouneffouf, Djallel and Cecchi, Guillermo},
   booktitle = {Proceedings of the Twenty-Eighth International Joint Conference on
                Artificial Intelligence, {IJCAI-19}},
