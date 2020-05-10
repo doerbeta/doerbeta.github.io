@@ -1,0 +1,6 @@
+@article{lin2020speaker,
+  title={{Speaker Diarization as a Fully Online Learning Problem in MiniVox}},
+  author={Lin, Baihan and Zhang, Xinxin},
+  journal={under review},
+  year={2020}
+}
