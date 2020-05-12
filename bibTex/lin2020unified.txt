@@ -1,11 +1,6 @@
-@inproceedings{lin2020unified,
-  title={{Unified Models of Human Behavioral Agents in Bandits, Contextual Bandits and RL}},
-  author={Lin, Baihan and Cecchi, Guillermo and Bouneffouf, Djallel and Reinen, Jenna and Rish, Irina},
-  booktitle = {under review},
-  publisher = {},             
-  pages     = {},
-  year      = {2020},
-  month     = {},
-  doi       = {},
-  url       = {},
+@article{lin2020unified,
+  title={Unified Models of Human Behavioral Agents in Bandits, Contextual Bandits, and RL},
+  author={Lin, Baihan and Bouneffouf, Djallel and Cecchi, Guillermo},
+  journal={arXiv preprint arXiv:2005.04544},
+  year={2020}
 }
