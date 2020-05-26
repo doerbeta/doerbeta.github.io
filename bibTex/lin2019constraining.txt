@@ -1,0 +1,6 @@
+@article{lin2019constraining,
+  title={{Constraining Implicit Space with MDL: Regularity Normalization as Unsupervised Attention}},
+  author={Lin, Baihan},
+  journal={arXiv preprint arXiv:1902.10658},
+  year={2019}
+}
