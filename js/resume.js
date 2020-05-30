@@ -120,7 +120,7 @@ collall.addEventListener("click", function() {
       if (contents[j].style.maxHeight) {
         contents[j].style.maxHeight = null;
       } else {
-        contents[j].style.maxHeight = content.scrollHeight + "px";
+        contents[j].style.maxHeight = contents[j].scrollHeight + "px";
       }
     }
   });
