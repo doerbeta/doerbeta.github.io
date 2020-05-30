@@ -118,8 +118,8 @@ collall.addEventListener("click", function() {
   var colls = document.getElementsByClassName("collapsible");
   var j;
     for (j = 0; j < colls.length; i++) {
-      colls[j].setAttribute("clicked",true);
-      // colls[j].click();
+      // colls[j].setAttribute("clicked",true);
+      colls[j].click();
       // var content = colls[j].nextElementSibling;
       // if (contents[j].style.maxHeight) {
       //   contents[j].style.maxHeight = null;
