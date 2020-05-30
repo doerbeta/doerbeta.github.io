@@ -125,7 +125,7 @@ collall.addEventListener("click", function() {
         contents[j].style.maxHeight = contents[j].scrollHeight + "px";
       }
     }
-  }, false);
+  });
 
 
 var coll = document.getElementsByClassName("collapsible");
