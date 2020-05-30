@@ -33,6 +33,8 @@ footer {
 }
 
 .imgcolumn {
+    border-radius:20%;
+    class: round-corner;
     float: left;
     width: 20.00%;
     padding: 5px;

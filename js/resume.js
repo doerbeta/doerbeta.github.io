@@ -12,7 +12,7 @@ function openInfo3() {
 
 
 function openInfo4() {
-  openInfo("Neural Minimum Description Length (Neural MDL)","https://www.baihan.nyc/img/publications/lin2019unsupervised.png","Presented at IJCAI 2019 Workshop. <br /> Understand the model complexity of neural networks during learning, adapting and failing. Ongoing work includes information flow characterization with coding length, incrementally computed regularity-based normalizations as deep network regularization etc..");
+  openInfo("Neural Minimum Description Length (Neural MDL)","https://www.baihan.nyc/img/publications/lin2019constraining.png","Presented at IJCAI 2019 Workshop. <br /> Understand the model complexity of neural networks during learning, adapting and failing. Ongoing work includes information flow characterization with coding length, incrementally computed regularity-based normalizations as deep network regularization etc..");
 }
 
 function openInfo5() {
@@ -24,10 +24,10 @@ function openInfo6() {
 }
 
 function openInfo(title,image,text) {
-  document.getElementById("info").style.width = "60%";
-  document.getElementById("info").style.height = "60%";
+  document.getElementById("info").style.width = "75%";
+  document.getElementById("info").style.height = "75%";
   document.getElementById("infotext").innerHTML = '<div class="inforow"><h3 class="infotitle">&nbsp;&nbsp;' + title + '</h3></div><br>' +
-      '<div class="infoimgcolumn"><img src=' + image + ' alt=""  style="width:100%;"></div>' +
+      '<div class="infoimgcolumn"><img src=' + image + ' alt="" class="rounded-corner" style="width:90%;border-radius:20%;"></div>' +
       '<div class="infotextcolumn"><p class="infocontent"> ' + text + '</p></div>';
 }
 
