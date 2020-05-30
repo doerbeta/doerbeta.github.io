@@ -681,6 +681,7 @@ span {
   color: #414950;
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
+  border-radius: 20px;
 }
 
 .field-title {
@@ -705,7 +706,7 @@ span {
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
-    border-radius: 10px;
+    border-radius: 20px;
     border: 2px solid white;
     opacity: 0.9;
 }
