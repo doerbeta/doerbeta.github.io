@@ -111,21 +111,21 @@ setTimeout(showImg, 1 * 1000);
 
 
 
-var collall = document.getElementById("collapsibleall");
+var collall = document.getElementById("expall");
 collall.addEventListener("click", function() {
     this.classList.toggle("active");
-    // var contents = document.getElementsByClassName("abstract");
-  var colls = document.getElementsByClassName("collapsible");
+    var contents = document.querySelectorAll("abstract");
+  // var colls = document.getElementsByClassName("collapsible");
   var j;
-    for (j = 0; j < colls.length; i++) {
-      var content = colls[j].nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
+    for (j = 0; j < contents.length; i++) {
+      // var content = colls[j].nextElementSibling;
+      if (contents[j].style.maxHeight) {
+        contents[j].style.maxHeight = null;
       } else {
-        content.style.maxHeight = content.scrollHeight + "px";
+        contents[j].style.maxHeight = contents[j].scrollHeight + "px";
       }
     }
-  });
+  }, false);
 
 
 var coll = document.getElementsByClassName("collapsible");
