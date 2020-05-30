@@ -111,8 +111,8 @@ setTimeout(showImg, 1 * 1000);
 
 
 
-var collall = document.getElementsByClassName("collapsible-all");
-collall[0].addEventListener("click", function() {
+var collall = document.getElementById("collapsibleall");
+collall.addEventListener("click", function() {
     this.classList.toggle("active");
     var contents = document.getElementsByClassName("abstract");
     var j;

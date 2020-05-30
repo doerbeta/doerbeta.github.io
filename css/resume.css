@@ -662,11 +662,11 @@ span {
 }
 
 
-.collapsible-all {
+.collapsibleall {
     cursor: pointer;
 }
 
-.collapsible-all:after {
+.collapsibleall:after {
     content: '\002B';
     font-weight: bold;
 }
