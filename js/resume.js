@@ -24,10 +24,10 @@ function openInfo6() {
 }
 
 function openInfo(title,image,text) {
-  document.getElementById("info").style.width = "75%";
-  document.getElementById("info").style.height = "75%";
+  document.getElementById("info").style.width = "70%";
+  document.getElementById("info").style.height = "70%";
   document.getElementById("infotext").innerHTML = '<div class="inforow"><h3 class="infotitle">&nbsp;&nbsp;' + title + '</h3></div><br>' +
-      '<div class="infoimgcolumn"><img src=' + image + ' alt="" class="rounded-corner" style="width:90%;border-radius:10%;"></div>' +
+      '<div class="infoimgcolumn"><img src=' + image + ' alt="" class="rounded-corner center" style="width:90%;border-radius:10%;"></div>' +
       '<div class="infotextcolumn"><p class="infocontent"> ' + text + '</p></div>';
 }
 
@@ -108,6 +108,23 @@ $(this).attr("src", "./img/fields/topology.png");
 });   
 
 setTimeout(showImg, 1 * 1000);
+
+
+
+var collall = document.getElementsByClassName("collapsible-all");
+collall[0].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var contents = document.getElementsByClassName("abstract");
+    var j;
+    for (j = 0; j < contents.length; i++) {
+      if (contents[j].style.maxHeight) {
+        contents[j].style.maxHeight = null;
+      } else {
+        contents[j].style.maxHeight = content.scrollHeight + "px";
+      }
+    }
+  });
+
 
 var coll = document.getElementsByClassName("collapsible");
 var i;

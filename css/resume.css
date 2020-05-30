@@ -661,6 +661,16 @@ span {
     animation: rotate 3s infinite;
 }
 
+
+.collapsible-all {
+    cursor: pointer;
+}
+
+.collapsible-all:after {
+    content: '\002B';
+    font-weight: bold;
+}
+
 .collapsible {
   cursor: pointer;
 }
