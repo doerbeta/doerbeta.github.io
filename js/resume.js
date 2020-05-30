@@ -114,6 +114,7 @@ setTimeout(showImg, 1 * 1000);
 var collall = document.getElementById("expall");
 collall.addEventListener("click", function() {
     this.classList.toggle("active");
+    collall.innerHTML = "collapse all abstracts";
     let contents = document.querySelectorAll(".abstract");
   // var colls = document.getElementsByClassName("collapsible");
     // for (let j = 0; j < colls.length; i++) {
