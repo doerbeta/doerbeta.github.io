@@ -479,6 +479,38 @@ a:active {
     color: #268fd6;
 }
 
+a {
+    /*color: #272727;*/
+    color: #268fd6;
+}
+
+a:hover,
+a:focus,
+a:active {
+    /*color: #747474;*/
+    color: #268fd6;
+}
+
+.collapsible {
+    color: #268fd6;
+}
+
+.collapsible:hover,
+.collapsible:focus,
+.collapsible:active {
+    color: #268fd6;
+}
+
+.collapsibleall {
+    color: #268fd6;
+}
+
+.collapsibleall:hover,
+.collapsibleall:focus,
+.collapsibleall:active {
+    color: #268fd6;
+}
+
 .nav-link {
     color: #272727;
 }
