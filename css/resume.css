@@ -491,23 +491,23 @@ a:active {
     color: #268fd6;
 }
 
-.collapsible {
+a .collapsible {
     color: #268fd6;
 }
 
-.collapsible:hover,
-.collapsible:focus,
-.collapsible:active {
+a .collapsible:hover,
+a .collapsible:focus,
+a .collapsible:active {
     color: #268fd6;
 }
 
-.collapsibleall {
+a .collapsibleall {
     color: #268fd6;
 }
 
-.collapsibleall:hover,
-.collapsibleall:focus,
-.collapsibleall:active {
+a .collapsibleall:hover,
+a .collapsibleall:focus,
+a .collapsibleall:active {
     color: #268fd6;
 }
 
