@@ -27,7 +27,7 @@ function openInfo(title,image,text) {
   document.getElementById("info").style.width = "75%";
   document.getElementById("info").style.height = "75%";
   document.getElementById("infotext").innerHTML = '<div class="inforow"><h3 class="infotitle">&nbsp;&nbsp;' + title + '</h3></div><br>' +
-      '<div class="infoimgcolumn"><img src=' + image + ' alt="" class="rounded-corner" style="width:90%;border-radius:20%;"></div>' +
+      '<div class="infoimgcolumn"><img src=' + image + ' alt="" class="rounded-corner" style="width:90%;border-radius:10%;"></div>' +
       '<div class="infotextcolumn"><p class="infocontent"> ' + text + '</p></div>';
 }
 
