@@ -114,7 +114,7 @@ setTimeout(showImg, 1 * 1000);
 var collall = document.getElementById("expall");
 collall.addEventListener("click", function() {
     this.classList.toggle("active");
-    if (collall.innerHTML = "collapse all abstracts") {
+    if (collall.innerHTML == "collapse all abstracts") {
       collall.innerHTML = "expand all abstracts";
     } else {
       collall.innerHTML = "collapse all abstracts";
