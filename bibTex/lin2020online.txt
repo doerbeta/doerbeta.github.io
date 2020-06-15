@@ -1,0 +1,6 @@
+@article{lin2020unified,
+  title={Online Learning in Iterated Prisoner's Dilemma to Mimic Human Behavior},
+  author={Lin, Baihan and Bouneffouf, Djallel and Cecchi, Guillermo},
+  journal={arXiv preprint arXiv:2006.06580},
+  year={2020}
+}
