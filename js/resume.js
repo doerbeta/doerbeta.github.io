@@ -111,45 +111,6 @@ setTimeout(showImg, 1 * 1000);
 
 
 
-var collall = document.getElementById("expall");
-collall.addEventListener("click", function() {
-    this.classList.toggle("active");
-    if (collall.innerHTML == "collapse all abstracts") {
-      collall.innerHTML = "expand all abstracts";
-    } else {
-      collall.innerHTML = "collapse all abstracts";
-    }
-    let contents = document.querySelectorAll(".abstract");
-  // var colls = document.getElementsByClassName("collapsible");
-    // for (let j = 0; j < colls.length; i++) {
-      for (let j = 0; j < contents.length; j++) {
-        // colls[j].setAttribute("clicked",true);
-      // colls[j].click();
-      // var content = colls[j].nextElementSibling;
-      if (contents[j].style.maxHeight) {
-        contents[j].style.maxHeight = null;
-      } else {
-        contents[j].style.maxHeight = contents[j].scrollHeight + "px";
-      }
-    }
-  });
-
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-
 (function($) {
   "use strict"; // Start of use strict
 
