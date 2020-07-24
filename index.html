@@ -249,11 +249,16 @@
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="publications">
         <div class="my-auto">
             <h2 class="mb-5">Publications</h2>
+
+            <div id="pubs_container"></div>
+<!--             
             <p class="mb-5 text-primary"> <b>Types: </b> peer-reviewed journals <b>(J)</b>, peer-reviewed conference proceedings <b>(C)</b>, peer-reviewed extended abstracts <b>(E)</b>, arXiv preprints / manuscripts <b>(P)</b>.  &nbsp;
                 <br />
                 <br /> <b>25</b> total = <b>6</b> J + <b>6</b> C + <b>7</b> E + <b>6</b> P, with 142 citations. &nbsp;
                 <br />
                 <br /> Feel free to click on <b> abstract </b> to learn more, or [&nbsp;<a style="color:#268fd6;" class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;] &nbsp; </p>
+            
+            
             <h3> ongoing...</h3>
             <br />
             <ul class="fa-ul mb-0">
@@ -271,7 +276,6 @@
                             <p style="color:black"> under review </p>
                             [
                             <a href="https://arxiv.org/abs/2006.04376">arXiv</a> ]&nbsp; [
-                            <!--                            arXiv to come ]&nbsp; [-->
                             <a href="./bibTex/lin2020speaker.txt">bibTex</a> ]&nbsp; [
                             <a href="https://github.com/doerlbh/MiniVox">code</a> ]&nbsp; [
                             <a href="https://www.baihan.nyc/viz/VoiceID/">demo</a> ]&nbsp; [
@@ -296,7 +300,6 @@
                             <br/>
                             <p style="color:black"> under review </p>
                             [
-                            <!--                            <a href="https://arxiv.org/abs/">arXiv</a> ]&nbsp; [-->
                             arXiv to come ]&nbsp; [
                             <a href="./bibTex/lin2020voice.txt">bibTex</a> ]&nbsp; [
                             <a href="https://www.baihan.nyc/viz/VoiceID/">demo</a> ]&nbsp; [
@@ -519,8 +522,6 @@
                             <br />
                             <br/>
                             <p style="color:black"> NeurIPS 2019 Workshop on Learning Meaningful Representations of Life (LMRL) </p>
-                            <!-- [<a href="">arXiv</a>]&nbsp; -->
-                            <!-- [<a href="./bibTex/lin2019reinforce.txt">bibTex</a>]&nbsp; -->
                             [ arXiv to come ]&nbsp; [
                             <a href="./pdfs/NIPS_scTSA_poster.pdf">poster</a> ]&nbsp; [
                             <a href="./bibTex/lin2019what.txt">bibTex</a> ]&nbsp; [
@@ -712,31 +713,6 @@
             <h3> 2018</h3>
             <br />
             <ul class="fa-ul mb-0">
-                <!--                <li>-->
-                <!--                    <div class="row">-->
-                <!--                        <div class="imgcolumn">-->
-                <!--                            <img class="rounded-corner" style="width:100%;border-radius:10%;border:2px solid dimgrey;" src="./img/publications/lin2018adaptive.jpg" alt="lin2018adaptive" >-->
-                <!--                        </div>-->
-                <!--                        <div class="textcolumn">-->
-                <!--                            [8]&nbsp; <b class="text-primary" id="p8"> Adaptive Representation Selection in Contextual Bandit &nbsp; </b>-->
-                <!--                            <br />-->
-                <!--                            <b><span style="color: dimgray;">Baihan Lin</span></b>, Guillermo Cecchi, Djallel Bouneffouf, Irina Rish-->
-                <!--                            <br />-->
-                <!--                            <br/>-->
-                <!--                            <p style="color:black"> arXiv </p>-->
-                <!--                            [-->
-                <!--                            <a href="https://arxiv.org/abs/1802.00981">arXiv</a> ]&nbsp; [-->
-                <!--                            <a href="./bibTex/lin2018adaptive.txt">bibTex</a> ]&nbsp;-->
-                <!--                            &lt;!&ndash; [<a href="">code</a>]&nbsp;  &ndash;&gt;-->
-                <!--                            [ git to come ]&nbsp; [-->
-                <!--                            <a  style="color:#268fd6;" class="collapsible">abstract&nbsp;</a> ]-->
-                <!--                            <div class="abstract rounded-corner">-->
-                <!--                                <p> We consider an extension of the contextual bandit setting, motivated by several practical applications, where an unlabeled history of contexts can become available for pre-training before the online decision-making begins. We propose an approach for improving the performance of contextual bandit in such setting, via adaptive, dynamic representation learning, which combines offline pre-training on unlabeled history of contexts with online selection and modification of embedding functions. Our experiments on a variety of datasets and in different nonstationary environments demonstrate clear advantages of our approach over the standard contextual bandit. </p>-->
-                <!--                            </div>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </li>-->
-                <!--                <br />-->
                 <li>
                     <div class="row">
                         <div class="imgcolumn">
@@ -751,7 +727,6 @@
                             <p style="color:black"> IEEE ICDM 2018 Workshop on Data Science and Big Data Analytics (DSBDA) </p>
                             [
                             <a href="https://arxiv.org/abs/1802.00981">arXiv</a> ]&nbsp; [
-                            <!--                            <a href="./pdfs/lin2018contextual.pdf">pdf</a> ]&nbsp; [-->
                             <a href="./bibTex/lin2018contextual.txt">bibTex</a> ]&nbsp; [
                             <a href="https://github.com/doerlbh/ABaCoDE">code</a> ]&nbsp; [
                             <a  style="color:#268fd6;" class="collapsible">abstract&nbsp;</a> ]
@@ -914,7 +889,7 @@
                 </li>
                 <br />
             </ul>
-        </div>
+        </div> -->
     </section>
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="life">
         <div class="my-auto">
@@ -948,6 +923,9 @@
 <script src="https://www.baihan.nyc/js/meyda.js"></script>
 <script src="https://www.baihan.nyc/js/three.js"></script>
 <script src="https://www.baihan.nyc/js/tda.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js"></script>
+<script src="./js/pubs.js"></script>
 
 </body>
 

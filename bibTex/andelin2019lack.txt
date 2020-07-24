@@ -1,7 +1,10 @@
-@article{andelin2019lack,
-  title={Lack of Ocular Dominance Columns in Albino Rats Increases the Size of the Binocular Region in Striate Cortex},
-  author={Andelin, Adrian and Doyle, Zane and Laing, Robyn and Turecek, Joseph and Lin, Baihan and Olavarria, Jaime},
+@article{andelin2020influence,
+  title={Influence of ocular dominance columns and patchy callosal connections on binocularity in lateral striate cortex: Long Evans versus albino rats},
+  author={Andelin, Adrian K and Doyle, Zane and Laing, Robyn J and Turecek, Josef and Lin, Baihan and Olavarria, Jaime F},
   journal={Journal of Comparative Neurology},
-  year={2019},
+  volume={528},
+  number={4},
+  pages={650--663},
+  year={2020},
   publisher={Wiley Online Library}
 }
