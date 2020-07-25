@@ -166,7 +166,7 @@ function renderPubs(arr, labs) {
         .filter(x => x['with'].split('-').includes(item['name']))
         .map(x => `<a href="#${x['id']}">[${pubids[x['id']]}]</a>`)
         .sort((a, b) => {
-          return (a['year'] != b['year']) ? b['year'] - a['year'] : b['month'] - a['month']
+          return (a['year'] == b['year']) ? b['month'] - a['month'] : b['year'] - a['year']
         })
         .join('')} </td>
 
