@@ -41,7 +41,7 @@ var fd_noabbr_flipped = {
 };
 
 var fd_abbr_flipped = {
-  'NS': '<a style="border-radius:4px;padding:1px;color:steelblue;font-size:90%;background-color:white;" class="fd-filter" id="ml-ab-fp">&nbsp;NS&nbsp;</a>',
+  'NS': '<a style="border-radius:4px;padding:1px;color:steelblue;font-size:90%;background-color:white;" class="fd-filter" id="ns-ab-fp">&nbsp;NS&nbsp;</a>',
   'ML': '<a style="border-radius:4px;padding:1px;color:tomato;font-size:90%;background-color:white;" class="fd-filter" id="ml-ab-fp">&nbsp;ML&nbsp;</a>',
   'CV': '<a style="border-radius:4px;padding:1px;color:sandybrown;font-size:90%;background-color:white;" class="fd-filter" id="cv-ab-fp">&nbsp;CV&nbsp;</a>',
   'GT': '<a style="border-radius:4px;padding:1px;color:mediumpurple;font-size:90%;background-color:white;" class="fd-filter" id="gt-ab-fp">&nbsp;GT&nbsp;</a>',
@@ -152,6 +152,7 @@ function renderPubs(arr, labs) {
   var fdcount = fds.map((item) => {
     return arr.filter((x) => { return x['areas'].split('-').includes(item); }).length;
   })
+  // fdstate = fdstate.map((item) => { return 1; });
   listenFilter(arr, filter_container, fds, fdstate, fdsindex, fdcount);
 
   // automatically render lab experiences
@@ -202,14 +203,18 @@ function listenFilter(arr, filter_container, fds, fdstate, fdsindex, fdcount) {
     .sort((a, b) => { return b.count - a.count; })
     .map(x => x.html)
     .join('&nbsp;')}`;
+  // filter_container.innerHTML = `Filter by research areas: ${fds.map((fd, index) => { return getFields(fd, 0, fdstate[index]); }).join('&nbsp;')}`;
 
-  var fdfs = document.getElementsByClassName("fd-filter");
+  var fdfs = [].slice.call(document.getElementsByClassName("fd-filter"))
+  .map((x) => { return { 'obj': x, 'count': fdcount[fdsindex[x.id.substring(0,2).toLowerCase()]] }; })
+  .sort((a, b) => { return b.count - a.count; })
+  .map((x) => { return x.obj; });
   for (let i = 0; i < fdfs.length; i++) {
     fdfs[i].addEventListener("click", () => {
       if (fdfs[i].id.startsWith("sa")) {
         allids.forEach((item) => { item.style.display = 'block'; });
         fdstate = fdstate.map((item) => { return 1; });
-        filter_container.innerHTML = `Filter by research areas: ${fds.map((fd, index) => { return getFields(fd, 0, fdstate[index]); }).join('&nbsp;')}`;
+        // filter_container.innerHTML = `Filter by research areas: ${fds.map((fd, index) => { return getFields(fd, 0, fdstate[index]); }).join('&nbsp;')}`;
       } else {
         if (fdstate.reduce((a, b) => { return a * b; })) {
           fdstate = fdstate.map((item) => { return 0; });
@@ -219,7 +224,7 @@ function listenFilter(arr, filter_container, fds, fdstate, fdsindex, fdcount) {
           if (fdstate.reduce((a, b) => { return a + b; }) == 0) {
             allids.forEach((item) => { item.style.display = 'block'; });
             fdstate = fdstate.map((item) => { return 1; });
-            filter_container.innerHTML = `Filter by research areas: ${fds.map((fd, index) => { return getFields(fd, 0, fdstate[index]); }).join('&nbsp;')}`;
+            // filter_container.innerHTML = `Filter by research areas: ${fds.map((fd, index) => { return getFields(fd, 0, fdstate[index]); }).join('&nbsp;')}`;
           }
         }
         var toshow = fds.filter((item, index) => { return fdstate[index]; });
@@ -238,7 +243,7 @@ function listenFilter(arr, filter_container, fds, fdstate, fdsindex, fdcount) {
           .map((item) => { return document.getElementById(item['id']); });
         hideids.forEach((item) => { item.style.display = 'none'; });
         showids.forEach((item) => { item.style.display = 'block'; });
-        filter_container.innerHTML = `Filter by research areas: ${fds.map((fd, index) => { return getFields(fd, 0, fdstate[index]); }).join('&nbsp;')}`;
+        // filter_container.innerHTML = `Filter by research areas: ${fds.map((fd, index) => { return getFields(fd, 0, fdstate[index]); }).join('&nbsp;')}`;
       }
       listenFilter(arr, filter_container, fds, fdstate, fdsindex, fdcount);
     });
