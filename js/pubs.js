@@ -99,7 +99,7 @@ function citeSummary(arr, J, C, E, P) {
     })
   return `<p class="mb-5 text-primary"> <b>Types: </b> peer-reviewed journals <b>(J)</b>, peer-reviewed conference proceedings <b>(C)</b>, peer-reviewed extended abstracts <b>(E)</b>, arXiv preprints / manuscripts <b>(P)</b>.  &nbsp;
   <br />
-  <br /> <b>${(J + C + E + P)}</b> total = <b>${J}</b> J + <b>${C}</b> C + <b>${E}</b> E + <b>${P}</b> P, with ${citations} citations. &nbsp;
+  <br /> <b>${(J + C + E + P)}</b> total = <b>${J}</b> J + <b>${C}</b> C + <b>${E}</b> E + <b>${P}</b> P, with <a href="https://scholar.google.com/citations?user=H67KJ4cAAAAJ&hl=en">${citations}</a> citations. &nbsp;
   <br />
   <br /> Feel free to click on <b> abstract </b> to learn more, or [&nbsp;<a style="color:#268fd6;" class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;] &nbsp; </p>`;
 }
@@ -130,7 +130,7 @@ function yearSummary(arr, J, C, E, P, yr) {
       <div class="textcolumn">
           [${item['type'] + count}]&nbsp;<b class="text-primary" id="${item['id']}"> ${item['title']} </b>
           <br />
-          <b>${item['authors'].replace(/Baihan Lin/gi, '<span style="color: dimgray;">Baihan Lin</span></b>')}
+          ${item['authors'].replace(/Baihan Lin/gi, '<b><span style="color: dimgray;">Baihan Lin</span></b>')}
           <br />
           <br />
           <p style="color:black"> ${item['venue']} </p>
