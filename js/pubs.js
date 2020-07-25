@@ -164,15 +164,10 @@ function renderPubs(arr, labs) {
     <td> ${item['with']} </td>
     <td> ${arr
         .filter(x => x['with'].split('-').includes(item['name']))
-        .map(x => `<a href="#${x['id']}">[${pubids[x['id']]}]</a>`)
         .sort((a, b) => {
-          if ((a['year'] == b['year']) ) {
-            return b['month'] - a['month'];
-          } else {
-            return b['year'] - a['year'];
-          }
-          // return (a['year'] == b['year']) ? b['month'] - a['month'] : b['year'] - a['year']
-        }) 
+          return (a['year'] == b['year']) ? b['month'] - a['month'] : b['year'] - a['year']
+        })
+        .map(x => `<a href="#${x['id']}">[${pubids[x['id']]}]</a>`)
         .join('')} </td>
 
     ${(item['pubs']) ? item['pubs'].split('-')
