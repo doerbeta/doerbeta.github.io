@@ -1,3 +1,59 @@
+var fd_noabbr = {
+  'NS' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:steelblue;" class="fd-filter" id="ns-noab">&nbsp;neuroscience&nbsp;</a>',
+  'ML' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:tomato;" class="fd-filter" id="ml-noab">&nbsp;machine learning&nbsp;</a>',
+  'CV' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:sandybrown;" class="fd-filter" id="cv-noab">&nbsp;computer vision&nbsp;</a>',
+  'GT' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:mediumpurple;" class="fd-filter" id="gt-noab">&nbsp;geometry & topology&nbsp;</a>',
+  'SB' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:seagreen;" class="fd-filter" id="sb-noab">&nbsp;systems biology&nbsp;</a>',
+  'SP' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:plum;" class="fd-filter" id="sp-noab">&nbsp;speech processing&nbsp;</a>',
+  'AM' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:skyblue;" class="fd-filter" id="am-noab">&nbsp;applied mathematics&nbsp;</a>',
+  'HCI' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:sienna;" class="fd-filter" id="hci-noab">&nbsp;human-computer interaction&nbsp;</a>',
+  'IT' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:orange;" class="fd-filter" id="it-noab">&nbsp;information theory&nbsp;</a>',
+  'TM' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:salmon;" class="fd-filter" id="tm-noab">&nbsp;translational medicine&nbsp;</a>',
+  'SA' : '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:lightgrey;" class="fd-filter" id="sa-noab">&nbsp;show all&nbsp;</a>'
+};
+
+var fd_abbr = {
+  'NS' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:steelblue;" class="fd-filter" id="ns-ab">&nbsp;NS&nbsp;</a>',
+  'ML' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:tomato;" class="fd-filter" id="ml-ab">&nbsp;ML&nbsp;</a>',
+  'CV' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:sandybrown;" class="fd-filter" id="cv-ab">&nbsp;CV&nbsp;</a>',
+  'GT' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:mediumpurple;" class="fd-filter" id="gt-ab">&nbsp;GT&nbsp;</a>',
+  'SB' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:seagreen;" class="fd-filter" id="sb-ab">&nbsp;SB&nbsp;</a>',
+  'SP' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:plum;" class="fd-filter" id="sp-ab">&nbsp;SP&nbsp;</a>',
+  'AM' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:skyblue;" class="fd-filter" id="am-ab">&nbsp;AM&nbsp;</a>',
+  'HCI' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:sienna;" class="fd-filter" id="hci-ab">&nbsp;HCI&nbsp;</a>',
+  'IT' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:orange;" class="fd-filter" id="it-ab">&nbsp;IT&nbsp;</a>',
+  'TM' : '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:salmon;" class="fd-filter" id="tm-ab">&nbsp;TM&nbsp;</a>',
+  'SA' : '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:lightgrey;" class="fd-filter" id="sa-ab">&nbsp;SA&nbsp;</a>'
+};
+
+var fd_noabbr_flipped = {
+  'NS' : '<a style="border-radius:4px;padding:1px;color:steelblue;font-size:90%;background-color:white;" class="fd-filter" id="ns-noab-fp">&nbsp;neuroscience&nbsp;</a>',
+  'ML' : '<a style="border-radius:4px;padding:1px;color:tomato;font-size:90%;background-color:white;" class="fd-filter" id="ml-noab-fp">&nbsp;machine learning&nbsp;</a>',
+  'CV' : '<a style="border-radius:4px;padding:1px;color:sandybrown;font-size:90%;background-color:white;" class="fd-filter" id="cv-noab-fp">&nbsp;computer vision&nbsp;</a>',
+  'GT' : '<a style="border-radius:4px;padding:1px;color:mediumpurple;font-size:90%;background-color:white;" class="fd-filter" id="gt-noab-fp">&nbsp;geometry & topology&nbsp;</a>',
+  'SB' : '<a style="border-radius:4px;padding:1px;color:seagreen;font-size:90%;background-color:white;" class="fd-filter" id="sb-noab-fp">&nbsp;systems biology&nbsp;</a>',
+  'SP' : '<a style="border-radius:4px;padding:1px;color:plum;font-size:90%;background-color:white;" class="fd-filter" id="sp-noab-fp">&nbsp;speech processing&nbsp;</a>',
+  'AM' : '<a style="border-radius:4px;padding:1px;color:skyblue;font-size:90%;background-color:white;" class="fd-filter" id="am-noab-fp">&nbsp;applied mathematics&nbsp;</a>',
+  'HCI' : '<a style="border-radius:4px;padding:1px;color:sienna;font-size:90%;background-color:white;" class="fd-filter" id="hci-noab-fp">&nbsp;human-computer interaction&nbsp;</a>',
+  'IT' : '<a style="border-radius:4px;padding:1px;color:orange;font-size:90%;background-color:white;" class="fd-filter" id="it-noab-fp">&nbsp;information theory&nbsp;</a>',
+  'TM' : '<a style="border-radius:4px;padding:1px;color:salmon;font-size:90%;background-color:white;" class="fd-filter" id="tm-noab-fp">&nbsp;translational medicine&nbsp;</a>',
+  'SA' : '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="fd-filter" id="sa-noab-fp">&nbsp;show all&nbsp;</a>'
+};
+
+var fd_abbr_flipped = {
+  'NS' : '<a style="border-radius:4px;padding:1px;color:steelblue;font-size:90%;background-color:white;" class="fd-filter" id="ml-ab-fp">&nbsp;NS&nbsp;</a>',
+  'ML' : '<a style="border-radius:4px;padding:1px;color:tomato;font-size:90%;background-color:white;" class="fd-filter" id="ml-ab-fp">&nbsp;ML&nbsp;</a>',
+  'CV' : '<a style="border-radius:4px;padding:1px;color:sandybrown;font-size:90%;background-color:white;" class="fd-filter" id="cv-ab-fp">&nbsp;CV&nbsp;</a>',
+  'GT' : '<a style="border-radius:4px;padding:1px;color:mediumpurple;font-size:90%;background-color:white;" class="fd-filter" id="gt-ab-fp">&nbsp;GT&nbsp;</a>',
+  'SB' : '<a style="border-radius:4px;padding:1px;color:seagreen;font-size:90%;background-color:white;" class="fd-filter" id="sb-ab-fp">&nbsp;SB&nbsp;</a>',
+  'SP' : '<a style="border-radius:4px;padding:1px;color:plum;font-size:90%;background-color:white;" class="fd-filter" id="sp-ab-fp">&nbsp;SP&nbsp;</a>',
+  'AM' : '<a style="border-radius:4px;padding:1px;color:skyblue;font-size:90%;background-color:white;" class="fd-filter" id="am-ab-fp">&nbsp;AM&nbsp;</a>',
+  'HCI' : '<a style="border-radius:4px;padding:1px;color:sienna;font-size:90%;background-color:white;" class="fd-filter" id="hci-ab-fp">&nbsp;HCI&nbsp;</a>',
+  'IT' : '<a style="border-radius:4px;padding:1px;color:orange;font-size:90%;background-color:white;" class="fd-filter" id="it-ab-fp">&nbsp;IT&nbsp;</a>',
+  'TM' : '<a style="border-radius:4px;padding:1px;color:salmon;font-size:90%;background-color:white;" class="fd-filter" id="tm-ab-fp">&nbsp;TM&nbsp;</a>',
+  'SA' : '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="fd-filter" id="sa-ab-fp">&nbsp;SA&nbsp;</a>'
+};
+
 var getData = fetch('./data/pubs.xlsx')
   .then((response) => {
     // return response.json();
@@ -68,11 +124,8 @@ function renderPubs(arr) {
     }
   });
 
-
   var coll = document.getElementsByClassName("collapsible");
-  var i;
-
-  for (i = 0; i < coll.length; i++) {
+  for (let i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
       this.classList.toggle("active");
       var content = this.nextElementSibling;
@@ -84,6 +137,79 @@ function renderPubs(arr) {
     });
   }
 
+  var filter_container = document.querySelector("#filter_fields");
+  var fds = ['NS','ML','CV','GT','SB','SP','AM','HCI','IT','TM','SA'];
+  var fdstate = [1,1,1,1,1,1,1,1,1,1,1];
+  var fdsindex = {'ns':0,'ml':1,'cv':2,'gt':3,'sb':4,'sp':5,'am':6,'hc':7,'it':8,'tm':9,'sa':10};
+  var fdcount = fds.map((item) => {
+    return arr.filter((x) => {return x['areas'].split('-').includes(item);}).length;
+  })
+  listenFilter(arr,filter_container,fds,fdstate,fdsindex,fdcount);
+
+}
+
+function listenFilter(arr,filter_container,fds,fdstate,fdsindex,fdcount) {
+  
+  var allids = arr
+  .filter((item) => {return item['display'];})
+  .map((item) => {return document.getElementById(item['id']);});
+
+  filter_container.innerHTML = `Filter by research areas: ${fds.map((fd,index) => {
+    return (fd == 'SA') ? getFields(fd,0,fdstate[index]) : getFields(fd,0,fdstate[index]).replace(/&nbsp;<\/a>/gi,` (${fdcount[index]})&nbsp;</a>`);
+  })
+  .map((x,index) => {return {'html':x,'count':fdcount[index]};})
+  .sort((a,b) => {return b.count - a.count; })
+  .map(x => x.html)
+  .join('&nbsp;')}`;
+  
+  var fdfs = document.getElementsByClassName("fd-filter");
+  for (let i = 0; i < fdfs.length; i++) {
+    fdfs[i].addEventListener("click", () => {
+      if (fdfs[i].id.startsWith("sa")) {
+        allids.forEach((item) => {item.style.display = 'block';});
+        fdstate = fdstate.map((item) => {return 1;});
+        filter_container.innerHTML = `Filter by research areas: ${fds.map((fd,index) => {return getFields(fd,0,fdstate[index]);}).join('&nbsp;')}`;
+      } else {
+        if (fdstate.reduce((a,b)=>{return a*b;})) {
+          fdstate = fdstate.map((item) => {return 0;});
+          fdstate[fdsindex[fdfs[i].id.substring(0,2)]] = 1;
+        } else {
+          fdstate[fdsindex[fdfs[i].id.substring(0,2)]] = !fdstate[fdsindex[fdfs[i].id.substring(0,2)]];
+          if (fdstate.reduce((a,b)=>{return a+b;}) == 0) {
+            allids.forEach((item) => {item.style.display = 'block';});
+            fdstate = fdstate.map((item) => {return 1;});
+            filter_container.innerHTML = `Filter by research areas: ${fds.map((fd,index) => {return getFields(fd,0,fdstate[index]);}).join('&nbsp;')}`;
+          }
+        }
+        var toshow = fds.filter((item,index) => {return fdstate[index];});
+        var tohide = fds.filter((item,index) => {return !fdstate[index];});
+        var showids = arr
+        .filter((item) => {
+          var matched = toshow.filter((x) => {return item['areas'].split('-').includes(x);});
+          return item['display'] & (matched.length > 0);
+        })
+        .map((item) => {return  document.getElementById(item['id']);});
+        var hideids = arr
+        .filter((item) => {
+          var matched = tohide.filter((x) => {return item['areas'].split('-').includes(x);});
+          return item['display'] & (matched.length > 0);
+        })
+        .map((item) => {return  document.getElementById(item['id']);});
+        hideids.forEach((item) => {item.style.display = 'none';});
+        showids.forEach((item) => {item.style.display = 'block';});
+        filter_container.innerHTML = `Filter by research areas: ${fds.map((fd,index) => {return getFields(fd,0,fdstate[index]);}).join('&nbsp;')}`;
+      }
+      listenFilter(arr,filter_container,fds,fdstate,fdsindex,fdcount);
+    });
+  }
+}
+
+function getFields(fd, abbr, st) {
+  if (abbr) {
+    return (st) ? fd_abbr[fd] : fd_abbr_flipped[fd];
+  } else {
+    return (st) ? fd_noabbr[fd] : fd_noabbr_flipped[fd];
+  }
 }
 
 function citeSummary(arr, J, C, E, P) {
@@ -100,6 +226,8 @@ function citeSummary(arr, J, C, E, P) {
   return `<p class="mb-5 text-primary"> <b>Types: </b> peer-reviewed journals <b>(J)</b>, peer-reviewed conference proceedings <b>(C)</b>, peer-reviewed extended abstracts <b>(E)</b>, arXiv preprints / manuscripts <b>(P)</b>.  &nbsp;
   <br />
   <br /> <b>${(J + C + E + P)}</b> total = <b>${J}</b> J + <b>${C}</b> C + <b>${E}</b> E + <b>${P}</b> P, with <a href="https://scholar.google.com/citations?user=H67KJ4cAAAAJ&hl=en">${citations}</a> citations. &nbsp;
+  <br />
+  <br /> <span id="filter_fields"></span>
   <br />
   <br /> Feel free to click on <b> abstract </b> to learn more, or [&nbsp;<a style="color:#268fd6;" class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;] &nbsp; </p>`;
 }
@@ -122,17 +250,17 @@ function yearSummary(arr, J, C, E, P, yr) {
       if (item['type'] == 'C') { C++; count = C; }
       if (item['type'] == 'E') { E++; count = E; }
       if (item['type'] == 'P') { P++; count = P; }
-      return `<li>
+      return `<li class="li-pubs" id="${item['id']}">
       <div class="row">
       <div class="imgcolumn">
       <img class="rounded-corner" style="width:100%;border-radius:10%;border:2px solid dimgrey;" src="./img/publications/${item['image']}" alt="${item['id']}" >
       </div>
       <div class="textcolumn">
-          [${item['type'] + count}]&nbsp;<b class="text-primary" id="${item['id']}"> ${item['title']} </b>
+          [${item['type'] + count}]&nbsp;<b class="text-primary"> ${item['title']} </b>
           <br />
-          ${item['authors'].replace(/Baihan Lin/gi, '<b><span style="color: dimgray;">Baihan Lin</span></b>')}
+          ${item['authors'].replace(/Baihan Lin/gi, '<b><a style="color: dimgray;">Baihan Lin</span></b>')}
           <br />
-          <br />
+          <p> ${item['areas'].split('-').map((item) => {return getFields(item,1,1)}).join('&nbsp;')} </p>
           <p style="color:black"> ${item['venue']} </p>
           ${item['arxiv'] ? `[ <a href="${item['arxiv']}">arXiv</a> ]&nbsp;` : ``}
           ${item['pdf'] ? `[ <a href="./pdfs/${item['pdf']}">pdf</a> ]&nbsp;` : ``}
@@ -147,8 +275,8 @@ function yearSummary(arr, J, C, E, P, yr) {
           ${item['cite'] && item['citelink'] ? `Cited by <a href="${item['citelink']}">${item['cite']}</a>` : ``}
       </div>
   </div>
-  </li>
-  <br />`;
+  <br />
+  </li>`;
     })
     .reverse()
     .join("");
