@@ -2,7 +2,7 @@ var fd_noabbr = {
   'NS': '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:steelblue;" class="fd-filter" id="ns-noab">&nbsp;neuroscience&nbsp;</a>',
   'ML': '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:tomato;" class="fd-filter" id="ml-noab">&nbsp;machine learning&nbsp;</a>',
   'CV': '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:sandybrown;" class="fd-filter" id="cv-noab">&nbsp;computer vision&nbsp;</a>',
-  'GT': '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:mediumpurple;" class="fd-filter" id="gt-noab">&nbsp;geometry && topology&nbsp;</a>',
+  'GT': '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:mediumpurple;" class="fd-filter" id="gt-noab">&nbsp;geometry & topology&nbsp;</a>',
   'SB': '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:seagreen;" class="fd-filter" id="sb-noab">&nbsp;systems biology&nbsp;</a>',
   'SP': '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:plum;" class="fd-filter" id="sp-noab">&nbsp;speech processing&nbsp;</a>',
   'AM': '<a style="border-radius:4px;padding:1px;color:white;font-size:90%;background-color:skyblue;" class="fd-filter" id="am-noab">&nbsp;applied mathematics&nbsp;</a>',
@@ -30,7 +30,7 @@ var fd_noabbr_flipped = {
   'NS': '<a style="border-radius:4px;padding:1px;color:steelblue;font-size:90%;background-color:white;" class="fd-filter" id="ns-noab-fp">&nbsp;neuroscience&nbsp;</a>',
   'ML': '<a style="border-radius:4px;padding:1px;color:tomato;font-size:90%;background-color:white;" class="fd-filter" id="ml-noab-fp">&nbsp;machine learning&nbsp;</a>',
   'CV': '<a style="border-radius:4px;padding:1px;color:sandybrown;font-size:90%;background-color:white;" class="fd-filter" id="cv-noab-fp">&nbsp;computer vision&nbsp;</a>',
-  'GT': '<a style="border-radius:4px;padding:1px;color:mediumpurple;font-size:90%;background-color:white;" class="fd-filter" id="gt-noab-fp">&nbsp;geometry && topology&nbsp;</a>',
+  'GT': '<a style="border-radius:4px;padding:1px;color:mediumpurple;font-size:90%;background-color:white;" class="fd-filter" id="gt-noab-fp">&nbsp;geometry & topology&nbsp;</a>',
   'SB': '<a style="border-radius:4px;padding:1px;color:seagreen;font-size:90%;background-color:white;" class="fd-filter" id="sb-noab-fp">&nbsp;systems biology&nbsp;</a>',
   'SP': '<a style="border-radius:4px;padding:1px;color:plum;font-size:90%;background-color:white;" class="fd-filter" id="sp-noab-fp">&nbsp;speech processing&nbsp;</a>',
   'AM': '<a style="border-radius:4px;padding:1px;color:skyblue;font-size:90%;background-color:white;" class="fd-filter" id="am-noab-fp">&nbsp;applied mathematics&nbsp;</a>',
@@ -86,7 +86,34 @@ var tp_noabbr_flipped = {
   'S': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="s-noab-fp">&nbsp;total&nbsp;</a>'
 };
 
+var vn_noabbr = {
+  'IJCAI': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="ijc-noab">&nbsp;IJCAI&nbsp;</a>',
+  'AAMAS': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="aam-noab">&nbsp;AAMAS&nbsp;</a>',
+  'InterSpeech': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="int-noab">&nbsp;InterSpeech&nbsp;</a>',
+  'ISMB': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="ism-noab">&nbsp;ISMB&nbsp;</a>',
+  'CCN': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="ccn-noab">&nbsp;CCN&nbsp;</a>',
+  'ICDM Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="icw-noab">&nbsp;ICDM Workshops&nbsp;</a>',
+  'IJCAI Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="ijw-noab">&nbsp;IJCAI Workshops&nbsp;</a>',
+  'KDD Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="kdw-noab">&nbsp;KDD Workshops&nbsp;</a>',
+  'NeurIPS Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="new-noab">&nbsp;NeurIPS Workshops&nbsp;</a>',
+  'show all': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="sho-noab">&nbsp;show all&nbsp;</a>'
+};
+
+var vn_noabbr_flipped = {
+  'IJCAI': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="ijc-noab-fp">&nbsp;IJCAI&nbsp;</a>',
+  'AAMAS': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="aam-noab-fp">&nbsp;AAMAS&nbsp;</a>',
+  'InterSpeech': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="int-noab-fp">&nbsp;InterSpeech&nbsp;</a>',
+  'ISMB': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="ism-noab-fp">&nbsp;ISMB&nbsp;</a>',
+  'CCN': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="ccn-noab-fp">&nbsp;CCN&nbsp;</a>',
+  'ICDM Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="icw-noab-fp">&nbsp;ICDM Workshops&nbsp;</a>',
+  'IJCAI Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="ijw-noab-fp">&nbsp;IJCAI Workshops&nbsp;</a>',
+  'KDD Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="kdw-noab-fp">&nbsp;KDD Workshops&nbsp;</a>',
+  'NeurIPS Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="new-noab-fp">&nbsp;NeurIPS Workshops&nbsp;</a>',
+  'show all': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="sho-noab-fp">&nbsp;show all&nbsp;</a>'
+};
+
 var pubids = {};
+var showvenues = true;
 
 function getFields(fd, abbr, st) {
   if (abbr) {
@@ -102,6 +129,10 @@ function getTypes(tp, abbr, st) {
   } else {
     return (st) ? tp_noabbr[tp] : tp_noabbr_flipped[tp];
   }
+}
+
+function getVenues(vn, abbr, st) {
+  return (st) ? vn_noabbr[vn] : vn_noabbr_flipped[vn];
 }
 
 var getPubsData = fetch('./data/pubs.xlsx')
@@ -161,12 +192,14 @@ function renderPubs(arr, labs) {
     .reduce((a, b) => {
       return a + b;
     })
-    container.innerHTML = `<p class="mb-5 text-primary"> 
-    <br /> <span id="filter_types"></span>
-    <br />
-    <br /> <span id="filter_fields"></span>
-    <br />
-    <br /> Feel free to click on <b> abstract </b> to learn more, or [&nbsp;<a style="color:#268fd6;" 
+  container.innerHTML = `<p class="mb-5 text-primary"> 
+    <span id="filter_types"></span>
+    <br /><br />
+    <span id="filter_fields"></span>
+    <br /><br />
+    <span id="filter_venues"></span>
+    <br /><br />
+    Click on <b> abstract </b> to learn more, or [&nbsp;<a style="color:#268fd6;" 
     class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;] &nbsp; </p>` + container.innerHTML;
 
   // console.log(container);
@@ -211,7 +244,7 @@ function renderPubs(arr, labs) {
   // add filters by research fields
   var filter_fields_container = document.querySelector("#filter_fields");
   var fds = ['NS', 'ML', 'CV', 'GT', 'SB', 'SP', 'AM', 'HCI', 'IT', 'TM', 'SA'];
-  var fdstate = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+  var fdstate = Array(fds.length).fill(1);
   var fdsindex = { 'ns': 0, 'ml': 1, 'cv': 2, 'gt': 3, 'sb': 4, 'sp': 5, 'am': 6, 'hc': 7, 'it': 8, 'tm': 9, 'sa': 10 };
   var fdcount = fds.map((item) => {
     return arr.filter((x) => { return x['areas'].split('-').includes(item); }).length;
@@ -221,14 +254,33 @@ function renderPubs(arr, labs) {
   // add filters by publication types
   var filter_type_container = document.querySelector("#filter_types");
   var tps = ['J', 'C', 'E', 'P', 'S'];
-  var tpstate = [1, 1, 1, 1, 1];
+  var tpstate = Array(tps.length).fill(1);
   var tpsindex = { 'J': 0, 'C': 1, 'E': 2, 'P': 3, 'S': 4 };
   var tpcount = [ys['J'], ys['C'], ys['E'], ys['P'], ys['J'] + ys['C'] + ys['E'] + ys['P']];
   var tpopts = { 'container': filter_type_container, 'name': tps, 'state': tpstate, 'index': tpsindex, 'count': tpcount, 'citation': citations };
-  
+
+  // add filters by venues
+  var filter_venue_container = document.querySelector("#filter_venues");
+  var vns = ['IJCAI', 'AAMAS', 'InterSpeech', 'ISMB', 'CCN', 'NeurIPS Workshops', 'IJCAI Workshops', 'KDD Workshops', 'ICDM Workshops', 'show all'];
+  var vnstate = Array(vns.length).fill(1);
+  var vnsindex = { 'ijc': 0, 'aam': 1, 'int': 2, 'ism': 3, 'ccn': 4, 'new': 5, 'ijw': 6, 'kdw': 7, 'icw': 8, 'sho': 9 };
+  var vncount = vns.map((item) => {
+    return arr.filter((x) => {
+      if (item.split(' ').length == 1) {
+        return (x['venue'].split(' ').includes(item) && !x['venue'].includes('Workshop'));
+      } else {
+        return (x['venue'].split(' ').includes(item.split(' ')[0]) && x['venue'].includes('Workshop'));
+      }
+    }).length;
+  });
+  var vnopts = { 'container': filter_venue_container, 'name': vns, 'state': vnstate, 'index': vnsindex, 'count': vncount };
+
   // add listeners to both filters
-  listenFieldFilter(arr, fdopts, tpopts);
-  listenTypeFilter(arr, fdopts, tpopts);
+  listenFieldFilter(arr, fdopts, tpopts, vnopts);
+  listenTypeFilter(arr, fdopts, tpopts, vnopts);
+  if (showvenues) {
+    listenVenueFilter(arr, fdopts, tpopts, vnopts);
+  }
 
   // automatically render lab experiences
   var labs_container = document.querySelector("#labs_container");
@@ -249,7 +301,7 @@ function renderPubs(arr, labs) {
     ${(item['pubs']) ? item['pubs'].split('-')
         .map(x => `<a href="#${x}">[${pubids[x]}]</a>`).join('') : ''} </td>
     <td> ${(item['on']) ? item['on'].split('-')
-        .map(x => getFields(x, 1, 1).replace(/&nbsp;/gi,'')).join(' ') : ''} </td>
+        .map(x => getFields(x, 1, 1).replace(/&nbsp;/gi, '')).join(' ') : ''} </td>
 </tr>`;
   }).join('');
 
@@ -265,11 +317,11 @@ function renderPubs(arr, labs) {
 
 }
 
-function listenFieldFilter(arr, fdopts, tpopts) {
+function listenFieldFilter(arr, fdopts, tpopts, vnopts) {
 
-  filter_container = fdopts['container'] 
+  filter_container = fdopts['container']
   fds = fdopts['name']
-  fdstate = fdopts['state'] 
+  fdstate = fdopts['state']
   fdsindex = fdopts['index']
   fdcount = fdopts['count']
 
@@ -277,25 +329,24 @@ function listenFieldFilter(arr, fdopts, tpopts) {
     .filter((item) => { return item['display']; })
     .map((item) => { return document.getElementById(item['id']); });
 
-  filter_container.innerHTML = `Filter by <b>research areas</b>: ${fds.map((fd, index) => {
-    return (fd == 'SA') ? getFields(fd, 0, fdstate[index]) : getFields(fd, 0, fdstate[index]).replace(/&nbsp;<\/a>/gi, ` (${fdcount[index]})&nbsp;</a>`);
+  filter_container.innerHTML = `Click to filter by <b>research areas</b>: ${fds.map((fd, index) => {
+    return (fd == 'SA') ? getFields(fd, 0, fdstate[index]) : getFields(fd, 0, fdstate[index]).replace(/&nbsp;<\/a>/gi, ` (<b>${fdcount[index]}</b>)&nbsp;</a>`);
   })
     .map((x, index) => { return { 'html': x, 'count': fdcount[index] }; })
     .sort((a, b) => { return b.count - a.count; })
     .map(x => x.html)
     .join('&nbsp;')}`;
-  // filter_container.innerHTML = `Filter by research areas: ${fds.map((fd, index) => { return getFields(fd, 0, fdstate[index]); }).join('&nbsp;')}`;
 
   var fdfs = [].slice.call(document.getElementsByClassName("fd-filter"))
-  .map((x) => { return { 'obj': x, 'count': fdcount[fdsindex[x.id.substring(0,2).toLowerCase()]] }; })
-  .sort((a, b) => { return b.count - a.count; })
-  .map((x) => { return x.obj; });
+    .map((x) => { return { 'obj': x, 'count': fdcount[fdsindex[x.id.substring(0, 2).toLowerCase()]] }; })
+    .sort((a, b) => { return b.count - a.count; })
+    .map((x) => { return x.obj; });
   for (let i = 0; i < fdfs.length; i++) {
     fdfs[i].addEventListener("click", () => {
       if (fdfs[i].id.startsWith("sa")) {
         allids.forEach((item) => { item.style.display = 'block'; });
         fdstate = fdstate.map((item) => { return 1; });
-      } else if ( !fdstate[-1] && !fdfs[i].id.startsWith("sa") && fdstate.slice(0,-1).reduce((a, b) => { return a + b; })+1 == fdstate.length - 1  ) {
+      } else if (!fdstate[-1] && !fdfs[i].id.startsWith("sa") && fdstate.slice(0, -1).reduce((a, b) => { return a + b; }) + 1 == fdstate.length - 1) {
         allids.forEach((item) => { item.style.display = 'block'; });
         fdstate = fdstate.map((item) => { return 1; });
       } else {
@@ -326,19 +377,23 @@ function listenFieldFilter(arr, fdopts, tpopts) {
         hideids.forEach((item) => { item.style.display = 'none'; });
         showids.forEach((item) => { item.style.display = 'block'; });
       }
+      tpopts['state'] = tpopts['state'].map((item) => { return 1; });
+      vnopts['state'] = vnopts['state'].map((item) => { return 1; });
       fdopts['state'] = fdstate;
-      tpopts['state'] = tpopts['state'].map((item) => { return 1; });;    
-      listenTypeFilter(arr, fdopts, tpopts);
-      listenFieldFilter(arr, fdopts, tpopts);
+      listenTypeFilter(arr, fdopts, tpopts, vnopts);
+      if (showvenues) {
+        listenVenueFilter(arr, fdopts, tpopts, vnopts);
+      }
+      listenFieldFilter(arr, fdopts, tpopts, vnopts);
     });
   }
 }
 
-function listenTypeFilter(arr, fdopts, tpopts) {
+function listenTypeFilter(arr, fdopts, tpopts, vnopts) {
 
-  filter_container = tpopts['container'] 
+  filter_container = tpopts['container']
   tps = tpopts['name']
-  tpstate = tpopts['state'] 
+  tpstate = tpopts['state']
   tpsindex = tpopts['index']
   tpcount = tpopts['count']
   citations = tpopts['citation']
@@ -347,11 +402,11 @@ function listenTypeFilter(arr, fdopts, tpopts) {
     .filter((item) => { return item['display']; })
     .map((item) => { return document.getElementById(item['id']); });
 
-  filter_container.innerHTML = `Filter by <b>publication types</b>: 
-  ${getTypes('S', 0, tpstate[4]).replace(/&nbsp;<\/a>/gi, ` (<b>${tpcount[4]}</b>)&nbsp;</a>`)} = ${tps.slice(0,4).map((tp, index) => {
+  filter_container.innerHTML = `Click to filter by <b>publication types</b>: 
+  ${getTypes('S', 0, tpstate[4]).replace(/&nbsp;<\/a>/gi, ` (<b>${tpcount[4]}</b>)&nbsp;</a>`)} = ${tps.slice(0, 4).map((tp, index) => {
     return getTypes(tp, 0, tpstate[index]).replace(/&nbsp;<\/a>/gi, ` (<b>${tpcount[index]}</b>)&nbsp;</a>`);
   })
-    .join('&nbsp;+&nbsp;')}, with <a href="https://scholar.google.com/citations?user=H67KJ4cAAAAJ&hl=en">${citations}</a> citations.`;
+      .join('&nbsp;+&nbsp;')}, with <a href="https://scholar.google.com/citations?user=H67KJ4cAAAAJ&hl=en">${citations}</a> citations.`;
 
   var tpfs = [].slice.call(document.getElementsByClassName("tp-filter"));
   for (let i = 0; i < tpfs.length; i++) {
@@ -359,7 +414,7 @@ function listenTypeFilter(arr, fdopts, tpopts) {
       if (tpfs[i].id.startsWith("s-")) {
         allids.forEach((item) => { item.style.display = 'block'; });
         tpstate = tpstate.map((item) => { return 1; });
-      } else if ( !tpstate[-1] && !tpfs[i].id.startsWith("s-") && tpstate.slice(0,-1).reduce((a, b) => { return a + b; })+1 == tpstate.length - 1  ) {
+      } else if (!tpstate[-1] && !tpfs[i].id.startsWith("s-") && tpstate.slice(0, -1).reduce((a, b) => { return a + b; }) + 1 == tpstate.length - 1) {
         allids.forEach((item) => { item.style.display = 'block'; });
         tpstate = tpstate.map((item) => { return 1; });
       } else {
@@ -390,10 +445,84 @@ function listenTypeFilter(arr, fdopts, tpopts) {
         hideids.forEach((item) => { item.style.display = 'none'; });
         showids.forEach((item) => { item.style.display = 'block'; });
       }
-      fdopts['state'] = fdopts['state'].map((item) => { return 1; });;
-      tpopts['state'] = tpstate;    
-      listenFieldFilter(arr, fdopts, tpopts);
-      listenTypeFilter(arr, fdopts, tpopts);
+      fdopts['state'] = fdopts['state'].map((item) => { return 1; });
+      vnopts['state'] = vnopts['state'].map((item) => { return 1; });
+      tpopts['state'] = tpstate;
+      listenFieldFilter(arr, fdopts, tpopts, vnopts);
+      if (showvenues) {
+        listenVenueFilter(arr, fdopts, tpopts, vnopts);
+      }
+      listenTypeFilter(arr, fdopts, tpopts, vnopts);
+    });
+  }
+}
+
+function listenVenueFilter(arr, fdopts, tpopts, vnopts) {
+
+  filter_container = vnopts['container']
+  vns = vnopts['name']
+  vnstate = vnopts['state']
+  vnsindex = vnopts['index']
+  vncount = vnopts['count']
+
+  var allids = arr
+    .filter((item) => { return item['display']; })
+    .map((item) => { return document.getElementById(item['id']); });
+
+  filter_container.innerHTML = `Click to filter by <b>venues</b>: ${vns.map((vn, index) => {
+    return (vn == 'show all') ? getVenues(vn, 0, vnstate[index]) : getVenues(vn, 0, vnstate[index]).replace(/&nbsp;<\/a>/gi, ` (<b>${vncount[index]}</b>)&nbsp;</a>`);
+  })
+    .join('&nbsp;')}`;
+
+  var vnfs = [].slice.call(document.getElementsByClassName("vn-filter"));
+  for (let i = 0; i < vnfs.length; i++) {
+    vnfs[i].addEventListener("click", () => {
+      if (vnfs[i].id.startsWith("sho")) {
+        allids.forEach((item) => { item.style.display = 'block'; });
+        vnstate = vnstate.map((item) => { return 1; });
+      } else if (!vnstate[-1] && !vnfs[i].id.startsWith("sho") && vnstate.slice(0, -1).reduce((a, b) => { return a + b; }) + 1 == vnstate.length - 1) {
+        allids.forEach((item) => { item.style.display = 'block'; });
+        vnstate = vnstate.map((item) => { return 1; });
+      } else {
+        if (vnstate.reduce((a, b) => { return a * b; })) {
+          vnstate = vnstate.map((item) => { return 0; });
+          vnstate[vnsindex[vnfs[i].id.substring(0, 3)]] = 1;
+        } else {
+          vnstate[vnsindex[vnfs[i].id.substring(0, 3)]] = !vnstate[vnsindex[vnfs[i].id.substring(0, 3)]];
+          if (vnstate.reduce((a, b) => { return a + b; }) == 0) {
+            allids.forEach((item) => { item.style.display = 'block'; });
+            vnstate = vnstate.map((item) => { return 1; });
+          }
+        }
+        var toshow = vns.filter((item, index) => { return vnstate[index]; });
+        var tohide = vns.filter((item, index) => { return !vnstate[index]; });
+        var showids = arr
+          .filter((item) => {
+            var matched = toshow.filter((x) => {
+              return (x.includes('Workshop')) ? (item['venue'].includes('Workshop') && item['venue'].toLowerCase().includes(x.split(' ')[0].toLowerCase())) : (!item['venue'].includes('Workshop') && item['venue'].toLowerCase().includes(x.split(' ')[0].toLowerCase()));
+            });
+            return item['display'] && (matched.length > 0);
+          })
+          .map((item) => { return document.getElementById(item['id']); });
+        var hideids = arr
+          .filter((item) => {
+            var matched = toshow.filter((x) => {
+              return (x.includes('Workshop')) ? (item['venue'].includes('Workshop') && item['venue'].toLowerCase().includes(x.split(' ')[0].toLowerCase())) : (!item['venue'].includes('Workshop') && item['venue'].toLowerCase().includes(x.split(' ')[0].toLowerCase()));
+            });
+            return item['display'] && (matched.length == 0);
+          })
+          .map((item) => { return document.getElementById(item['id']); });
+        hideids.forEach((item) => { item.style.display = 'none'; });
+        showids.forEach((item) => { item.style.display = 'block'; });
+      }
+      fdopts['state'] = fdopts['state'].map((item) => { return 1; });
+      tpopts['state'] = tpopts['state'].map((item) => { return 1; });
+      vnopts['state'] = vnstate;
+      listenFieldFilter(arr, fdopts, tpopts, vnopts);
+      listenTypeFilter(arr, fdopts, tpopts, vnopts);
+      if (showvenues) {
+        listenVenueFilter(arr, fdopts, tpopts, vnopts);
+      }
     });
   }
 }
@@ -417,7 +546,9 @@ function citeSummary(arr, J, C, E, P) {
   <br />
   <br /> <span id="filter_fields"></span>
   <br />
-  <br /> Feel free to click on <b> abstract </b> to learn more, or [&nbsp;<a style="color:#268fd6;" class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;] &nbsp; </p>`;
+  <br /> <span id="filter_venues"></span>
+  <br />
+  <br /> Click on <b>abstract</b> to learn more, or [&nbsp;<a style="color:#268fd6;" class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;] &nbsp; </p>`;
 }
 
 function yearSummary(arr, J, C, E, P, yr) {
