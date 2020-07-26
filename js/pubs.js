@@ -71,18 +71,18 @@ var tp_abbr_flipped = {
 };
 
 var tp_noabbr = {
-  'J': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="j-noab">&nbsp;peer-reviewed journals&nbsp;</a>',
-  'C': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="c-noab">&nbsp;peer-reviewed conference proceedings&nbsp;</a>',
-  'E': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="e-noab">&nbsp;peer-reviewed extended abstracts&nbsp;</a>',
-  'P': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="p-noab">&nbsp;arXiv preprints / manuscripts&nbsp;</a>',
+  'J': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="j-noab">&nbsp;peer-reviewed <b>J</b>ournals&nbsp;</a>',
+  'C': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="c-noab">&nbsp;peer-reviewed <b>C</b>onference proceedings&nbsp;</a>',
+  'E': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="e-noab">&nbsp;peer-reviewed <b>E</b>xtended abstracts&nbsp;</a>',
+  'P': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="p-noab">&nbsp;arXiv <b>P</b>reprints / manuscripts&nbsp;</a>',
   'S': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="s-noab">&nbsp;total&nbsp;</a>'
 };
 
 var tp_noabbr_flipped = {
-  'J': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="j-noab-fp">&nbsp;peer-reviewed journals&nbsp;</a>',
-  'C': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="c-noab-fp">&nbsp;peer-reviewed conference proceedings&nbsp;</a>',
-  'E': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="e-noab-fp">&nbsp;peer-reviewed extended abstracts&nbsp;</a>',
-  'P': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="p-noab-fp">&nbsp;arXiv preprints / manuscripts&nbsp;</a>',
+  'J': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="j-noab-fp">&nbsp;peer-reviewed <b>J</b>ournals&nbsp;</a>',
+  'C': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="c-noab-fp">&nbsp;peer-reviewed <b>C</b>onference proceedings&nbsp;</a>',
+  'E': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="e-noab-fp">&nbsp;peer-reviewed <b>E</b>xtended abstracts&nbsp;</a>',
+  'P': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="p-noab-fp">&nbsp;arXiv <b>P</b>reprints / manuscripts&nbsp;</a>',
   'S': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="s-noab-fp">&nbsp;total&nbsp;</a>'
 };
 
@@ -348,8 +348,8 @@ function listenTypeFilter(arr, fdopts, tpopts) {
     .map((item) => { return document.getElementById(item['id']); });
 
   filter_container.innerHTML = `Filter by <b>publication types</b>: 
-  ${getTypes('S', 0, tpstate[4]).replace(/&nbsp;<\/a>/gi, ` (${tpcount[4]})&nbsp;</a>`)} = ${tps.slice(0,4).map((tp, index) => {
-    return getTypes(tp, 0, tpstate[index]).replace(/&nbsp;<\/a>/gi, ` (${tpcount[index]})&nbsp;</a>`);
+  ${getTypes('S', 0, tpstate[4]).replace(/&nbsp;<\/a>/gi, ` (<b>${tpcount[4]}</b>)&nbsp;</a>`)} = ${tps.slice(0,4).map((tp, index) => {
+    return getTypes(tp, 0, tpstate[index]).replace(/&nbsp;<\/a>/gi, ` (<b>${tpcount[index]}</b>)&nbsp;</a>`);
   })
     .join('&nbsp;+&nbsp;')}, with <a href="https://scholar.google.com/citations?user=H67KJ4cAAAAJ&hl=en">${citations}</a> citations.`;
 
