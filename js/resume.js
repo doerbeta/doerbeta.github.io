@@ -16,7 +16,7 @@ function openInfo4() {
 }
 
 function openInfo5() {
-  openInfo("Voice ID on the fly","https://www.baihan.nyc/img/publications/lin2020voice.gif","Under review at InterSpeech 2020 <br /></p><p class=\"infocontent\"> Interact with this AI system to help it learn about speaker identity in real-time. Ongoing work includes semi-supervision with self-supervision in contextual bandits, real-time feature extraction given adaptive parameters etc.");
+  openInfo("Voice ID on the fly","https://www.baihan.nyc/img/publications/lin2020voice.gif","Presented at InterSpeech 2020 <br /></p><p class=\"infocontent\"> Interact with this AI system to help it learn about speaker identity in real-time. Ongoing work includes semi-supervision with self-supervision in contextual bandits, real-time feature extraction given adaptive parameters etc.");
 }
 
 function openInfo6() {
