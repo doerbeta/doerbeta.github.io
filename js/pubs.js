@@ -578,7 +578,7 @@ function yearSummary(arr, J, C, E, P, yr) {
       <div class="textcolumn">
           [${item['type'] + count}]&nbsp;<b class="text-primary"> ${item['title']} </b>
           <br />
-          ${item['authors'].replace(/Baihan Lin/gi, '<b><a style="color: dimgray;">Baihan Lin</span></b>')}
+          ${item['authors'].replace(/Baihan Lin/gi, '<b><span style="color: dimgray;">Baihan Lin</span></b>')}
           <br />
           <p> ${item['areas'].split('-').map((item) => { return getFields(item, 1, 1) }).join('&nbsp;')} </p>
           <p style="color:black"> ${item['venue']} </p>
