@@ -247,7 +247,7 @@ function renderPubs(arr, labs) {
   var fdstate = Array(fds.length).fill(1);
   var fdsindex = { 'ns': 0, 'ml': 1, 'cv': 2, 'gt': 3, 'sb': 4, 'sp': 5, 'am': 6, 'hc': 7, 'it': 8, 'tm': 9, 'sa': 10 };
   var fdcount = fds.map((item) => {
-    return arr.filter((x) => { return x['areas'].split('-').includes(item); }).length;
+    return arr.filter((x) => { return x['display'] && x['areas'].split('-').includes(item); }).length;
   })
   var fdopts = { 'container': filter_fields_container, 'name': fds, 'state': fdstate, 'index': fdsindex, 'count': fdcount };
 
