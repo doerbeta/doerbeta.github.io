@@ -291,7 +291,7 @@ function renderPubs(arr, labs) {
     <td> ${(item['at']) ? item['at'] : ''}  </td>
     <td> ${item['with']} </td>
     <td> ${arr
-        .filter(x => x['with'].split('-').includes(item['name']))
+        .filter(x => x['display'] && x['with'].split('-').includes(item['name']))
         .sort((a, b) => {
           return (a['year'] == b['year']) ? b['month'] - a['month'] : b['year'] - a['year']
         })
