@@ -12,7 +12,7 @@ beta website for testing, main site at www.baihan.nyc
 
 ## DISCLAIMER
 
-Most, if not all, media resources refer in this repositories (images, videos etc.) are either original personal resources, or royalty-free web resources. If there is any copyright concerns, feel free to contact me (doerlbh@gmail.com).
+Most, if not all, media resources used in this repositories (images, videos etc.) are either original personal resources, or royalty-free web resources. If there is any copyright concerns, feel free to contact me (doerlbh@gmail.com).
 
   
 
