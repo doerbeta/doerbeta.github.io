@@ -26,4 +26,4 @@ Since 2016, this work has been protected by the U.S. Copyright Law, with proper 
 
 While supporting open source culture in general, this repository is subject to intellectual property rights. Columbia University (the "university") seeks to encourage creativity and invention among its faculty members and students. In doing so, the University affirms its traditional commitment to the personal ownership by its faculty members and students of Intellectual Property Rights in works they create. The complete policy governing Intellectual Property Rights may be seen on the [university website](https://research.columbia.edu/protection-intellectual-property).
 
-If there is any elements you would like to use or borrow, please contact me (doerlbh@gmail.com) regarding the matter.
+If there is any elements you would like to use or borrow, please contact me directly (doerlbh@gmail.com) regarding the matter to obtain a formal permission.
