@@ -1,6 +1,7 @@
-@article{lin2020semi,
+@inproceedings{lin2020semi,
   title={Online Semi-Supervised Learning in Contextual Bandits with Episodic Reward},
   author={Lin, Baihan},
-  journal={arXiv preprint arXiv:},
-  year={2020}
+  booktitle={Australasian Joint Conference on Artificial Intelligence},
+  year={2020},
+  organization={Springer}
 }
