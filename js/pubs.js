@@ -92,6 +92,7 @@ var vn_noabbr = {
   'InterSpeech': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="int-noab">&nbsp;InterSpeech&nbsp;</a>',
   'ISMB': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="ism-noab">&nbsp;ISMB&nbsp;</a>',
   'CCN': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="ccn-noab">&nbsp;CCN&nbsp;</a>',
+  'AJCAI': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="ajc-noab">&nbsp;AJCAI&nbsp;</a>',
   'ICDM Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="icw-noab">&nbsp;ICDM Workshops&nbsp;</a>',
   'IJCAI Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="ijw-noab">&nbsp;IJCAI Workshops&nbsp;</a>',
   'KDD Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="vn-filter" id="kdw-noab">&nbsp;KDD Workshops&nbsp;</a>',
@@ -105,6 +106,7 @@ var vn_noabbr_flipped = {
   'InterSpeech': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="int-noab-fp">&nbsp;InterSpeech&nbsp;</a>',
   'ISMB': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="ism-noab-fp">&nbsp;ISMB&nbsp;</a>',
   'CCN': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="ccn-noab-fp">&nbsp;CCN&nbsp;</a>',
+  'AJCAI': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="ajc-noab-fp">&nbsp;AJCAI&nbsp;</a>',
   'ICDM Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="icw-noab-fp">&nbsp;ICDM Workshops&nbsp;</a>',
   'IJCAI Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="ijw-noab-fp">&nbsp;IJCAI Workshops&nbsp;</a>',
   'KDD Workshops': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="vn-filter" id="kdw-noab-fp">&nbsp;KDD Workshops&nbsp;</a>',
@@ -261,7 +263,7 @@ function renderPubs(arr, labs) {
 
   // add filters by venues
   var filter_venue_container = document.querySelector("#filter_venues");
-  var vns = ['IJCAI', 'AAMAS', 'InterSpeech', 'ISMB', 'CCN', 'NeurIPS Workshops', 'IJCAI Workshops', 'KDD Workshops', 'ICDM Workshops', 'show all'];
+  var vns = ['IJCAI', 'AAMAS', 'InterSpeech', 'ISMB', 'CCN', 'AJCAI', 'NeurIPS Workshops', 'IJCAI Workshops', 'KDD Workshops', 'ICDM Workshops', 'show all'];
   var vnstate = Array(vns.length).fill(1);
   var vnsindex = { 'ijc': 0, 'aam': 1, 'int': 2, 'ism': 3, 'ccn': 4, 'new': 5, 'ijw': 6, 'kdw': 7, 'icw': 8, 'sho': 9 };
   var vncount = vns.map((item) => {
