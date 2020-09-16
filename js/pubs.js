@@ -561,24 +561,20 @@ function thumbchange() {
   var thumbbutton = document.getElementById("demo")
   if (thumbbutton.innerHTML == "collapse all thumbnails-") {
     thumbbutton.innerHTML = "expand all thumbnails+";
-    document.getElementsByClassName("imgcolumn").forEach(function (x, i) {
-      x.style.display = "none";
-      x.style.width = "0%";
-      x.style.padding = "0px";
+    document.getElementsByClassName("imgcolumn").forEach( (item) => {
+      item.style.display = "none";
+      item.style.width = "0%";
+      item.style.padding = "0px";
     } );
-    document.getElementsByClassName("textcolumn").forEach(function (x, i) {
-      x.style.width = "95%";
-    } );
+    document.getElementsByClassName("textcolumn").forEach( (item) => { item.width = "95%"; } );
   } else {
     thumbbutton.innerHTML = "collapse all thumbnails-";
-    document.getElementsByClassName("imgcolumn").forEach(function (x, i) {
-      x.style.display = "inline";
-      x.style.width = "20%";
-      x.style.padding = "5px";
+    document.getElementsByClassName("imgcolumn").forEach( (item) => {
+      item.style.display = "inline";
+      item.style.width = "20%";
+      item.style.padding = "5px";
     } );
-    document.getElementsByClassName("textcolumn").forEach(function (x, i) {
-      x.width = "79%";
-    } );
+    document.getElementsByClassName("textcolumn").forEach( (item) => { item.width = "79%"; } );
   }
 }
 
