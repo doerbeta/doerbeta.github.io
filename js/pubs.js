@@ -582,10 +582,12 @@ function yearSummary(arr, J, C, E, P, yr) {
       </div>
       <div class="textcolumn">
           [${item['type'] + count}]&nbsp;<b class="text-primary"> ${item['title']} </b>
-          <br />
+          // <br />
+          // <br />
+          <p> 
+          ${item['areas'].split('-').map((item) => { return getFields(item, 1, 1) }).join('&nbsp;')} 
           ${item['authors'].replace(/Baihan Lin/gi, '<b><span style="color: dimgray;">Baihan Lin</span></b>')}
-          <br />
-          <p> ${item['areas'].split('-').map((item) => { return getFields(item, 1, 1) }).join('&nbsp;')} </p>
+          </p>
           <p style="color:black"> ${item['venue']} </p>
           ${item['arxiv'] ? `[ <a href="${item['arxiv']}">arXiv</a> ]&nbsp;` : ``}
           ${item['pdf'] ? `[ <a href="./pdfs/${item['pdf']}">pdf</a> ]&nbsp;` : ``}
