@@ -558,7 +558,7 @@ function citeSummary(arr, J, C, E, P) {
 document.getElementById("thumb").addEventListener("click", thumbchange);
 
 function thumbchange() {
-  var thumbbutton = document.getElementById("demo")
+  var thumbbutton = document.getElementById("thumb")
   if (thumbbutton.innerHTML == "collapse all thumbnails-") {
     thumbbutton.innerHTML = "expand all thumbnails+";
     document.getElementsByClassName("imgcolumn").forEach( (item) => {
