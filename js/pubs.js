@@ -206,6 +206,7 @@ function renderPubs(arr, labs) {
     or [&nbsp;<a style="color:#268fd6;" id="thumb">collapse all thumbnails-</a>&nbsp;] 
     &nbsp; </p>` + container.innerHTML;
 
+  document.getElementById('thumb').addEventListener("click", thumbchange);
   // console.log(container);
 
   var collall = document.getElementById("expall");
@@ -555,29 +556,6 @@ function citeSummary(arr, J, C, E, P) {
   <br /> Click on <b>abstract</b> to learn more, [&nbsp;<a style="color:#268fd6;" class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;], or [&nbsp;<a style="color:#268fd6;" id="thumb">collapse all thumbnails-</a>&nbsp;] &nbsp; </p>`;
 }
 
-document.getElementById("thumb").addEventListener("click", thumbchange);
-
-function thumbchange() {
-  var thumbbutton = document.getElementById("thumb")
-  if (thumbbutton.innerHTML == "collapse all thumbnails-") {
-    thumbbutton.innerHTML = "expand all thumbnails+";
-    document.getElementsByClassName("imgcolumn").forEach( (item) => {
-      item.style.display = "none";
-      item.style.width = "0%";
-      item.style.padding = "0px";
-    } );
-    document.getElementsByClassName("textcolumn").forEach( (item) => { item.width = "95%"; } );
-  } else {
-    thumbbutton.innerHTML = "collapse all thumbnails-";
-    document.getElementsByClassName("imgcolumn").forEach( (item) => {
-      item.style.display = "inline";
-      item.style.width = "20%";
-      item.style.padding = "5px";
-    } );
-    document.getElementsByClassName("textcolumn").forEach( (item) => { item.width = "79%"; } );
-  }
-}
-
 function yearSummary(arr, J, C, E, P, yr) {
   var content = arr
     .filter((item) => {
@@ -633,3 +611,23 @@ function yearSummary(arr, J, C, E, P, yr) {
   return summary
 }
 
+function thumbchange() {
+  var thumbbutton = document.getElementById('thumb')
+  if (thumbbutton.innerHTML == "collapse all thumbnails-") {
+    thumbbutton.innerHTML = "expand all thumbnails+";
+    Array.from(document.getElementsByClassName('imgcolumn')).forEach( (item) => {
+      item.style.display = "none";
+      item.style.width = "0%";
+      item.style.padding = "0px";
+    } );
+    Array.from(document.getElementsByClassName('textcolumn')).forEach( (item) => { item.width = "95%"; } );
+  } else {
+    thumbbutton.innerHTML = "collapse all thumbnails-";
+    Array.from(document.getElementsByClassName("imgcolumn")).forEach( (item) => {
+      item.style.display = "inline";
+      item.style.width = "20%";
+      item.style.padding = "5px";
+    } );
+    Array.from(document.getElementsByClassName("textcolumn")).forEach( (item) => { item.width = "79%"; } );
+  }
+}
