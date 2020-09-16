@@ -195,15 +195,16 @@ function renderPubs(arr, labs) {
       return a + b;
     })
   container.innerHTML = `<p class="mb-5 text-primary"> 
-    <span id="filter_types"></span>
+  Distracting? click to [&nbsp;<a style="color:#268fd6;" id="thumb">collapse all thumbnails-</a>&nbsp;]. 
+  <br /><br />  
+  <span id="filter_types"></span>
     <br /><br />
     <span id="filter_fields"></span>
     <br /><br />
     <span id="filter_venues"></span>
     <br /><br />
-    Click on <b> abstract </b> to learn more, [&nbsp;<a style="color:#268fd6;" 
-    class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;], 
-    or [&nbsp;<a style="color:#268fd6;" id="thumb">collapse all thumbnails-</a>&nbsp;] 
+    Click on <b> abstract </b> to learn more, or [&nbsp;<a style="color:#268fd6;" 
+    class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;]. 
     &nbsp; </p>` + container.innerHTML;
 
   document.getElementById('thumb').addEventListener("click", thumbchange);
@@ -581,11 +582,10 @@ function yearSummary(arr, J, C, E, P, yr) {
       <img class="rounded-corner" style="width:100%;border-radius:10%;border:2px solid dimgrey;" src="./img/publications/${item['image']}" alt="${item['id']}" >
       </div>
       <div class="textcolumn">
-          [${item['type'] + count}]&nbsp;<b class="text-primary"> ${item['title']} </b>
-          // <br />
-          // <br />
+          [${item['type'] + count}]&nbsp;
+          ${item['areas'].split('-').map((item) => { return getFields(item, 1, 1) }).join('&nbsp;')} &nbsp;
+          <b class="text-primary"> ${item['title']} </b>
           <p> 
-          ${item['areas'].split('-').map((item) => { return getFields(item, 1, 1) }).join('&nbsp;')} 
           ${item['authors'].replace(/Baihan Lin/gi, '<b><span style="color: dimgray;">Baihan Lin</span></b>')}
           </p>
           <p style="color:black"> ${item['venue']} </p>
