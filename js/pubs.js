@@ -201,8 +201,10 @@ function renderPubs(arr, labs) {
     <br /><br />
     <span id="filter_venues"></span>
     <br /><br />
-    Click on <b> abstract </b> to learn more, or [&nbsp;<a style="color:#268fd6;" 
-    class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;] &nbsp; </p>` + container.innerHTML;
+    Click on <b> abstract </b> to learn more, [&nbsp;<a style="color:#268fd6;" 
+    class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;], 
+    or [&nbsp;<a style="color:#268fd6;" id="thumb">collapse all thumbnails</a>&nbsp;] 
+    &nbsp; </p>` + container.innerHTML;
 
   // console.log(container);
 
@@ -265,7 +267,7 @@ function renderPubs(arr, labs) {
   var filter_venue_container = document.querySelector("#filter_venues");
   var vns = ['IJCAI', 'AAMAS', 'INTERSPEECH', 'ISMB', 'CCN', 'AJCAI', 'NeurIPS Workshops', 'IJCAI Workshops', 'KDD Workshops', 'ICDM Workshops', 'show all'];
   var vnstate = Array(vns.length).fill(1);
-  var vnsindex = { 'ijc': 0, 'aam': 1, 'int': 2, 'ism': 3, 'ccn': 4, 'new': 5, 'ijw': 6, 'kdw': 7, 'icw': 8, 'sho': 9 };
+  var vnsindex = { 'ijc': 0, 'aam': 1, 'int': 2, 'ism': 3, 'ccn': 4, 'ajc': 5, 'new': 6, 'ijw': 7, 'kdw': 8, 'icw': 9, 'sho': 10 };
   var vncount = vns.map((item) => {
     return arr.filter((x) => {
       if (item.split(' ').length == 1) {
