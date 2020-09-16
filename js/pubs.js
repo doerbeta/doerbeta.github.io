@@ -550,7 +550,34 @@ function citeSummary(arr, J, C, E, P) {
   <br />
   <br /> <span id="filter_venues"></span>
   <br />
-  <br /> Click on <b>abstract</b> to learn more, or [&nbsp;<a style="color:#268fd6;" class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;] &nbsp; </p>`;
+  <br /> Click on <b>abstract</b> to learn more, [&nbsp;<a style="color:#268fd6;" class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;], or [&nbsp;<a style="color:#268fd6;" id="thumb">collapse all thumbnails</a>&nbsp;] &nbsp; </p>`;
+}
+
+document.getElementById("thumb").addEventListener("click", thumbchange);
+
+function thumbchange() {
+  var thumbbutton = document.getElementById("demo")
+  if (thumbbutton.innerHTML == "collapse all thumbnails") {
+    thumbbutton.innerHTML = "expand all thumbnails";
+    document.getElementsByClassName("imgcolumn").forEach(function (x, i) {
+      x.display = "none";
+      x.width = "0%";
+      x.padding = "0px";
+    } );
+    document.getElementsByClassName("textcolumn").forEach(function (x, i) {
+      x.width = "95%";
+    } );
+  } else {
+    thumbbutton.innerHTML = "collapse all thumbnails";
+    document.getElementsByClassName("imgcolumn").forEach(function (x, i) {
+      x.display = "inline";
+      x.width = "20%";
+      x.padding = "5px";
+    } );
+    document.getElementsByClassName("textcolumn").forEach(function (x, i) {
+      x.width = "79%";
+    } );
+  }
 }
 
 function yearSummary(arr, J, C, E, P, yr) {
