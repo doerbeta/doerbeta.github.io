@@ -195,8 +195,8 @@ function renderPubs(arr, labs) {
       return a + b;
     })
   container.innerHTML = `<p class="mb-5 text-primary"> 
-  Distracting? Click to [&nbsp;<a style="color:#268fd6;" id="thumb">collapse all thumbnails -</a>&nbsp;] and/or [&nbsp;<a style="color:#268fd6;" 
-  class="collapsibleall" id="expall">collapse all abstracts </a>&nbsp;]. 
+  Too plain? Click to [&nbsp;<a style="color:#268fd6;" id="thumb">expand all thumbnails -</a>&nbsp;] and/or [&nbsp;<a style="color:#268fd6;" 
+  class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;]. 
   <br /><br />  
   <span id="filter_types"></span>
     <br /><br />
