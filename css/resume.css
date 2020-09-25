@@ -439,8 +439,8 @@ h2 {
 
 section.resume-section {
     border-bottom: 1px solid #dee2e6;
-    padding-top: 4rem !important;
-    padding-bottom: 2rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 1rem !important;
 }
 
 section.resume-section .resume-item .resume-date {
@@ -449,7 +449,7 @@ section.resume-section .resume-item .resume-date {
 
 @media (min-width: 768px) {
     section.resume-section {
-        min-height: 100vh;
+        min-height: 50vh;
     }
     section.resume-section .resume-item .resume-date {
         min-width: 18rem;
@@ -458,8 +458,8 @@ section.resume-section .resume-item .resume-date {
 
 @media (min-width: 990px) {
     section.resume-section {
-        padding-top: 2rem !important;
-        padding-bottom: 2rem !important;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
     }
 }
 
