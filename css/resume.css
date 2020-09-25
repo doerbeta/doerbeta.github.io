@@ -276,7 +276,7 @@ footer {
 
 body {
     /* font-family: 'Ubuntu', serif; */
-    font-family: 'Noto Sans JP';
+    font-family: 'Lato';
     padding-top: 1em;
     color: #868e96;
     padding-left: 1em;
@@ -466,7 +466,7 @@ section.resume-section .resume-item .resume-date {
 
 .text-primary {
     /* font-family: 'Ubuntu', serif; */
-    font-family: 'Noto Sans JP';
+    font-family: 'Lato';
     font-size: 1.1rem;
 
     color: #272727 !important;
@@ -735,7 +735,7 @@ span {
 
 .abstract {
   padding: 0 18px;
-  /* max-height: 500px; */
+  max-height: 100%;
   overflow: hidden;
   color: #414950;
   transition: max-height 0.2s ease-out;
@@ -745,7 +745,7 @@ span {
 
 .field-title {
     /* font-family: 'Ubuntu', serif; */
-    font-family: 'Noto Sans JP';
+    font-family: 'Lato';
     text-transform:none;
     padding-top: 1em;
     padding-bottom: 0.5em;

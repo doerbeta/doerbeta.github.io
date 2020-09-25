@@ -195,7 +195,7 @@ function renderPubs(arr, labs) {
       return a + b;
     })
   container.innerHTML = `<p class="mb-5 text-primary"> 
-  Distracting? Click to [&nbsp;<a style="color:#268fd6;" id="thumb">collapse all thumbnails-</a>&nbsp;] and/or [&nbsp;<a style="color:#268fd6;" 
+  Distracting? Click to [&nbsp;<a style="color:#268fd6;" id="thumb">collapse all thumbnails -</a>&nbsp;] and/or [&nbsp;<a style="color:#268fd6;" 
   class="collapsibleall" id="expall">collapse all abstracts </a>&nbsp;]. 
   <br /><br />  
   <span id="filter_types"></span>
@@ -608,8 +608,8 @@ function yearSummary(arr, J, C, E, P, yr) {
 
 function thumbchange() {
   var thumbbutton = document.getElementById('thumb')
-  if (thumbbutton.innerHTML == "collapse all thumbnails-") {
-    thumbbutton.innerHTML = "expand all thumbnails+";
+  if (thumbbutton.innerHTML == "collapse all thumbnails -") {
+    thumbbutton.innerHTML = "expand all thumbnails +";
     Array.from(document.getElementsByClassName('imgcolumn')).forEach( (item) => {
       item.style.display = "none";
       item.style.width = "0%";
@@ -617,7 +617,7 @@ function thumbchange() {
     } );
     Array.from(document.getElementsByClassName('textcolumn')).forEach( (item) => { item.width = "95%"; } );
   } else {
-    thumbbutton.innerHTML = "collapse all thumbnails-";
+    thumbbutton.innerHTML = "collapse all thumbnails -";
     Array.from(document.getElementsByClassName("imgcolumn")).forEach( (item) => {
       item.style.display = "inline";
       item.style.width = "20%";
