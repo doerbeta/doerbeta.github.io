@@ -575,7 +575,7 @@ function yearSummary(arr, J, C, E, P, yr) {
       <img class="rounded-corner" style="width:100%;border-radius:10%;border:2px solid dimgrey;" src="./img/publications/${item['image']}" alt="${item['id']}" >
       </div>
       <div class="textcolumn">
-      <hr style="height:5px;margin-bottom:0.1em;margin-top:0.1em">
+      <hr style="height:5px;margin-bottom:0.1em;margin-top:0.1em;" class="pubrule">
           [${item['type'] + count}]&nbsp;
           ${item['areas'].split('-').map((item) => { return getFields(item, 1, 1) }).join('&nbsp;')} &nbsp;
           <b class="text-primary"> ${item['title']} </b>
@@ -615,7 +615,7 @@ function thumbchange() {
       item.style.width = "0%";
       item.style.padding = "0px";
     } );
-    Array.from(document.getElementsByClassName('textcolumn')).forEach( (item) => { item.width = "95%"; } );
+    Array.from(document.getElementsByClassName('textcolumn')).forEach( (item) => { item.style.width = "95%"; } );
   } else {
     thumbbutton.innerHTML = "collapse all thumbnails -";
     Array.from(document.getElementsByClassName("imgcolumn")).forEach( (item) => {
@@ -623,6 +623,6 @@ function thumbchange() {
       item.style.width = "20%";
       item.style.padding = "5px";
     } );
-    Array.from(document.getElementsByClassName("textcolumn")).forEach( (item) => { item.width = "75%"; } );
+    Array.from(document.getElementsByClassName("textcolumn")).forEach( (item) => { item.style.width = "78%"; } );
   }
 }
