@@ -623,6 +623,6 @@ function thumbchange() {
       item.style.width = "20%";
       item.style.padding = "5px";
     } );
-    Array.from(document.getElementsByClassName("textcolumn")).forEach( (item) => { item.width = "79%"; } );
+    Array.from(document.getElementsByClassName("textcolumn")).forEach( (item) => { item.width = "75%"; } );
   }
 }
