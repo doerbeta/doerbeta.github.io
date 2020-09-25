@@ -195,17 +195,15 @@ function renderPubs(arr, labs) {
       return a + b;
     })
   container.innerHTML = `<p class="mb-5 text-primary"> 
-  Distracting? Click to [&nbsp;<a style="color:#268fd6;" id="thumb">collapse all thumbnails-</a>&nbsp;]. 
+  Distracting? Click to [&nbsp;<a style="color:#268fd6;" id="thumb">collapse all thumbnails-</a>&nbsp;] and/or [&nbsp;<a style="color:#268fd6;" 
+  class="collapsibleall" id="expall">collapse all abstracts </a>&nbsp;]. 
   <br /><br />  
   <span id="filter_types"></span>
     <br /><br />
     <span id="filter_fields"></span>
     <br /><br />
     <span id="filter_venues"></span>
-    <br /><br />
-    Click on <b> abstract </b> to learn more, or [&nbsp;<a style="color:#268fd6;" 
-    class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;]. 
-    &nbsp; </p>` + container.innerHTML;
+    <br /></p>` + container.innerHTML;
 
   document.getElementById('thumb').addEventListener("click", thumbchange);
   // console.log(container);
@@ -213,18 +211,13 @@ function renderPubs(arr, labs) {
   var collall = document.getElementById("expall");
   collall.addEventListener("click", function () {
     this.classList.toggle("active");
-    if (collall.innerHTML == "collapse all abstracts") {
-      collall.innerHTML = "expand all abstracts";
+    if (collall.innerHTML == "collapse all abstracts ") {
+      collall.innerHTML = "expand all abstracts ";
     } else {
-      collall.innerHTML = "collapse all abstracts";
+      collall.innerHTML = "collapse all abstracts ";
     }
     let contents = document.querySelectorAll(".abstract");
-    // var colls = document.getElementsByClassName("collapsible");
-    // for (let j = 0; j < colls.length; i++) {
     for (let j = 0; j < contents.length; j++) {
-      // colls[j].setAttribute("clicked",true);
-      // colls[j].click();
-      // var content = colls[j].nextElementSibling;
       if (contents[j].style.maxHeight) {
         contents[j].style.maxHeight = null;
       } else {
