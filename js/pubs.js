@@ -575,13 +575,14 @@ function yearSummary(arr, J, C, E, P, yr) {
       <img class="rounded-corner" style="width:100%;border-radius:10%;border:2px solid dimgrey;" src="./img/publications/${item['image']}" alt="${item['id']}" >
       </div>
       <div class="textcolumn">
+      <hr style="height:5px;margin-bottom:0.1em;margin-top:0.1em">
           [${item['type'] + count}]&nbsp;
           ${item['areas'].split('-').map((item) => { return getFields(item, 1, 1) }).join('&nbsp;')} &nbsp;
           <b class="text-primary"> ${item['title']} </b>
           <p> 
           ${item['authors'].replace(/Baihan Lin/gi, '<b><span style="color: dimgray;">Baihan Lin</span></b>')}
           </p>
-          <p style="color:black"> ${item['venue']} </p>
+          <span style="color:black"> ${item['venue']} </span><br />
           ${item['arxiv'] ? `[ <a href="${item['arxiv']}">arXiv</a> ]&nbsp;` : ``}
           ${item['pdf'] ? `[ <a href="./pdfs/${item['pdf']}">pdf</a> ]&nbsp;` : ``}
           ${item['link'] ? `[  <a href="${item['link']}">${item['linkname'] ? item['linkname'] : 'link'}</a> ]&nbsp;` : ``}
@@ -593,14 +594,13 @@ function yearSummary(arr, J, C, E, P, yr) {
           ${item['slides'] ? `[ <a href="./pdfs/${item['slides']}">slides</a> ]&nbsp;` : ``}
           ${item['abstract'] ? `[  <a  style="color:#268fd6;" class="collapsible">abstract&nbsp;</a> ] <div class="abstract rounded-corner"> <p> ${item['abstract']}  </p></div>` : ``} 
           ${item['cite'] && item['citelink'] ? `Cited by <a href="${item['citelink']}">${item['cite']}</a>` : ``}
-      </div>
+          </div>
   </div>
-  <br />
   </li>`;
     })
     .reverse()
     .join("");
-  content = `<h3> ${yr == -1 ? 'ongoing...' : yr} </h3><br /><ul class="fa-ul mb-0">${content}</ul>`;
+  content = `<h3> ${yr == -1 ? 'ongoing...' : yr} </h3><ul class="fa-ul mb-0">${content}</ul><br /> `;
   summary = { 'html': content, 'J': J, 'C': C, 'E': E, "P": P };
   // console.log(summary)
   return summary
