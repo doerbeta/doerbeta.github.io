@@ -33,12 +33,9 @@ footer {
 }
 
 .imgcolumn {
-    /* float: left;
-    width: 20.00%;
-    padding: 5px; */
-    display: none;
-    width: 0;
-    padding: 0;
+    display: inline;
+    width: 15%;
+    padding: 5px;
 }
 
 .textcolumn {

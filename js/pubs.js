@@ -195,8 +195,10 @@ function renderPubs(arr, labs) {
       return a + b;
     })
   container.innerHTML = `<p class="mb-5 text-primary"> 
-  Too plain? Click to [&nbsp;<a style="color:#268fd6;" id="thumb">expand all thumbnails +</a>&nbsp;] and/or [&nbsp;<a style="color:#268fd6;" 
+  Too plain? Click to [&nbsp;<a style="color:#268fd6;" 
   class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;]. 
+  <br />  
+  Too distracting? Click to [&nbsp;<a style="color:#268fd6;" id="thumb">collapse all thumbnails <b>-</b></a>&nbsp;]. 
   <br /><br />  
   <span id="filter_types"></span>
     <br /><br />
@@ -608,8 +610,8 @@ function yearSummary(arr, J, C, E, P, yr) {
 
 function thumbchange() {
   var thumbbutton = document.getElementById('thumb')
-  if (thumbbutton.innerHTML == "collapse all thumbnails -") {
-    thumbbutton.innerHTML = "expand all thumbnails +";
+  if (thumbbutton.innerHTML == "collapse all thumbnails <b>-</b>") {
+    thumbbutton.innerHTML = "expand all thumbnails <b>+</b>";
     Array.from(document.getElementsByClassName('imgcolumn')).forEach( (item) => {
       item.style.display = "none";
       item.style.width = "0%";
@@ -617,10 +619,10 @@ function thumbchange() {
     } );
     Array.from(document.getElementsByClassName('textcolumn')).forEach( (item) => { item.style.width = "95%"; } );
   } else {
-    thumbbutton.innerHTML = "collapse all thumbnails -";
+    thumbbutton.innerHTML = "collapse all thumbnails <b>-</b>";
     Array.from(document.getElementsByClassName("imgcolumn")).forEach( (item) => {
       item.style.display = "inline";
-      item.style.width = "20%";
+      item.style.width = "15%";
       item.style.padding = "5px";
     } );
     Array.from(document.getElementsByClassName("textcolumn")).forEach( (item) => { item.style.width = "78%"; } );
