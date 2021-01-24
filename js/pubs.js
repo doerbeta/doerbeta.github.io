@@ -58,6 +58,7 @@ var tp_abbr = {
   'J': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="j-ab">&nbsp;J&nbsp;</a>',
   'C': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="c-ab">&nbsp;C&nbsp;</a>',
   'E': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="e-ab">&nbsp;E&nbsp;</a>',
+  'M': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="m-ab">&nbsp;M&nbsp;</a>',
   'P': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="p-ab">&nbsp;P&nbsp;</a>',
   'S': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="s-ab">&nbsp;all&nbsp;</a>'
 };
@@ -66,6 +67,7 @@ var tp_abbr_flipped = {
   'J': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="j-ab-fp">&nbsp;J&nbsp;</a>',
   'C': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="c-ab-fp">&nbsp;C&nbsp;</a>',
   'E': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="e-ab-fp">&nbsp;E&nbsp;</a>',
+  'M': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="m-ab-fp">&nbsp;M&nbsp;</a>',
   'P': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="p-ab-fp">&nbsp;P&nbsp;</a>',
   'S': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="s-ab-fp">&nbsp;all&nbsp;</a>'
 };
@@ -74,7 +76,8 @@ var tp_noabbr = {
   'J': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="j-noab">&nbsp;peer-reviewed <b>J</b>ournals&nbsp;</a>',
   'C': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="c-noab">&nbsp;peer-reviewed <b>C</b>onference proceedings&nbsp;</a>',
   'E': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="e-noab">&nbsp;peer-reviewed <b>E</b>xtended abstracts&nbsp;</a>',
-  'P': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="p-noab">&nbsp;arXiv <b>P</b>reprints / manuscripts&nbsp;</a>',
+  'M': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="m-noab">&nbsp;<b>M</b>anuscripts / preprints&nbsp;</a>',
+  'P': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="p-noab">&nbsp;<b>P</b>atents&nbsp;</a>',
   'S': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:gainsboro;" class="tp-filter" id="s-noab">&nbsp;total&nbsp;</a>'
 };
 
@@ -82,7 +85,8 @@ var tp_noabbr_flipped = {
   'J': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="j-noab-fp">&nbsp;peer-reviewed <b>J</b>ournals&nbsp;</a>',
   'C': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="c-noab-fp">&nbsp;peer-reviewed <b>C</b>onference proceedings&nbsp;</a>',
   'E': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="e-noab-fp">&nbsp;peer-reviewed <b>E</b>xtended abstracts&nbsp;</a>',
-  'P': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="p-noab-fp">&nbsp;arXiv <b>P</b>reprints / manuscripts&nbsp;</a>',
+  'M': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="m-noab-fp">&nbsp;<b>M</b>anuscripts / preprints&nbsp;</a>',
+  'P': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="p-noab-fp">&nbsp;<b>P</b>atents&nbsp;</a>',
   'S': '<a style="border-radius:4px;padding:1px;color:black;font-size:90%;background-color:white;" class="tp-filter" id="s-noab-fp">&nbsp;total&nbsp;</a>'
 };
 
