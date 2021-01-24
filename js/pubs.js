@@ -410,7 +410,7 @@ function listenTypeFilter(arr, fdopts, tpopts, vnopts) {
     .map((item) => { return document.getElementById(item['id']); });
 
   filter_container.innerHTML = `Click to filter by <b>publication types</b>: 
-  ${getTypes('S', 0, tpstate[5]).replace(/&nbsp;<\/a>/gi, ` (<b>${tpcount[5]}</b>)&nbsp;</a>`)} = ${tps.slice(0, 5).map((tp, index) => {
+  ${getTypes('S', 0, tpstate[5]).replace(/&nbsp;<\/a>/gi, ` (<b>${tpcount[5]}</b>)&nbsp;</a>`)} = ${tps.slice(0, -1).map((tp, index) => {
     return getTypes(tp, 0, tpstate[index]).replace(/&nbsp;<\/a>/gi, ` (<b>${tpcount[index]}</b>)&nbsp;</a>`);
   })
       .join('&nbsp;+&nbsp;')}, with <a href="https://scholar.google.com/citations?user=H67KJ4cAAAAJ&hl=en">${citations}</a> citations.`;
@@ -575,7 +575,7 @@ function yearSummary(arr, J, C, E, M, P, yr) {
       if (item['type'] == 'J') { J++; count = J; }
       if (item['type'] == 'C') { C++; count = C; }
       if (item['type'] == 'E') { E++; count = E; }
-      if (item['type'] == 'M') { P++; count = M; }
+      if (item['type'] == 'M') { M++; count = M; }
       if (item['type'] == 'P') { P++; count = P; }
       pubids[item['id']] = item['type'] + count;
       return `<li class="li-pubs" id="${item['id']}">
@@ -610,7 +610,7 @@ function yearSummary(arr, J, C, E, M, P, yr) {
     .reverse()
     .join("");
   content = `<h3> ${yr == -1 ? 'ongoing...' : yr} </h3><ul class="fa-ul mb-0">${content}</ul><br /> `;
-  summary = { 'html': content, 'J': J, 'C': C, 'E': E, "P": P };
+  summary = { 'html': content, 'J': J, 'C': C, 'E': E, "M": M, "P": P };
   // console.log(summary)
   return summary
 }
