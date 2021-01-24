@@ -167,20 +167,22 @@ function renderPubs(arr, labs) {
   var J = 0; // journals
   var C = 0; // conferences
   var E = 0; // extended abstracts
-  var P = 0; // preprints
+  var M = 0; // manuscripts or preprints
+  var P = 0; // patents
 
   // add yearly publication summary
   for (var yr = startyear; yr <= currentyear; yr++) {
-    ys = yearSummary(arr, J, C, E, P, yr)
+    ys = yearSummary(arr, J, C, E, M, P, yr)
     J = ys['J'];
     C = ys['C'];
     E = ys['E'];
+    M = ys['M'];
     P = ys['P'];
     container.innerHTML = ys['html'] + container.innerHTML;
   }
 
   // add ongoing publication summary
-  ys = yearSummary(arr, J, C, E, P, -1)
+  ys = yearSummary(arr, J, C, E, M, P, -1)
   container.innerHTML = ys['html'] + container.innerHTML;
 
   // add citation summary
@@ -254,10 +256,10 @@ function renderPubs(arr, labs) {
 
   // add filters by publication types
   var filter_type_container = document.querySelector("#filter_types");
-  var tps = ['J', 'C', 'E', 'P', 'S'];
+  var tps = ['J', 'C', 'E', 'M', 'P', 'S'];
   var tpstate = Array(tps.length).fill(1);
-  var tpsindex = { 'J': 0, 'C': 1, 'E': 2, 'P': 3, 'S': 4 };
-  var tpcount = [ys['J'], ys['C'], ys['E'], ys['P'], ys['J'] + ys['C'] + ys['E'] + ys['P']];
+  var tpsindex = { 'J': 0, 'C': 1, 'E': 2, 'M': 3, 'P': 4, 'S': 5 };
+  var tpcount = [ys['J'], ys['C'], ys['E'], ys['M'], ys['P'], ys['J'] + ys['C'] + ys['E'] + ys['M'] + ys['P']];
   var tpopts = { 'container': filter_type_container, 'name': tps, 'state': tpstate, 'index': tpsindex, 'count': tpcount, 'citation': citations };
 
   // add filters by venues
@@ -404,7 +406,7 @@ function listenTypeFilter(arr, fdopts, tpopts, vnopts) {
     .map((item) => { return document.getElementById(item['id']); });
 
   filter_container.innerHTML = `Click to filter by <b>publication types</b>: 
-  ${getTypes('S', 0, tpstate[4]).replace(/&nbsp;<\/a>/gi, ` (<b>${tpcount[4]}</b>)&nbsp;</a>`)} = ${tps.slice(0, 4).map((tp, index) => {
+  ${getTypes('S', 0, tpstate[5]).replace(/&nbsp;<\/a>/gi, ` (<b>${tpcount[5]}</b>)&nbsp;</a>`)} = ${tps.slice(0, 5).map((tp, index) => {
     return getTypes(tp, 0, tpstate[index]).replace(/&nbsp;<\/a>/gi, ` (<b>${tpcount[index]}</b>)&nbsp;</a>`);
   })
       .join('&nbsp;+&nbsp;')}, with <a href="https://scholar.google.com/citations?user=H67KJ4cAAAAJ&hl=en">${citations}</a> citations.`;
@@ -539,9 +541,9 @@ function citeSummary(arr, J, C, E, P) {
     .reduce((a, b) => {
       return a + b;
     })
-  return `<p class="mb-5 text-primary"> <b>Types: </b> peer-reviewed journals <b>(J)</b>, peer-reviewed conference proceedings <b>(C)</b>, peer-reviewed extended abstracts <b>(E)</b>, arXiv preprints / manuscripts <b>(P)</b>.  &nbsp;
+  return `<p class="mb-5 text-primary"> <b>Types: </b> peer-reviewed journals <b>(J)</b>, peer-reviewed conference proceedings <b>(C)</b>, peer-reviewed extended abstracts <b>(E)</b>, manuscripts / arXiv preprints <b>(M)</b> and patents <b>(P)</b>.  &nbsp;
   <br />
-  <br /> <b>${(J + C + E + P)}</b> total = <b>${J}</b> J + <b>${C}</b> C + <b>${E}</b> E + <b>${P}</b> P, with <a href="https://scholar.google.com/citations?user=H67KJ4cAAAAJ&hl=en">${citations}</a> citations. &nbsp;
+  <br /> <b>${(J + C + E + M + P)}</b> total = <b>${J}</b> J + <b>${C}</b> C + <b>${E}</b> E + <b>${M}</b> M + <b>${P}</b> P, with <a href="https://scholar.google.com/citations?user=H67KJ4cAAAAJ&hl=en">${citations}</a> citations. &nbsp;
   <br />
   <br /> <span id="filter_types"></span>
   <br />
@@ -552,7 +554,7 @@ function citeSummary(arr, J, C, E, P) {
   <br /> Click on <b>abstract</b> to learn more, [&nbsp;<a style="color:#268fd6;" class="collapsibleall" id="expall">expand all abstracts </a>&nbsp;], or [&nbsp;<a style="color:#268fd6;" id="thumb">collapse all thumbnails-</a>&nbsp;] &nbsp; </p>`;
 }
 
-function yearSummary(arr, J, C, E, P, yr) {
+function yearSummary(arr, J, C, E, M, P, yr) {
   var content = arr
     .filter((item) => {
       if (yr == -1) {
@@ -569,6 +571,7 @@ function yearSummary(arr, J, C, E, P, yr) {
       if (item['type'] == 'J') { J++; count = J; }
       if (item['type'] == 'C') { C++; count = C; }
       if (item['type'] == 'E') { E++; count = E; }
+      if (item['type'] == 'M') { P++; count = M; }
       if (item['type'] == 'P') { P++; count = P; }
       pubids[item['id']] = item['type'] + count;
       return `<li class="li-pubs" id="${item['id']}">
