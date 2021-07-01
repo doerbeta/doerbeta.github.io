@@ -1,0 +1,6 @@
+@article{lin2021epidemic,
+  title={Optimal Epidemic Control as a Contextual Combinatorial Bandit with Budget},
+  author={Lin, Baihan and Bouneffouf, Djallel},
+  journal={arXiv preprint arXiv:2106.15808},
+  year={2021}
+}
